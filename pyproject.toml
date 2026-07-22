@@ -1,0 +1,66 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bd-adv-manim"
+version = "0.1.0"
+description = "A reproducible Manim Community workspace for research and teaching visuals"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = ["manim==0.20.1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bd_adv_manim"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+requires-pixi = ">=0.55,<1"
+
+[tool.pixi.dependencies]
+python = "3.12.*"
+manim = "==0.20.1"
+curl = "*"
+fontconfig = "*"
+hatchling = ">=1.27,<2"
+perl = "*"
+pytest = ">=8,<10"
+ruff = ">=0.12,<1"
+xz = "*"
+
+[tool.pixi.pypi-dependencies]
+bd-adv-manim = { path = ".", editable = true }
+
+[tool.pixi.tasks]
+setup-fonts = { cmd = "bash scripts/setup_fonts.sh", description = "Download and verify the repository-local Noto JP fonts" }
+setup-tex = { cmd = "bash scripts/setup_tex.sh", description = "Install the repository-local, sudo-free TeX environment" }
+doctor = { cmd = "bash scripts/doctor.sh", description = "Check Manim, TeX, fonts, and platform support" }
+manim = { cmd = "bash scripts/manim.sh", description = "Run the ManimCE CLI with this workspace's TeX environment" }
+render-preview = { cmd = "bash scripts/manim.sh -ql projects/showcase/showcase.py WorkspaceShowcase", description = "Render the showcase quickly at preview quality" }
+render-final = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 projects/showcase/showcase.py WorkspaceShowcase", description = "Render the showcase at 1080p30" }
+render-paper = { cmd = "bash scripts/manim.sh --resolution 3840,2160 --fps 30 -s projects/showcase/showcase.py PaperFigure", description = "Render a high-resolution white-background PNG" }
+render-transparent = { cmd = "bash scripts/manim.sh --resolution 3840,2160 --fps 30 -s -t projects/showcase/showcase.py TransparentFigure", description = "Render a high-resolution transparent PNG" }
+render-smoke = { cmd = "bash scripts/render_smoke.sh", description = "Render one representative frame at low quality" }
+format = { cmd = "ruff format .", description = "Format Python files" }
+format-check = { cmd = "ruff format --check .", description = "Check Python formatting without changing files" }
+lint = { cmd = "ruff check .", description = "Run Ruff lint checks" }
+test = { cmd = "pytest", description = "Run fast unit tests" }
+check-fast = [{ task = "format-check" }, { task = "lint" }, { task = "test" }]
+check = [{ task = "check-fast" }, { task = "doctor" }, { task = "render-smoke" }]
+render-all = [{ task = "render-final" }, { task = "render-paper" }, { task = "render-transparent" }]
+setup = [{ task = "setup-fonts" }, { task = "setup-tex" }, { task = "doctor" }]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+extend-exclude = [".pixi", ".tools", "media"]
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "SIM", "UP"]
