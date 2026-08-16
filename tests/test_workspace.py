@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from bd_adv_manim import DARK_THEME, FONT_SANS_JP, FONT_SERIF_JP, LIGHT_THEME
 from projects.showcase.showcase import (
     PaperFigure,
@@ -5,6 +7,18 @@ from projects.showcase.showcase import (
     TransparentFigure,
     WorkspaceShowcase,
 )
+
+
+def test_project_outputs_are_ignored() -> None:
+    gitignore = Path(".gitignore").read_text(encoding="utf-8")
+    assert "projects/**/output/" in gitignore
+
+
+def test_manim_wrapper_routes_output_next_to_input() -> None:
+    wrapper = Path("scripts/manim.sh").read_text(encoding="utf-8")
+    assert "project_dir/output" in wrapper
+    assert "--media_dir" in wrapper
+    assert "media_dir_set" in wrapper
 
 
 def test_themes_have_distinct_backgrounds() -> None:

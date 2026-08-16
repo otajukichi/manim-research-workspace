@@ -8,6 +8,7 @@
     "**/__pycache__": true,
     ".pixi": true,
     ".tools": true,
-    "media": true
+    "media": true,
+    "**/output": true
   }
 }

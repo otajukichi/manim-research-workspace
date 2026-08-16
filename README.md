@@ -13,8 +13,9 @@
 - 1080p・30 fpsのMP4、高解像度PNG、透過PNGをコマンド一つで生成
 - Ruff、pytest、低画質レンダリングによるローカル検証
 
-生成物、Pixi環境、TeX環境、フォントはそれぞれ `media/`、`.pixi/`、`.tools/`、`.local/` に作られ、
-Gitには含まれません。
+生成物は、実行したPythonファイルと同じディレクトリの `output/` に作られます。
+Pixi環境、TeX環境、フォントはそれぞれ `.pixi/`、`.tools/`、`.local/` に作られ、
+これらのローカルファイルはGitには含まれません。
 
 ## 最初のセットアップ
 
@@ -54,14 +55,18 @@ pixi run render-paper
 pixi run render-transparent
 ```
 
-出力先は `media/` です。サーバーでも安全に動くよう、標準タスクは動画プレイヤーや
-ファイルブラウザーを自動起動しません。
+たとえば上記のデモは `projects/showcase/output/` に出力されます。ソースと成果物が
+プロジェクト単位でまとまるため、リポジトリ直下の共通 `media/` からコピーする必要は
+ありません。標準タスクは動画プレイヤーやファイルブラウザーを自動起動しません。
 
 任意のSceneを実行する場合は、ManimCEの引数をそのまま渡せます。
 
 ```bash
 pixi run manim -- -ql projects/template/template_scene.py FirstScene
 ```
+
+この場合の出力先は `projects/template/output/` です。`scripts/manim.sh` が入力Python
+ファイルの親ディレクトリを判定し、ManimCEの `--media_dir` を自動設定します。
 
 ## プロジェクトを追加する
 
@@ -76,8 +81,13 @@ projects/
 │   └── template_scene.py
 └── my_research_topic/  # 追加例
     ├── my_research_topic.py
-    └── assets/
+    ├── assets/
+    └── output/            # 自動生成。Git管理外
 ```
+
+この公開リポジトリでは `showcase/` と `template/` だけを追跡し、それ以外の
+`projects/` 直下の作業ディレクトリは `.gitignore` で除外します。新しく作った作品も
+GitHubで公開したい場合は、除外規則を変更するか、作品専用のリポジトリへ移してください。
 
 表示する日本語、コメント、文書は日本語で構いません。ファイル名、ディレクトリ名、
 Sceneクラス名は、LinuxサーバーとTeXでの問題を避けるため英数字にします。

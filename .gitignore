@@ -5,9 +5,18 @@
 .cache/
 
 # Manim render output and caches
+# `media/` is kept only to ignore output made by older workspace versions.
 media/
+/output/
+projects/**/output/
 __pycache__/
 *.py[cod]
+
+# This public workspace ships only its two demos. Other project directories
+# are local work and must not be included by a broad `git add`.
+projects/*/
+!projects/showcase/
+!projects/template/
 
 # Python tooling
 .pytest_cache/
