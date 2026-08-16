@@ -2,7 +2,7 @@
 
 from manim import Circle, Create
 
-from bd_adv_manim import DarkScene
+from manim_research import DarkScene
 
 
 class FirstScene(DarkScene):

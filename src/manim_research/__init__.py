@@ -1,7 +1,7 @@
-"""Shared components for the BD_Adv Manim workspace."""
+"""Shared components for Manim Research Workspace."""
 
-from bd_adv_manim.tex import JAPANESE_TEX_TEMPLATE
-from bd_adv_manim.theme import (
+from manim_research.tex import JAPANESE_TEX_TEMPLATE
+from manim_research.theme import (
     DARK_THEME,
     FONT_SANS_JP,
     FONT_SERIF_JP,

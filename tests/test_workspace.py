@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from bd_adv_manim import DARK_THEME, FONT_SANS_JP, FONT_SERIF_JP, LIGHT_THEME
+from manim_research import DARK_THEME, FONT_SANS_JP, FONT_SERIF_JP, LIGHT_THEME
 from projects.showcase.showcase import (
     PaperFigure,
     RenderSmoke,

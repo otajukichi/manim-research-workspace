@@ -22,7 +22,7 @@ from manim import (
     Write,
 )
 
-from bd_adv_manim import JAPANESE_TEX_TEMPLATE, DarkScene, LightScene
+from manim_research import JAPANESE_TEX_TEMPLATE, DarkScene, LightScene
 
 
 class WorkspaceShowcase(DarkScene):

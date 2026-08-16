@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "bd-adv-manim"
+name = "manim-research-workspace"
 version = "0.1.0"
 description = "A reproducible Manim Community workspace for research and teaching visuals"
 readme = "README.md"
@@ -12,7 +12,7 @@ license = "MIT"
 dependencies = ["manim==0.20.1"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/bd_adv_manim"]
+packages = ["src/manim_research"]
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
@@ -31,7 +31,7 @@ ruff = ">=0.12,<1"
 xz = "*"
 
 [tool.pixi.pypi-dependencies]
-bd-adv-manim = { path = ".", editable = true }
+manim-research-workspace = { path = ".", editable = true }
 
 [tool.pixi.tasks]
 setup-fonts = { cmd = "bash scripts/setup_fonts.sh", description = "Download and verify the repository-local Noto JP fonts" }

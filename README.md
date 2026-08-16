@@ -1,4 +1,4 @@
-# BD_Adv ManimCE Workspace
+# Manim Research Workspace
 
 研究提案、論文、授業発表で使う図とアニメーションを、
 [Manim Community Edition](https://www.manim.community/) で継続的に制作するための
@@ -92,13 +92,13 @@ GitHubで公開したい場合は、除外規則を変更するか、作品専�
 表示する日本語、コメント、文書は日本語で構いません。ファイル名、ディレクトリ名、
 Sceneクラス名は、LinuxサーバーとTeXでの問題を避けるため英数字にします。
 
-共通テーマは `src/bd_adv_manim/theme.py`、日本語TeXテンプレートは
-`src/bd_adv_manim/tex.py` にあります。
+共通テーマは `src/manim_research/theme.py`、日本語TeXテンプレートは
+`src/manim_research/tex.py` にあります。
 
 ```python
 from manim import Circle, Create
 
-from bd_adv_manim import DarkScene
+from manim_research import DarkScene
 
 
 class MyScene(DarkScene):
@@ -129,15 +129,10 @@ pixi run format
 実行してください。古いLinuxではglibc互換性のためPixiが起動できない場合があります。
 その場合はサーバーのOS情報を確認してから対応プラットフォームを追加します。
 
-## GitHubで公開するとき
+## 公開リポジトリで作業するとき
 
-今回はローカルリポジトリだけを作成します。内容を確認してGitHub側に空の公開リポジトリを
-作った後、次の形で接続できます。
-
-```bash
-git remote add origin https://github.com/USER/REPOSITORY.git
-git push -u origin main
-```
+このリポジトリは `manim-research-workspace` としてGitHubで公開されています。
+公開してよい変更だけが含まれていることを、コミット前に必ず確認してください。
 
 未発表研究、共同研究、講義資料、第三者の画像やデータは、この公開リポジトリへ
 誤ってコミットしないでください。非公開案件は別のprivateリポジトリで扱うのが安全です。
