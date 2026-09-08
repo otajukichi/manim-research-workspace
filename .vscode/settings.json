@@ -9,6 +9,6 @@
     ".pixi": true,
     ".tools": true,
     "media": true,
-    "**/output": true
+    "**/output/**/partial_movie_files": true
   }
 }

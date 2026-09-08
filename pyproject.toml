@@ -29,6 +29,7 @@ perl = "*"
 pytest = ">=8,<10"
 ruff = ">=0.12,<1"
 xz = "*"
+contourpy = ">=1.3.3,<2"
 
 [tool.pixi.pypi-dependencies]
 manim-research-workspace = { path = ".", editable = true }
@@ -42,11 +43,15 @@ render-preview = { cmd = "bash scripts/manim.sh -ql projects/showcase/showcase.p
 render-final = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 projects/showcase/showcase.py WorkspaceShowcase", description = "Render the showcase at 1080p30" }
 render-paper = { cmd = "bash scripts/manim.sh --resolution 3840,2160 --fps 30 -s projects/showcase/showcase.py PaperFigure", description = "Render a high-resolution white-background PNG" }
 render-transparent = { cmd = "bash scripts/manim.sh --resolution 3840,2160 --fps 30 -s -t projects/showcase/showcase.py TransparentFigure", description = "Render a high-resolution transparent PNG" }
+render-research-showcase = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 projects/showcase/theme_showcase.py ResearchThemeShowcase", description = "Review the Research Theme at 1080p30 (three screens)" }
+render-research-dark-showcase = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 projects/showcase/theme_showcase.py ResearchDarkThemeShowcase", description = "Review the original dark Research Theme at 1080p30 (three screens)" }
+render-education-showcase = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 projects/showcase/theme_showcase.py EducationThemeShowcase", description = "Review the Education Theme at 1080p30 (three screens)" }
+render-theme-stills = { cmd = "bash scripts/manim.sh --resolution 1920,1080 --fps 30 -s -a projects/showcase/theme_stills.py", description = "Render all nine theme review screens as 1080p PNGs" }
 render-smoke = { cmd = "bash scripts/render_smoke.sh", description = "Render one representative frame at low quality" }
 format = { cmd = "ruff format .", description = "Format Python files" }
 format-check = { cmd = "ruff format --check .", description = "Check Python formatting without changing files" }
 lint = { cmd = "ruff check .", description = "Run Ruff lint checks" }
-test = { cmd = "pytest", description = "Run fast unit tests" }
+test = { cmd = "python -m pytest", description = "Run fast unit tests" }
 check-fast = [{ task = "format-check" }, { task = "lint" }, { task = "test" }]
 check = [{ task = "check-fast" }, { task = "doctor" }, { task = "render-smoke" }]
 render-all = [{ task = "render-final" }, { task = "render-paper" }, { task = "render-transparent" }]

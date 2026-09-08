@@ -23,4 +23,15 @@ fi
 export PATH="$tex_bin:$PATH"
 export XDG_DATA_HOME="$repo_root/.local/share"
 export XDG_CACHE_HOME="$repo_root/.cache"
+
+# Pixi/Conda の Fontconfig がデフォルト設定を自動発見できない環境向け。
+# Pixi 環境内の fonts.conf を明示的に使用する。
+if [[ -n "${CONDA_PREFIX:-}" && -f "$CONDA_PREFIX/etc/fonts/fonts.conf" ]]; then
+    export FONTCONFIG_FILE="$CONDA_PREFIX/etc/fonts/fonts.conf"
+    export FONTCONFIG_PATH="$CONDA_PREFIX/etc/fonts"
+elif [[ -f /etc/fonts/fonts.conf ]]; then
+    export FONTCONFIG_FILE="/etc/fonts/fonts.conf"
+    export FONTCONFIG_PATH="/etc/fonts"
+fi
+
 exec "$@"
