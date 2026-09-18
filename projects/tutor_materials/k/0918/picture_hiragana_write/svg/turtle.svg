@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180" width="300" height="180">
+  <title>かめ</title>
+  <!-- この教材用のオリジナル図案。四本足、しっぽ、甲羅の模様を描く。 -->
+  <g stroke="#3D342E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="86" cy="43" rx="15" ry="19" fill="#8BCB88"/>
+    <ellipse cx="162" cy="43" rx="15" ry="19" fill="#8BCB88"/>
+    <ellipse cx="86" cy="135" rx="15" ry="19" fill="#8BCB88"/>
+    <ellipse cx="162" cy="135" rx="15" ry="19" fill="#8BCB88"/>
+    <path d="M10 90 L48 75 L48 105 Z" fill="#8BCB88"/>
+    <ellipse cx="122" cy="90" rx="84" ry="56" fill="#6FAF73"/>
+    <path d="M112 54 L147 70 L147 106 L112 124 L81 106 L81 70 Z" fill="#8BCB88" stroke-width="3"/>
+    <path d="M112 54 V35 M147 70 L184 53 M147 106 L184 128 M112 124 V145 M81 106 L54 121 M81 70 L54 59" fill="none" stroke-width="3"/>
+    <circle cx="238" cy="84" r="34" fill="#8BCB88"/>
+    <circle cx="246" cy="74" r="5" fill="#3D342E" stroke="none" stroke-width="0"/>
+    <path d="M242 96 Q253 103 263 92" fill="none" stroke-width="3"/>
+  </g>
+</svg>

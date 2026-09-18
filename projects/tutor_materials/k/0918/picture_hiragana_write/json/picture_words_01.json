@@ -1,0 +1,20 @@
+{
+    "title": "えをみて かいてみよう",
+    "subtitle": "えの なまえを、ひらがなで かいてみよう！",
+    "bottom_note": "えを よくみて、ひとマスに ひともじずつ かこう！",
+
+    "problems": [
+        {
+            "icon": "bear.svg",
+            "answer": "くま"
+        },
+        {
+            "icon": "rabbit.svg",
+            "answer": "うさぎ"
+        },
+        {
+            "icon": "turtle.svg",
+            "answer": "かめ"
+        }
+    ]
+}

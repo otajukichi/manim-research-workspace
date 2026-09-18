@@ -1,0 +1,30 @@
+{
+    "title": "どうぶつを かぞえよう",
+    "subtitle": "ふたつの なかまを かぞえて、ぜんぶで いくつか こたえよう！",
+
+    "instruction_title": "★ やりかた ★",
+    "instruction_text": "ひだりの どうぶつを かぞえる → みぎの どうぶつを かぞえる →\nぜんぶで いくつか みぎの しかくに かこう！",
+
+    "problems": [
+        {
+            "animal": "chick",
+            "left_count": 2,
+            "right_count": 3
+        },
+        {
+            "animal": "rabbit",
+            "left_count": 4,
+            "right_count": 2
+        },
+        {
+            "animal": "bear",
+            "left_count": 3,
+            "right_count": 4
+        },
+        {
+            "animal": "chick",
+            "left_count": 5,
+            "right_count": 4
+        }
+    ]
+}

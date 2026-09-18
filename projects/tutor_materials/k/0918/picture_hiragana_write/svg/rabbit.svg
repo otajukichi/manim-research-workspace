@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <title>うさぎ</title>
+  <!-- この教材用のオリジナル図案。長い耳と丸い顔で表現する。 -->
+  <g stroke="#3D342E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="72" cy="71" rx="20" ry="53" fill="#F7F2FF"/>
+    <ellipse cx="128" cy="71" rx="20" ry="53" fill="#F7F2FF"/>
+    <ellipse cx="72" cy="71" rx="9" ry="37" fill="#FFD7E6" stroke="none" stroke-width="0"/>
+    <ellipse cx="128" cy="71" rx="9" ry="37" fill="#FFD7E6" stroke="none" stroke-width="0"/>
+    <circle cx="100" cy="171" r="65" fill="#F7F2FF"/>
+    <circle cx="78" cy="166" r="5" fill="#3D342E" stroke="none" stroke-width="0"/>
+    <circle cx="122" cy="166" r="5" fill="#3D342E" stroke="none" stroke-width="0"/>
+    <circle cx="100" cy="183" r="5" fill="#F08AA6" stroke="none" stroke-width="0"/>
+    <path d="M100 188 V193 M100 193 Q93 201 86 194 M100 193 Q107 201 114 194" fill="none" stroke-width="3"/>
+  </g>
+</svg>
