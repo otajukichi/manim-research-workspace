@@ -1,13 +1,12 @@
 """A4縦・絵を見てひらがなを書くプリント。
 
-json/ の問題データと ../figures/ 以下のPNG絵素材を読み込む。
+json/ の問題データと figures/animal/ のPNG絵素材を読み込む。
 answer は書き込みマス数の決定に使う。
 trace は各マスに薄く表示するなぞり書き文字を配列で指定する。
-問題JSONは --content-file で実行時に切り替えられる。\n出力先はワークスペースの scripts/manim.sh に任せる。
+出力先はワークスペースの scripts/manim.sh に任せる。
 """
 
 import json
-import os
 from pathlib import Path
 
 import manimpango
@@ -38,45 +37,10 @@ PIXEL_HEIGHT = 3508
 
 BASE_DIR = Path(__file__).resolve().parent
 JSON_DIR = BASE_DIR / "json"
-FIGURES_DIR = BASE_DIR.parent / "figures"
+FIGURES_DIR = BASE_DIR / "figures" / "animal"
 
-DEFAULT_CONTENT_FILE_NAME = "picture_words_01.json"
-
-
-def resolve_content_file() -> Path:
-    """--content-file で指定されたJSONを解決する。
-
-    指定がなければ picture_words_01.json を使用する。
-
-    指定例:
-        picture_words_02.json
-
-    またはリポジトリルートからのパス:
-        projects/.../json/picture_words_02.json
-    """
-
-    requested = os.environ.get(
-        "MANIM_CONTENT_FILE",
-        DEFAULT_CONTENT_FILE_NAME,
-    )
-
-    requested_path = Path(requested).expanduser()
-
-    # 絶対パスならそのまま使う
-    if requested_path.is_absolute():
-        return requested_path
-
-    # カレントディレクトリ基準で実在する場合
-    cwd_path = Path.cwd() / requested_path
-
-    if cwd_path.is_file():
-        return cwd_path.resolve()
-
-    # ファイル名だけなら、この教材の json/ 以下として扱う
-    return JSON_DIR / requested_path
-
-
-CONTENT_FILE = resolve_content_file()
+CONTENT_FILE_NAME = "picture_words_01.json"
+CONTENT_FILE = JSON_DIR / CONTENT_FILE_NAME
 
 OUTPUT_FILE_PREFIX = "picture_hiragana"
 
@@ -88,7 +52,7 @@ OUTPUT_FILE_PREFIX = "picture_hiragana"
 TITLE_FONT_SIZE = 66
 TITLE_TOP_BUFF = 1.0
 
-SUBTITLE_FONT_SIZE = 44
+SUBTITLE_FONT_SIZE = 34
 SUBTITLE_BUFF = 0.28
 
 
@@ -175,7 +139,7 @@ TRACE_Y_OFFSET = 0.0
 # 下部の補足
 # ============================================================
 
-BOTTOM_NOTE_FONT_SIZE = 44
+BOTTOM_NOTE_FONT_SIZE = 25
 BOTTOM_NOTE_BOTTOM_BUFF = 0.72
 
 
@@ -219,48 +183,16 @@ SELECTED_FONT = require_education_font()
 # ============================================================
 
 def get_icon_path(icon: str) -> Path:
-    """0918/figures 以下からJSONで指定されたPNG画像を探す。
+    """JSONで指定されたPNG画像を探す。"""
 
-    次の両方に対応する。
+    icon_path = FIGURES_DIR / icon
 
-    - "bear.png"
-    - "animal/bear.png"
-    - "food/apple.png"
-    - "vehicle/car.png"
-    """
-
-    # カテゴリまでJSONで指定している場合
-    direct_path = FIGURES_DIR / icon
-
-    if direct_path.is_file():
-        return direct_path
-
-    # ファイル名だけの場合は figures 以下を再帰検索する
-    candidates = [
-        path
-        for path in FIGURES_DIR.rglob(icon)
-        if path.is_file()
-    ]
-
-    if len(candidates) == 1:
-        return candidates[0]
-
-    if len(candidates) > 1:
-        relative_paths = "\n".join(
-            f"  - {path.relative_to(FIGURES_DIR)}"
-            for path in candidates
+    if not icon_path.is_file():
+        raise FileNotFoundError(
+            f"PNG素材が見つかりません: {icon}\n{icon_path}"
         )
 
-        raise ValueError(
-            f"同名のPNG素材が複数あります: {icon}\n"
-            "JSONではカテゴリを含めて指定してください。\n"
-            f"{relative_paths}"
-        )
-
-    raise FileNotFoundError(
-        f"PNG素材が見つかりません: {icon}\n"
-        f"検索先: {FIGURES_DIR}"
-    )
+    return icon_path
 
 
 def make_icon(icon: str) -> ImageMobject:

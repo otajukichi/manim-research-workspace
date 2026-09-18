@@ -1,0 +1,30 @@
+{
+    "title": "くだものを かぞえよう",
+    "subtitle": "ふたつの なかまを かぞえて、ぜんぶで いくつか こたえよう！",
+
+    "instruction_title": "★ やりかた ★",
+    "instruction_text": "ひだりの くだものを かぞえる → みぎの くだものを かぞえる →\nぜんぶで いくつか みぎの しかくに かこう！",
+
+    "problems": [
+        {
+            "fruit": "peach.png",
+            "left_count": 5,
+            "right_count": 3
+        },
+        {
+            "fruit": "persimmon.png",
+            "left_count": 4,
+            "right_count": 5
+        },
+        {
+            "fruit": "melon.png",
+            "left_count": 6,
+            "right_count": 2
+        },
+        {
+            "fruit": "watermelon.png",
+            "left_count": 3,
+            "right_count": 6
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "title": "えをみて かいてみよう",
+    "subtitle": "えの なまえを、ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+
+    "problems": [
+        {
+            "icon": "food/apple.png",
+            "answer": "りんご",
+            "trace": ["り", "ん", "ご"]
+        },
+        {
+            "icon": "food/banana.png",
+            "answer": "ばなな",
+            "trace": ["ば", "な", "な"]
+        },
+        {
+            "icon": "food/grape.png",
+            "answer": "ぶどう",
+            "trace": ["ぶ", "ど", "う"]
+        }
+    ]
+}

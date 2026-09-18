@@ -1,0 +1,23 @@
+{
+    "title": "えをみて かいてみよう",
+    "subtitle": "えの なまえを、ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+
+    "problems": [
+        {
+            "icon": "animal/fox.png",
+            "answer": "きつね",
+            "trace": ["き", "つ", "ね"]
+        },
+        {
+            "icon": "animal/deer.png",
+            "answer": "しか",
+            "trace": ["し", "か"]
+        },
+        {
+            "icon": "animal/tiger.png",
+            "answer": "とら",
+            "trace": ["と", "ら"]
+        }
+    ]
+}

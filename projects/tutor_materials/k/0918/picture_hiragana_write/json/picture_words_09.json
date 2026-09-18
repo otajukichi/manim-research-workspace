@@ -1,0 +1,23 @@
+{
+    "title": "えをみて かいてみよう",
+    "subtitle": "えの なまえを、ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+
+    "problems": [
+        {
+            "icon": "vehicle/airplane.png",
+            "answer": "ひこうき",
+            "trace": ["ひ", "こ", "う", "き"]
+        },
+        {
+            "icon": "vehicle/bus.png",
+            "answer": "ばす",
+            "trace": ["ば", "す"]
+        },
+        {
+            "icon": "vehicle/car.png",
+            "answer": "くるま",
+            "trace": ["く", "る", "ま"]
+        }
+    ]
+}
