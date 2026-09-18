@@ -6,18 +6,15 @@
     "problems": [
         {
             "icon": "bear.png",
-            "answer": "くま",
-            "trace": ["く", "ま"]
+            "answer": "くま"
         },
         {
             "icon": "rabbit.png",
-            "answer": "うさぎ",
-            "trace": ["う", "さ", "ぎ"]
+            "answer": "うさぎ"
         },
         {
             "icon": "turtle.png",
-            "answer": "かめ",
-            "trace": ["か", "め"]
+            "answer": "かめ"
         }
     ]
 }

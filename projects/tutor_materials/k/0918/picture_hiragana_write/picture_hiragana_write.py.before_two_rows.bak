@@ -97,9 +97,6 @@ MAX_ANSWER_LENGTH = 4
 WRITE_CELL_SIZE = 2.15
 WRITE_CELL_GAP = 0.22
 
-# 上段（なぞり書き）と下段（自力書き）の縦間隔
-WRITE_ROW_GAP = 0.48
-
 WRITE_CELL_STROKE_WIDTH = 2.8
 WRITE_CELL_CORNER_RADIUS = 0.12
 
@@ -521,47 +518,6 @@ def make_write_cells(
     return cells
 
 
-def make_write_rows(
-    answer: str,
-    trace: list[str],
-    theme,
-) -> VGroup:
-    """上段になぞり書き、下段に空白マスを配置する。"""
-
-    # 上段:
-    # JSON の trace 配列で指定された薄い文字を表示
-    trace_row = make_write_cells(
-        answer,
-        trace,
-        theme,
-    )
-
-    # 下段:
-    # 同じ文字数の完全な空白マス
-    blank_trace = [
-        ""
-        for _ in answer
-    ]
-
-    blank_row = make_write_cells(
-        answer,
-        blank_trace,
-        theme,
-    )
-
-    rows = VGroup(
-        trace_row,
-        blank_row,
-    )
-
-    rows.arrange(
-        DOWN,
-        buff=WRITE_ROW_GAP,
-    )
-
-    return rows
-
-
 # ============================================================
 # 1問ぶん
 # ============================================================
@@ -611,7 +567,7 @@ def make_problem(
     # 右側: 書き込みマス
     # --------------------------------------------------------
 
-    write_rows = make_write_rows(
+    write_cells = make_write_cells(
         answer,
         trace,
         theme,
@@ -634,7 +590,7 @@ def make_problem(
         + write_area_right_x
     ) / 2
 
-    write_rows.move_to(
+    write_cells.move_to(
         [
             write_area_center_x,
             center_y,
@@ -645,7 +601,7 @@ def make_problem(
     return Group(
         problem_box,
         picture,
-        write_rows,
+        write_cells,
     )
 
 

@@ -1,0 +1,223 @@
+"""A4縦・絵を見てひらがなを書くプリント。
+
+json/ の問題データと figures/animal/ のPNG絵素材を読み込む。
+answer は書き込みマス数の決定にだけ使い、プリントには表示しない。
+出力先はワークスペースの scripts/manim.sh に任せる。
+"""
+
+import json
+from pathlib import Path
+
+from manim import DOWN, RIGHT, UP, DashedLine, Group, ImageMobject, RoundedRectangle, VGroup, config
+
+from manim_research import EducationScene
+
+# 用紙・データ
+A4_WIDTH = 21.0  # 用紙の横幅（Manim座標）
+A4_HEIGHT = 29.7  # 用紙の縦幅（Manim座標）
+PIXEL_WIDTH = 2480  # 印刷用PNGの横ピクセル数
+PIXEL_HEIGHT = 3508  # 印刷用PNGの縦ピクセル数
+
+BASE_DIR = Path(__file__).resolve().parent
+JSON_DIR = BASE_DIR / "json"
+FIGURES_DIR = BASE_DIR / "figures" / "animal"
+CONTENT_FILE_NAME = "picture_words_01.json"  # 使用する問題JSONを切り替える
+CONTENT_FILE = JSON_DIR / CONTENT_FILE_NAME
+OUTPUT_FILE_PREFIX = "picture_hiragana"  # 出力PNGのファイル名の先頭
+
+# タイトル・説明文
+TITLE_FONT_SIZE = 66  # タイトルの文字サイズ
+TITLE_TOP_BUFF = 1.0  # 用紙上端からタイトルまでの余白
+SUBTITLE_FONT_SIZE = 34  # 説明文の文字サイズ
+SUBTITLE_BUFF = 0.28  # タイトルと説明文の間隔
+
+# 問題全体・各問題の枠
+PROBLEM_COUNT = 3  # 1枚に載せる問題数
+PROBLEMS_CENTER_Y = -0.2  # 問題全体の上下位置（正で上、負で下）
+PROBLEM_VERTICAL_BUFF = 0.55  # 問題枠同士の縦の間隔
+PROBLEM_BOX_WIDTH = 17.4  # 各問題枠の横幅
+PROBLEM_BOX_HEIGHT = 6.45  # 各問題枠の高さ
+PROBLEM_BOX_CORNER_RADIUS = 0.35  # 問題枠の角の丸み
+PROBLEM_BOX_STROKE_WIDTH = 2.6  # 問題枠の線の太さ
+PROBLEM_BOX_FILL_OPACITY = 0.34  # 問題枠の背景色の濃さ
+
+# PNGの大きさ・位置（縦横比を保ち、両方の上限に収める）
+ICON_MAX_WIDTH = 3.8  # 絵の最大横幅
+ICON_MAX_HEIGHT = 2.7  # 絵の最大高さ
+ICON_Y_OFFSET = 1.15  # 問題枠の中心から絵を上下へ動かす量
+
+# 書き込みマス
+WRITE_CELL_SIZE = 2.35  # ひらがな1文字ぶんのマスの一辺
+WRITE_CELL_GAP = 0.32  # マス同士の横の間隔
+WRITE_CELL_STROKE_WIDTH = 2.8  # マスの外枠の線の太さ
+WRITE_CELL_CORNER_RADIUS = 0.12  # マスの角の丸み
+WRITE_GUIDE_STROKE_WIDTH = 1.5  # 中央の縦横破線の太さ
+WRITE_GUIDE_OPACITY = 0.45  # 中央の縦横破線の濃さ
+WRITE_AREA_Y_OFFSET = -1.65  # 問題枠の中心からマスを上下へ動かす量
+WRITE_AREA_HORIZONTAL_MARGIN = 0.5  # 長い答えを枠内に収めるための片側余白
+
+# 下部の補足（文章はJSONの任意項目 bottom_note で指定）
+BOTTOM_NOTE_FONT_SIZE = 25  # 下部の補足文の文字サイズ
+BOTTOM_NOTE_BOTTOM_BUFF = 0.72  # 用紙下端から補足文までの余白
+
+config.frame_width = A4_WIDTH
+config.frame_height = A4_HEIGHT
+config.pixel_width = PIXEL_WIDTH
+config.pixel_height = PIXEL_HEIGHT
+config.output_file = f"{OUTPUT_FILE_PREFIX}_{CONTENT_FILE.stem}"
+
+
+def get_icon_path(icon: str) -> Path:
+    """JSONで指定されたPNG画像を探す。"""
+    icon_path = FIGURES_DIR / icon
+    if not icon_path.is_file():
+        raise FileNotFoundError(f"PNG素材が見つかりません: {icon}\n{icon_path}")
+    return icon_path
+
+
+def load_content() -> dict:
+    """描画前に問題データと参照先PNGを検証する。"""
+    if not CONTENT_FILE.is_file():
+        raise FileNotFoundError(f"教材データが見つかりません:\n{CONTENT_FILE}")
+
+    with CONTENT_FILE.open(encoding="utf-8") as file:
+        data = json.load(file)
+
+    if not isinstance(data, dict):
+        raise ValueError("JSONの最上位はオブジェクトにしてください。")
+    for key in ("title", "subtitle", "problems"):
+        if key not in data:
+            raise ValueError(f"JSONに必要なキーがありません: {key}")
+    for key in ("title", "subtitle"):
+        if not isinstance(data[key], str):
+            raise ValueError(f"{key} は文字列にしてください。")
+    if "bottom_note" in data and not isinstance(data["bottom_note"], str):
+        raise ValueError("bottom_note は文字列にしてください。")
+
+    problems = data["problems"]
+    if not isinstance(problems, list):
+        raise ValueError("problems は配列にしてください。")
+    if len(problems) != PROBLEM_COUNT:
+        raise ValueError(f"problems は {PROBLEM_COUNT} 問にしてください。現在: {len(problems)} 問")
+
+    for index, problem in enumerate(problems, start=1):
+        if not isinstance(problem, dict):
+            raise ValueError(f"{index}問目は icon と answer を持つオブジェクトにしてください。")
+        for key in ("icon", "answer"):
+            if key not in problem:
+                raise ValueError(f"{index}問目に {key} がありません。")
+            if not isinstance(problem[key], str) or not problem[key].strip():
+                raise ValueError(f"{index}問目の {key} は空ではない文字列にしてください。")
+        get_icon_path(problem["icon"])
+
+    return data
+
+
+def make_icon(icon: str) -> ImageMobject:
+    """PNGの縦横比を保って、指定したサイズの中に収める。"""
+    icon_path = get_icon_path(icon)
+    picture = ImageMobject(str(icon_path))
+    if picture.width <= 0 or picture.height <= 0:
+        raise ValueError(f"PNG画像を表示できません: {icon_path}")
+    picture.scale(min(ICON_MAX_WIDTH / picture.width, ICON_MAX_HEIGHT / picture.height))
+    return picture
+
+
+def make_write_cell(theme) -> VGroup:
+    """既存教材と同じ、中央に縦横の破線がある書き込みマス。"""
+    box = RoundedRectangle(
+        width=WRITE_CELL_SIZE,
+        height=WRITE_CELL_SIZE,
+        corner_radius=WRITE_CELL_CORNER_RADIUS,
+        color=theme.muted,
+        stroke_width=WRITE_CELL_STROKE_WIDTH,
+        fill_color=theme.background,
+        fill_opacity=1.0,
+    )
+    half_length = WRITE_CELL_SIZE / 2 - 0.14
+    horizontal = DashedLine(
+        start=[-half_length, 0, 0],
+        end=[half_length, 0, 0],
+        dash_length=0.15,
+        dashed_ratio=0.52,
+        color=theme.secondary,
+        stroke_width=WRITE_GUIDE_STROKE_WIDTH,
+    )
+    vertical = DashedLine(
+        start=[0, -half_length, 0],
+        end=[0, half_length, 0],
+        dash_length=0.15,
+        dashed_ratio=0.52,
+        color=theme.secondary,
+        stroke_width=WRITE_GUIDE_STROKE_WIDTH,
+    )
+    horizontal.set_stroke(opacity=WRITE_GUIDE_OPACITY)
+    vertical.set_stroke(opacity=WRITE_GUIDE_OPACITY)
+    return VGroup(box, horizontal, vertical)
+
+
+def make_write_cells(count: int, theme) -> VGroup:
+    """答えの文字数ぶんの空欄を作る。答えの文字自体は描かない。"""
+    cells = VGroup(*(make_write_cell(theme) for _ in range(count)))
+    cells.arrange(RIGHT, buff=WRITE_CELL_GAP)
+    return cells
+
+
+def make_problem(icon: str, answer: str, theme) -> VGroup:
+    """絵と書き込みマスを、既存と同じ問題枠内に配置する。"""
+    problem_box = RoundedRectangle(
+        width=PROBLEM_BOX_WIDTH,
+        height=PROBLEM_BOX_HEIGHT,
+        corner_radius=PROBLEM_BOX_CORNER_RADIUS,
+        color=theme.secondary,
+        stroke_width=PROBLEM_BOX_STROKE_WIDTH,
+        fill_color=theme.surface,
+        fill_opacity=PROBLEM_BOX_FILL_OPACITY,
+    )
+    picture = make_icon(icon)
+    picture.move_to(problem_box.get_center() + UP * ICON_Y_OFFSET)
+
+    write_cells = make_write_cells(len(answer), theme)
+    max_write_width = PROBLEM_BOX_WIDTH - 2 * WRITE_AREA_HORIZONTAL_MARGIN
+    if write_cells.width > max_write_width:
+        write_cells.scale_to_fit_width(max_write_width)
+    write_cells.move_to(problem_box.get_center() + UP * WRITE_AREA_Y_OFFSET)
+    return Group(problem_box, picture, write_cells)
+
+
+class PictureHiraganaWriteWorksheet(EducationScene):
+    """絵を見て、ひらがなを書く練習プリント。"""
+
+    def construct(self) -> None:
+        content = load_content()
+        title = self.title_text(
+            content["title"], font_size=TITLE_FONT_SIZE, color=self.theme.accent
+        )
+        title.to_edge(UP, buff=TITLE_TOP_BUFF)
+        subtitle = self.jp_text(
+            content["subtitle"],
+            font_size=SUBTITLE_FONT_SIZE,
+            color=self.theme.foreground,
+            weight="BOLD",
+        )
+        subtitle.next_to(title, DOWN, buff=SUBTITLE_BUFF)
+
+        problems = Group(
+            *(
+                make_problem(problem["icon"], problem["answer"], self.theme)
+                for problem in content["problems"]
+            )
+        )
+        problems.arrange(DOWN, buff=PROBLEM_VERTICAL_BUFF)
+        problems.move_to([0, PROBLEMS_CENTER_Y, 0])
+        self.add(title, subtitle, problems)
+
+        if content.get("bottom_note"):
+            bottom_note = self.jp_text(
+                content["bottom_note"],
+                font_size=BOTTOM_NOTE_FONT_SIZE,
+                color=self.theme.accent,
+                weight="BOLD",
+            )
+            bottom_note.to_edge(DOWN, buff=BOTTOM_NOTE_BOTTOM_BUFF)
+            self.add(bottom_note)
