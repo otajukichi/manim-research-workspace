@@ -7,7 +7,7 @@ JSONは上から下、左から右の見た目どおりの2次元配列で指定
 pixi run manim -- \
     -s \
     --resolution 2480,3508 \
-    projects/tutor_materials/kumagae/0915/hiragana_trace_grid.py \
+    projects/tutor_materials/k/0915/hiragana_trace_grid.py \
     HiraganaTraceGrid
 """
 
