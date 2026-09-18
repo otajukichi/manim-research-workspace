@@ -4,19 +4,22 @@
 .local/
 .cache/
 
-# Manim render output and caches
-# `media/` is kept only to ignore output made by older workspace versions.
-media/
-/output/
-projects/**/output/
+# Track all projects, source assets, and finished renders (including legacy media/).
+# Ignore only Manim's reproducible intermediate caches in render directories.
+/media/Tex/
+/media/texts/
+/media/videos/**/partial_movie_files/
+/output/Tex/
+/output/texts/
+/output/videos/**/partial_movie_files/
+projects/**/output/Tex/
+projects/**/output/texts/
+projects/**/output/videos/**/partial_movie_files/
+
+# Python bytecode and TeX diagnostic output
 __pycache__/
 *.py[cod]
-
-# This public workspace ships only its two demos. Other project directories
-# are local work and must not be included by a broad `git add`.
-projects/*/
-!projects/showcase/
-!projects/template/
+missfont.log
 
 # Python tooling
 .pytest_cache/

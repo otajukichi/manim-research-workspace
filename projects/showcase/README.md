@@ -40,7 +40,7 @@ Research Darkの3枚は、Researchのファイル名の先頭を `ResearchDark` 
 - PNG：`projects/showcase/output/images/`
 - MP4：`projects/showcase/output/videos/theme_showcase/1080p30/ResearchThemeShowcase.mp4`、`EducationThemeShowcase.mp4`
 - Research Dark MP4：同じディレクトリの `ResearchDarkThemeShowcase.mp4`
-- 生成物は従来どおりGit管理外です。
+- 完成したPNG・MP4もソースと一緒にGit管理します。`Tex/`・`texts/`・`partial_movie_files/` の中間キャッシュは除外します。
 
 ## 次に編集する場所
 

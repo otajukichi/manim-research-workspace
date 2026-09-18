@@ -1,0 +1,1369 @@
+{
+  "metadata": {
+    "schema_version": "2.0",
+    "title": "第2学年 数学 対策プリント 詳細解法データ",
+    "language": "ja",
+    "grade": "中学2年",
+    "purpose": "対策プリント生成用の参照データ。問題文・補助表/図・操作メモ・途中式・代入・説明・最終解答までを順序付きで保持する。",
+    "source_images": [
+      "IMG_0368.jpeg",
+      "IMG_0369.jpeg",
+      "IMG_0370.jpeg",
+      "IMG_0371.jpeg"
+    ],
+    "transcription_policy": {
+      "printed_content": "印刷された問題文・式・誤答例を転記する。",
+      "handwritten_content": "写真で確認できる手書きの解き方を、計算順序が分かる形で構造化する。",
+      "normalization": "数式は読みやすい標準表記へ軽く正規化するが、式変形の順序と式番号は保持する。",
+      "corrections": "明らかな書き間違いは個別のcorrectionとして記録する。通常の問題では原文解答と正答を二重管理しない。"
+    },
+    "work_step_kinds": {
+      "annotation": "手書きのメモや選択・着目点",
+      "table": "解法のために作った表",
+      "diagram": "解法のために描いた簡単な図",
+      "equation_system": "連立方程式の設定",
+      "operation": "①×2＋②、代入などの操作メモ",
+      "calculation": "縦計算や連続した式変形",
+      "substitution": "求めた値を式へ代入する手順",
+      "conclusion": "文章による結論"
+    }
+  },
+  "problems": [
+    {
+      "id": "Q1",
+      "source_image": "IMG_0370.jpeg",
+      "source_sheet": "第2学年 数学 2学期中間考査 対策プリント①",
+      "topic": [
+        "連立方程式",
+        "用語"
+      ],
+      "printed_prompt": "次のア・イにあてはまる言葉を答えなさい。",
+      "subproblems": [
+        {
+          "id": "Q1-1",
+          "printed_text": "2つの方程式を組にしたものを連立方程式という。2つの方程式のどちらも成り立たせる文字の組を、連立方程式の［ア］という。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "ア＝解"
+            }
+          ],
+          "final_answer": "解"
+        },
+        {
+          "id": "Q1-2",
+          "printed_text": "x、yをふくむ連立方程式から、yをふくまない方程式を導くことを、yを［イ］するという。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "イ＝消去"
+            }
+          ],
+          "final_answer": "消去"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "source_image": "IMG_0370.jpeg",
+      "source_sheet": "第2学年 数学 2学期中間考査 対策プリント①",
+      "topic": [
+        "連立方程式",
+        "加減法",
+        "代入法"
+      ],
+      "printed_prompt": "次の連立方程式を解きなさい。",
+      "subproblems": [
+        {
+          "id": "Q2-1",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "-3x + y = -8"
+            },
+            {
+              "label": "②",
+              "expression": "-8x + y = 7"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "① − ②"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "① − ②",
+              "lines": [
+                "-3x + y = -8",
+                "-8x + y = 7",
+                "5x = -15",
+                "x = -3"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = -3 を②に代入",
+              "lines": [
+                "-8×(-3) + y = 7",
+                "24 + y = 7",
+                "y = 7 - 24",
+                "y = -17"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = -3, y = -17"
+            }
+          ],
+          "final_answer": {
+            "x": -3,
+            "y": -17
+          }
+        },
+        {
+          "id": "Q2-2",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "x - y = 3"
+            },
+            {
+              "label": "②",
+              "expression": "3x + y = 5"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "① + ②"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "① + ②",
+              "lines": [
+                "x - y = 3",
+                "3x + y = 5",
+                "4x = 8",
+                "x = 2"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 2 を②に代入",
+              "lines": [
+                "3×2 + y = 5",
+                "6 + y = 5",
+                "y = 5 - 6",
+                "y = -1"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 2, y = -1"
+            }
+          ],
+          "final_answer": {
+            "x": 2,
+            "y": -1
+          }
+        },
+        {
+          "id": "Q2-3",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "3x - 2y = 4"
+            },
+            {
+              "label": "②",
+              "expression": "2x + y = 5"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "① + ②×2"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "① + ②×2",
+              "lines": [
+                "3x - 2y = 4",
+                "4x + 2y = 10",
+                "7x = 14",
+                "x = 2"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 2 を②に代入",
+              "lines": [
+                "2×2 + y = 5",
+                "4 + y = 5",
+                "y = 5 - 4",
+                "y = 1"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 2, y = 1"
+            }
+          ],
+          "final_answer": {
+            "x": 2,
+            "y": 1
+          }
+        },
+        {
+          "id": "Q2-4",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "3x + 4y = 2"
+            },
+            {
+              "label": "②",
+              "expression": "2x - y = -6"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "① + ②×4"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "① + ②×4",
+              "lines": [
+                "3x + 4y = 2",
+                "8x - 4y = -24",
+                "11x = -22",
+                "x = -2"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = -2 を①に代入",
+              "lines": [
+                "3×(-2) + 4y = 2",
+                "-6 + 4y = 2",
+                "4y = 2 + 6",
+                "4y = 8",
+                "y = 2"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = -2, y = 2"
+            }
+          ],
+          "final_answer": {
+            "x": -2,
+            "y": 2
+          }
+        },
+        {
+          "id": "Q2-5",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "3x + 4y = 5"
+            },
+            {
+              "label": "②",
+              "expression": "4x + 5y = 6"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①×5 − ②×4"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "①×5 − ②×4",
+              "lines": [
+                "15x + 20y = 25",
+                "16x + 20y = 24",
+                "-x = 1",
+                "x = -1"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = -1 を①に代入",
+              "lines": [
+                "3×(-1) + 4y = 5",
+                "-3 + 4y = 5",
+                "4y = 5 + 3",
+                "4y = 8",
+                "y = 2"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = -1, y = 2"
+            }
+          ],
+          "final_answer": {
+            "x": -1,
+            "y": 2
+          }
+        },
+        {
+          "id": "Q2-6",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "9x - 2y = 11"
+            },
+            {
+              "label": "②",
+              "expression": "4x - 5y = 9"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①×5 − ②×2"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "①×5 − ②×2",
+              "lines": [
+                "45x - 10y = 55",
+                "8x - 10y = 18",
+                "37x = 37",
+                "x = 1"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 1 を①に代入",
+              "lines": [
+                "9×1 - 2y = 11",
+                "9 - 2y = 11",
+                "-2y = 11 - 9",
+                "-2y = 2",
+                "y = -1"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 1, y = -1"
+            }
+          ],
+          "final_answer": {
+            "x": 1,
+            "y": -1
+          }
+        },
+        {
+          "id": "Q2-7",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "y = 3x"
+            },
+            {
+              "label": "②",
+              "expression": "4x + y = 14"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①を②に代入"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "代入",
+              "lines": [
+                "4x + 3x = 14",
+                "7x = 14",
+                "x = 2"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 2 を①に代入",
+              "lines": [
+                "y = 3×2",
+                "y = 6"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 2, y = 6"
+            }
+          ],
+          "final_answer": {
+            "x": 2,
+            "y": 6
+          }
+        },
+        {
+          "id": "Q2-8",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "y = x - 2"
+            },
+            {
+              "label": "②",
+              "expression": "5x + 3y = 18"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①を②に代入"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "代入",
+              "lines": [
+                "5x + 3(x - 2) = 18",
+                "5x + 3x - 6 = 18",
+                "8x = 18 + 6",
+                "8x = 24",
+                "x = 3"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 3 を①に代入",
+              "lines": [
+                "y = 3 - 2",
+                "y = 1"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 3, y = 1"
+            }
+          ],
+          "final_answer": {
+            "x": 3,
+            "y": 1
+          }
+        },
+        {
+          "id": "Q2-9",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "0.3x + 0.4y = 0.5"
+            },
+            {
+              "label": "②",
+              "expression": "-3x + 4y = 11"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①×10 + ②"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "①×10 + ②",
+              "lines": [
+                "3x + 4y = 5",
+                "-3x + 4y = 11",
+                "8y = 16",
+                "y = 2"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "y = 2 を②に代入",
+              "lines": [
+                "-3x + 4×2 = 11",
+                "-3x + 8 = 11",
+                "-3x = 11 - 8",
+                "-3x = 3",
+                "x = -1"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = -1, y = 2"
+            }
+          ],
+          "final_answer": {
+            "x": -1,
+            "y": 2
+          }
+        },
+        {
+          "id": "Q2-10",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "x - 3y = 3"
+            },
+            {
+              "label": "②",
+              "expression": "x/3 - y/2 = 2"
+            }
+          ],
+          "work": [
+            {
+              "order": 1,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "① − ②×6"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "① − ②×6",
+              "lines": [
+                "x - 3y = 3",
+                "2x - 3y = 12",
+                "-x = -9",
+                "x = 9"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "x = 9 を①に代入",
+              "lines": [
+                "9 - 3y = 3",
+                "-3y = 3 - 9",
+                "-3y = -6",
+                "y = 2"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "x = 9, y = 2"
+            }
+          ],
+          "final_answer": {
+            "x": 9,
+            "y": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "source_image": "IMG_0371.jpeg",
+      "source_sheet": "第2学年 数学 2学期中間考査 対策プリント①",
+      "topic": [
+        "連立方程式",
+        "連鎖した等式"
+      ],
+      "printed_prompt": "方程式 x + y = 3x - 2y + 20 = 25 を解きなさい。",
+      "work": [
+        {
+          "order": 1,
+          "kind": "annotation",
+          "source": "handwritten",
+          "items": [
+            {
+              "text": "○＝△",
+              "interpreted_as": "x + y = 25 を作る着目"
+            },
+            {
+              "text": "□＝△",
+              "interpreted_as": "3x - 2y + 20 = 25 を作る着目"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "equation_system",
+          "source": "handwritten",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "x + y = 25"
+            },
+            {
+              "label": "②",
+              "expression": "3x - 2y = 5"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "中央の式を整理",
+          "lines": [
+            "3x - 2y + 20 = 25",
+            "3x - 2y = 25 - 20",
+            "3x - 2y = 5"
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "operation",
+          "source": "handwritten",
+          "text": "①×2 + ②"
+        },
+        {
+          "order": 5,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "①×2 + ②",
+          "lines": [
+            "2x + 2y = 50",
+            "3x - 2y = 5",
+            "5x = 55",
+            "x = 11"
+          ]
+        },
+        {
+          "order": 6,
+          "kind": "substitution",
+          "source": "handwritten",
+          "text": "x = 11 を①に代入",
+          "lines": [
+            "11 + y = 25",
+            "y = 25 - 11",
+            "y = 14"
+          ]
+        },
+        {
+          "order": 7,
+          "kind": "conclusion",
+          "source": "handwritten",
+          "text": "x = 11, y = 14"
+        }
+      ],
+      "final_answer": {
+        "x": 11,
+        "y": 14
+      }
+    },
+    {
+      "id": "Q4",
+      "source_image": "IMG_0371.jpeg",
+      "source_sheet": "第2学年 数学 2学期中間考査 対策プリント①",
+      "topic": [
+        "連立方程式",
+        "誤答訂正",
+        "小数"
+      ],
+      "printed_prompt": "下の囲みは、連立方程式を解いている途中の式だが、これは間違っている。何が間違っているのかを説明し、連立方程式を正しく解きなさい。",
+      "printed_incorrect_example": {
+        "equations": [
+          {
+            "label": "①",
+            "expression": "0.3x + 1.4y = -1"
+          },
+          {
+            "label": "②",
+            "expression": "4x + 14y = -4"
+          }
+        ],
+        "operation": "①×10 − ②",
+        "shown_lines": [
+          "3x + 14y = -1",
+          "4x + 14y = -4",
+          "-x = 3",
+          "x = -3"
+        ],
+        "continuation_text": "x = -3 を②に代入すると…"
+      },
+      "work": [
+        {
+          "order": 1,
+          "kind": "conclusion",
+          "source": "handwritten",
+          "role": "error_explanation",
+          "text": "①の式を10倍するときに、右辺の-1を10倍していない。"
+        },
+        {
+          "order": 2,
+          "kind": "operation",
+          "source": "handwritten",
+          "text": "①×10 − ②"
+        },
+        {
+          "order": 3,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "①×10 − ②",
+          "lines": [
+            "3x + 14y = -10",
+            "4x + 14y = -4",
+            "-x = -6",
+            "x = 6"
+          ]
+        },
+        {
+          "order": 4,
+          "kind": "substitution",
+          "source": "handwritten",
+          "text": "x = 6 を②に代入",
+          "lines": [
+            "4×6 + 14y = -4",
+            "24 + 14y = -4",
+            "14y = -4 - 24",
+            "14y = -28"
+          ],
+          "visibility_note": "写真下端で、この先の y = -2 の記述は確認できない。"
+        }
+      ],
+      "final_answer": {
+        "x": 6,
+        "y": -2
+      },
+      "correction": {
+        "type": "handwritten_final_answer_typo",
+        "as_written_in_answer_box": {
+          "x": -2,
+          "y": 6
+        },
+        "corrected": {
+          "x": 6,
+          "y": -2
+        },
+        "reason": "手書き途中計算で x=6 まで求めており、②に代入すると y=-2。最終解答欄のみxとyが入れ替わっている。"
+      }
+    },
+    {
+      "id": "Q5",
+      "source_image": "IMG_0371.jpeg",
+      "source_sheet": "第2学年 数学 2学期中間考査 対策プリント①",
+      "topic": [
+        "連立方程式",
+        "文章題",
+        "速さ・時間・道のり"
+      ],
+      "printed_prompt": "A地点からB地点を通って、C地点まで92kmの道のりを自動車で行くのに、A、B間を時速40km、B、C間を時速50kmで進むと、2時間かかりました。次の問いに答えなさい。",
+      "subproblems": [
+        {
+          "id": "Q5-1",
+          "printed_text": "A、B間の道のりをx km、B、C間の道のりをy kmとして連立方程式を立てなさい。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "table",
+              "source": "handwritten",
+              "columns": [
+                "",
+                "A〜B",
+                "B〜C",
+                "計"
+              ],
+              "rows": [
+                [
+                  "道のり",
+                  "x",
+                  "y",
+                  "92"
+                ],
+                [
+                  "時間",
+                  "x/40",
+                  "y/50",
+                  "2"
+                ]
+              ]
+            },
+            {
+              "order": 2,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "「み／はじ」の円形メモ（道のり・速さ・時間の関係を使うための補助メモ）"
+            },
+            {
+              "order": 3,
+              "kind": "equation_system",
+              "source": "handwritten",
+              "equations": [
+                {
+                  "label": "①",
+                  "expression": "x + y = 92"
+                },
+                {
+                  "label": "②",
+                  "expression": "x/40 + y/50 = 2"
+                }
+              ]
+            }
+          ],
+          "final_answer": [
+            "x + y = 92",
+            "x/40 + y/50 = 2"
+          ]
+        },
+        {
+          "id": "Q5-2",
+          "printed_text": "A、B間の道のりと、B、C間の道のりをそれぞれ求めなさい。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "equation_system",
+              "source": "handwritten",
+              "equations": [
+                {
+                  "label": "①",
+                  "expression": "x + y = 92"
+                },
+                {
+                  "label": "②",
+                  "expression": "x/40 + y/50 = 2"
+                }
+              ]
+            },
+            {
+              "order": 2,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "②×200"
+            },
+            {
+              "order": 3,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "②×200",
+              "lines": [
+                "5x + 4y = 400"
+              ],
+              "result_label": "②'"
+            },
+            {
+              "order": 4,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①×5"
+            },
+            {
+              "order": 5,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "①×5",
+              "lines": [
+                "5x + 5y = 460"
+              ],
+              "result_label": "①'"
+            },
+            {
+              "order": 6,
+              "kind": "operation",
+              "source": "handwritten",
+              "text": "①' − ②'"
+            },
+            {
+              "order": 7,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "①' − ②'",
+              "lines": [
+                "5x + 5y = 460",
+                "5x + 4y = 400",
+                "y = 60"
+              ]
+            },
+            {
+              "order": 8,
+              "kind": "substitution",
+              "source": "handwritten",
+              "text": "y = 60 を①に代入",
+              "lines": [
+                "x + 60 = 92",
+                "x = 92 - 60",
+                "x = 32"
+              ]
+            },
+            {
+              "order": 9,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "A、B間の道のり 32km／B、C間の道のり 60km"
+            }
+          ],
+          "final_answer": {
+            "A_to_B_km": 32,
+            "B_to_C_km": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "source_image": "IMG_0368.jpeg",
+      "source_sheet": "第2学年 数学 1学期期末考査 対策プリント②",
+      "topic": [
+        "連立方程式",
+        "文章題",
+        "速さ・時間・道のり",
+        "可否判定"
+      ],
+      "printed_prompt": "Aさんは、全長50kmのコースを、スタートのA地点からB地点までは自転車で進み、B地点からフィニッシュのC地点までは自転車を降りて走りました。自転車では時速20km、自転車を降りてからは時速10kmで走るとき、全体を2時間で完走することはできますか。2時間で完走できるか、できないかを答え、その理由を自転車で進む時間をx時間、走った時間をy時間として、連立方程式をつくって、説明しなさい。",
+      "work": [
+        {
+          "order": 1,
+          "kind": "annotation",
+          "source": "handwritten",
+          "text": "「2時間では完走できない」を選択（丸で囲む）"
+        },
+        {
+          "order": 2,
+          "kind": "equation_system",
+          "source": "handwritten",
+          "text": "連立方程式は",
+          "equations": [
+            {
+              "label": "①",
+              "expression": "x + y = 2"
+            },
+            {
+              "label": "②",
+              "expression": "20x + 10y = 50"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "operation",
+          "source": "handwritten",
+          "text": "①×10 − ②"
+        },
+        {
+          "order": 4,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "①×10 − ②",
+          "lines": [
+            "10x + 10y = 20",
+            "20x + 10y = 50",
+            "-10x = -30",
+            "x = 3"
+          ]
+        },
+        {
+          "order": 5,
+          "kind": "substitution",
+          "source": "handwritten",
+          "text": "x = 3 を①に代入",
+          "lines": [
+            "3 + y = 2",
+            "y = 2 - 3",
+            "y = -1"
+          ]
+        },
+        {
+          "order": 6,
+          "kind": "conclusion",
+          "source": "handwritten",
+          "text": "xとyは時間を表しているので、y=-1は問題にあてはまっていない。よって、2時間では完走できない。"
+        }
+      ],
+      "final_answer": "2時間では完走できない"
+    },
+    {
+      "id": "Q7",
+      "source_image": "IMG_0368.jpeg",
+      "source_sheet": "第2学年 数学 1学期期末考査 対策プリント②",
+      "topic": [
+        "一次関数",
+        "一次関数の判定",
+        "反比例"
+      ],
+      "printed_prompt": "次の問いに答えなさい。",
+      "subproblems": [
+        {
+          "id": "Q7-1",
+          "printed_text": "yがxの関数で、次の（ア）〜（ウ）の式で表されるとき、一次関数であるものをすべて選びなさい。",
+          "choices": {
+            "ア": "y = 2x - 4",
+            "イ": "y = 2/x",
+            "ウ": "y = 6 - 3x"
+          },
+          "work": [
+            {
+              "order": 1,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "アを丸で囲む"
+            },
+            {
+              "order": 2,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "イの y=2/x に『反比例』とメモ"
+            },
+            {
+              "order": 3,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "ウを丸で囲む"
+            },
+            {
+              "order": 4,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "（ア）、（ウ）"
+            }
+          ],
+          "final_answer": [
+            "ア",
+            "ウ"
+          ]
+        },
+        {
+          "id": "Q7-2",
+          "printed_text": "次の（ア）〜（ウ）の中から、yがxの一次関数であるものをすべて選びなさい。",
+          "choices": {
+            "ア": "200gある小麦粉から、x g使ったときの残りy g",
+            "イ": "20kmの道のりを、時速x kmで歩いたときにかかる時間y時間",
+            "ウ": "縦の長さx cm、横の長さ4cmの長方形の周の長さy cm"
+          },
+          "work": [
+            {
+              "order": 1,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "アを丸で囲む"
+            },
+            {
+              "order": 2,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "アの関係を式にする",
+              "lines": [
+                "y = 200 - x"
+              ]
+            },
+            {
+              "order": 3,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "イの関係を式にする",
+              "lines": [
+                "y = 20/x"
+              ]
+            },
+            {
+              "order": 4,
+              "kind": "diagram",
+              "source": "handwritten",
+              "description": "長方形を描き、左右の辺をx、上下の辺を4と書いている。",
+              "labels": {
+                "vertical": "x",
+                "horizontal": "4"
+              }
+            },
+            {
+              "order": 5,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "ウの周の長さを式にする",
+              "lines": [
+                "y = 2x + 8"
+              ]
+            },
+            {
+              "order": 6,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "ウを丸で囲む"
+            },
+            {
+              "order": 7,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "（ア）、（ウ）"
+            }
+          ],
+          "final_answer": [
+            "ア",
+            "ウ"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "source_image": "IMG_0368.jpeg",
+      "source_sheet": "第2学年 数学 1学期期末考査 対策プリント②",
+      "topic": [
+        "一次関数",
+        "文章題"
+      ],
+      "printed_prompt": "水そうに、底から10cmのところまで水がたまっている。1分間に4cmの割合で水面が高くなるように水を入れる。水を入れ始めてからx分後の底から水面までの高さをy cmとするとき、次の問いに答えなさい。",
+      "subproblems": [
+        {
+          "id": "Q8-1",
+          "printed_text": "xとyの関係を式に表しなさい。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "calculation",
+              "source": "handwritten",
+              "operation": "関係式を書く",
+              "lines": [
+                "y = 4x + 10"
+              ]
+            }
+          ],
+          "final_answer": "y = 4x + 10"
+        },
+        {
+          "id": "Q8-2",
+          "printed_text": "yはxの一次関数であるといえますか。",
+          "work": [
+            {
+              "order": 1,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "いえる。"
+            },
+            {
+              "order": 2,
+              "kind": "annotation",
+              "source": "handwritten",
+              "text": "（y = ax + b になっているから。）"
+            }
+          ],
+          "final_answer": "いえる"
+        }
+      ]
+    },
+    {
+      "id": "Q9",
+      "source_image": "IMG_0369.jpeg",
+      "source_sheet": "表題は写真内で確認できない",
+      "topic": [
+        "一次関数",
+        "増加量",
+        "変化の割合"
+      ],
+      "printed_prompt": "一次関数 y = 3x + 2 で、xの値が1から5まで変わるとき、次の問いに答えなさい。",
+      "work": [
+        {
+          "order": 1,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "x=1のときのyを求める",
+          "lines": [
+            "x = 1 のとき",
+            "y = 3×1 + 2",
+            "y = 5"
+          ]
+        },
+        {
+          "order": 2,
+          "kind": "calculation",
+          "source": "handwritten",
+          "operation": "x=5のときのyを求める",
+          "lines": [
+            "x = 5 のとき",
+            "y = 3×5 + 2",
+            "y = 17"
+          ]
+        },
+        {
+          "order": 3,
+          "kind": "table",
+          "source": "handwritten",
+          "columns": [
+            "",
+            "初め",
+            "終わり",
+            "増加量"
+          ],
+          "rows": [
+            [
+              "x",
+              "1",
+              "5",
+              "+4"
+            ],
+            [
+              "y",
+              "5",
+              "17",
+              "+12"
+            ]
+          ]
+        }
+      ],
+      "subproblems": [
+        {
+          "id": "Q9-1",
+          "printed_text": "xの増加量を求めなさい。",
+          "final_answer": 4
+        },
+        {
+          "id": "Q9-2",
+          "printed_text": "yの増加量を求めなさい。",
+          "final_answer": 12
+        },
+        {
+          "id": "Q9-3",
+          "printed_text": "変化の割合を求めなさい。",
+          "final_answer": 3
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "source_image": "IMG_0369.jpeg",
+      "source_sheet": "表題は写真内で確認できない",
+      "topic": [
+        "一次関数",
+        "変化の割合",
+        "増減"
+      ],
+      "printed_prompt": "次の一次関数の変化の割合を答えなさい。また、xの値が増加するとき、yの値は増加するか、減少するか答えなさい。",
+      "subproblems": [
+        {
+          "id": "Q10-1",
+          "function": "y = 5x + 1",
+          "work": [
+            {
+              "order": 1,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "5，増加する"
+            }
+          ],
+          "final_answer": {
+            "rate_of_change": 5,
+            "behavior": "増加する"
+          }
+        },
+        {
+          "id": "Q10-2",
+          "function": "y = x - 4",
+          "work": [
+            {
+              "order": 1,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "1，増加する"
+            }
+          ],
+          "final_answer": {
+            "rate_of_change": 1,
+            "behavior": "増加する"
+          }
+        },
+        {
+          "id": "Q10-3",
+          "function": "y = -(2/3)x + 2",
+          "work": [
+            {
+              "order": 1,
+              "kind": "conclusion",
+              "source": "handwritten",
+              "text": "-2/3，減少する"
+            }
+          ],
+          "final_answer": {
+            "rate_of_change": "-2/3",
+            "behavior": "減少する"
+          }
+        }
+      ]
+    }
+  ],
+  "review_notes": [
+    {
+      "problem_id": "Q4",
+      "status": "corrected",
+      "note": "最終解答欄だけ x=-2, y=6 と逆に書かれているため、途中計算に基づき x=6, y=-2 に修正。"
+    },
+    {
+      "problem_id": "Q4",
+      "status": "visibility_limit",
+      "note": "手書きの正しい解法は写真下端で 14y=-28 まで確認可能。次の y=-2 は検算により補完した。"
+    },
+    {
+      "problem_id": "Q9-Q10",
+      "status": "source_title_unknown",
+      "note": "問題番号と内容は明瞭だが、前面の用紙の表題は写真内で確認できない。"
+    }
+  ]
+}

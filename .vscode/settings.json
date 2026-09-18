@@ -8,7 +8,11 @@
     "**/__pycache__": true,
     ".pixi": true,
     ".tools": true,
-    "media": true,
+    "media/Tex": true,
+    "media/texts": true,
+    "media/**/partial_movie_files": true,
+    "**/output/Tex": true,
+    "**/output/texts": true,
     "**/output/**/partial_movie_files": true
   }
 }
