@@ -1,0 +1,22 @@
+{
+  "title": "すうじを なぞろう",
+  "subtitle": "かずを かぞえて、うすい すうじを なぞって かいてみよう！",
+  "bottom_note": "せんの うえを ゆっくり なぞってね。",
+  "problems": [
+    {
+      "number": 1,
+      "motif": "apple",
+      "label": "りんご"
+    },
+    {
+      "number": 2,
+      "motif": "star",
+      "label": "ほし"
+    },
+    {
+      "number": 3,
+      "motif": "balloon",
+      "label": "ふうせん"
+    }
+  ]
+}
