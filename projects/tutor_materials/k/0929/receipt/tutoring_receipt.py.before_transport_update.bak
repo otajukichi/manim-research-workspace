@@ -1,0 +1,669 @@
+"""A4縦・家庭教師用の月次指導明細兼領収書。
+
+- JSONから月内の指導日を読み込む
+- 金額は hours * hourly_rate で自動計算
+- 下部の押印欄は小さめ・控えめに表示
+"""
+
+import json
+import os
+from pathlib import Path
+
+from manim import (
+    DOWN,
+    LEFT,
+    RIGHT,
+    UP,
+    Line,
+    Rectangle,
+    RoundedRectangle,
+    Text,
+    VGroup,
+    config,
+)
+
+from manim_research import LightScene
+
+
+# ============================================================
+# 用紙
+# ============================================================
+
+A4_WIDTH = 21.0
+A4_HEIGHT = 29.7
+
+PIXEL_WIDTH = 2480
+PIXEL_HEIGHT = 3508
+
+config.frame_width = A4_WIDTH
+config.frame_height = A4_HEIGHT
+config.pixel_width = PIXEL_WIDTH
+config.pixel_height = PIXEL_HEIGHT
+config.background_color = "#FFFFFF"
+
+
+# ============================================================
+# データ
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+JSON_DIR = BASE_DIR / "json"
+
+DEFAULT_CONTENT_FILE_NAME = "receipt_2026_09.json"
+
+
+def resolve_content_file() -> Path:
+    requested = os.environ.get(
+        "MANIM_CONTENT_FILE",
+        DEFAULT_CONTENT_FILE_NAME,
+    )
+
+    requested_path = Path(requested).expanduser()
+
+    if requested_path.is_absolute():
+        return requested_path
+
+    cwd_path = Path.cwd() / requested_path
+
+    if cwd_path.is_file():
+        return cwd_path.resolve()
+
+    return JSON_DIR / requested_path
+
+
+CONTENT_FILE = resolve_content_file()
+
+config.output_file = f"tutoring_receipt_{CONTENT_FILE.stem}"
+
+
+def load_content(path: Path) -> dict:
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"JSONが見つかりません: {path}"
+        )
+
+    with path.open(encoding="utf-8") as f:
+        data = json.load(f)
+
+    sessions = data.get("sessions", [])
+    expenses = data.get("expenses", [])
+
+    tuition_subtotal = 0
+
+    for session in sessions:
+        hours = session.get("hours")
+        hourly_rate = session.get("hourly_rate")
+
+        if hours is not None and hourly_rate is not None:
+            session["amount"] = round(
+                float(hours) * float(hourly_rate)
+            )
+        else:
+            session["amount"] = None
+
+        if session["amount"] is not None:
+            tuition_subtotal += session["amount"]
+
+    expense_total = 0
+
+    for expense in expenses:
+        amount = expense.get("amount")
+
+        if amount is not None:
+            expense_total += float(amount)
+
+    data["expense_total"] = expense_total
+    data["tuition_subtotal"] = tuition_subtotal
+    data["grand_total"] = tuition_subtotal + expense_total
+
+    return data
+
+
+CONTENT = load_content(CONTENT_FILE)
+
+
+# ============================================================
+# 表示用
+# ============================================================
+
+def format_yen(value) -> str:
+    if value is None:
+        return ""
+
+    return f"{round(float(value)):,}円"
+
+
+def recipient_text(value: str) -> str:
+    value = value.strip()
+
+    if not value:
+        return "＿＿＿＿＿＿＿＿＿＿ 様"
+
+    if value.endswith("様"):
+        return value
+
+    return f"{value} 様"
+
+
+# ============================================================
+# デザイン
+# ============================================================
+
+PAGE_LEFT = -9.1
+PAGE_RIGHT = 9.1
+PAGE_WIDTH = PAGE_RIGHT - PAGE_LEFT
+
+TEXT_COLOR = "#263238"
+MUTED_COLOR = "#667085"
+LINE_COLOR = "#C5CDD8"
+
+ACCENT_COLOR = "#315C8C"
+ACCENT_LIGHT = "#EEF4FA"
+SURFACE_COLOR = "#F7F8FA"
+STAMP_LINE_COLOR = "#D5DCE5"
+
+
+# ============================================================
+# Scene
+# ============================================================
+
+class TutoringReceipt(LightScene):
+
+    def make_text(
+        self,
+        value: str,
+        *,
+        font_size: float = 30,
+        color: str = TEXT_COLOR,
+        weight: str = "NORMAL",
+        max_width: float | None = None,
+    ) -> Text:
+
+        mob = Text(
+            value if value else " ",
+            font=self.theme.sans_font,
+            font_size=font_size,
+            color=color,
+            weight=weight,
+        )
+
+        if (
+            max_width is not None
+            and mob.width > max_width
+        ):
+            mob.scale_to_fit_width(max_width)
+
+        return mob
+
+    @staticmethod
+    def put_left(mob, x: float, y: float):
+        mob.move_to(
+            [
+                x + mob.width / 2,
+                y,
+                0,
+            ]
+        )
+        return mob
+
+    @staticmethod
+    def put_right(mob, x: float, y: float):
+        mob.move_to(
+            [
+                x - mob.width / 2,
+                y,
+                0,
+            ]
+        )
+        return mob
+
+    # ========================================================
+    # ヘッダー
+    # ========================================================
+
+    def add_header(self) -> None:
+
+        title = self.make_text(
+            CONTENT["title"],
+            font_size=54,
+            weight="BOLD",
+        )
+        title.move_to([0, 13.25, 0])
+
+        rule = Line(
+            [PAGE_LEFT, 12.55, 0],
+            [PAGE_RIGHT, 12.55, 0],
+            color=ACCENT_COLOR,
+            stroke_width=2.0,
+        )
+
+        self.add(title, rule)
+
+    # ========================================================
+    # 宛名
+    # ========================================================
+
+    def add_recipient(self) -> None:
+
+        label = self.make_text(
+            "宛名",
+            font_size=22,
+            color=MUTED_COLOR,
+        )
+        self.put_left(label, PAGE_LEFT, 11.65)
+
+        recipient = self.make_text(
+            recipient_text(CONTENT.get("recipient", "")),
+            font_size=34,
+            weight="BOLD",
+            max_width=8.5,
+        )
+        self.put_left(recipient, PAGE_LEFT, 10.95)
+
+        line = Line(
+            [PAGE_LEFT, 10.35, 0],
+            [PAGE_LEFT + 7.2, 10.35, 0],
+            color=LINE_COLOR,
+            stroke_width=1.3,
+        )
+
+        self.add(label, recipient, line)
+
+    # ========================================================
+    # 対象月・領収日・但し書き
+    # ========================================================
+
+    def add_summary_info(self) -> None:
+
+        left_x = PAGE_LEFT
+        mid_x = -0.5
+        value_x = PAGE_LEFT + 1.7
+
+        label_period = self.make_text(
+            "対象月",
+            font_size=22,
+            color=MUTED_COLOR,
+        )
+        self.put_left(label_period, left_x, 9.25)
+
+        period = self.make_text(
+            CONTENT.get("period", ""),
+            font_size=24,
+            weight="BOLD",
+        )
+        self.put_left(period, value_x, 9.25)
+
+        label_date = self.make_text(
+            "領収日",
+            font_size=22,
+            color=MUTED_COLOR,
+        )
+        self.put_left(label_date, mid_x, 9.25)
+
+        received_date = self.make_text(
+            CONTENT.get("received_date", ""),
+            font_size=24,
+            weight="BOLD",
+        )
+        self.put_left(received_date, mid_x + 2.0, 9.25)
+
+        label_desc = self.make_text(
+            "但し",
+            font_size=22,
+            color=MUTED_COLOR,
+        )
+        self.put_left(label_desc, left_x, 8.20)
+
+        description = self.make_text(
+            CONTENT.get("description", ""),
+            font_size=22,
+            max_width=15.2,
+        )
+        self.put_left(description, value_x, 8.20)
+
+        self.add(
+            label_period,
+            period,
+            label_date,
+            received_date,
+            label_desc,
+            description,
+        )
+
+    # ========================================================
+    # 明細テーブル
+    # ========================================================
+
+    def add_sessions_table(self) -> float:
+        sessions = CONTENT.get("sessions", [])
+
+        table_width = 18.0
+        col_widths = [3.8, 6.2, 3.2, 4.8]
+        header_h = 0.95
+        row_h = 0.90
+
+        left = PAGE_LEFT
+        right = left + table_width
+        top = 7.1
+        total_h = header_h + row_h * len(sessions)
+        bottom = top - total_h
+
+        frame = Rectangle(
+            width=table_width,
+            height=total_h,
+            stroke_color=LINE_COLOR,
+            stroke_width=1.2,
+            fill_opacity=0,
+        )
+        frame.move_to(
+            [
+                (left + right) / 2,
+                (top + bottom) / 2,
+                0,
+            ]
+        )
+
+        header_bg = Rectangle(
+            width=table_width,
+            height=header_h,
+            stroke_width=0,
+            fill_color=SURFACE_COLOR,
+            fill_opacity=1.0,
+        )
+        header_bg.move_to(
+            [
+                (left + right) / 2,
+                top - header_h / 2,
+                0,
+            ]
+        )
+
+        lines = VGroup()
+
+        # 横線
+        lines.add(
+            Line(
+                [left, top - header_h, 0],
+                [right, top - header_h, 0],
+                color=LINE_COLOR,
+                stroke_width=1.0,
+            )
+        )
+
+        for i in range(1, len(sessions)):
+            y = top - header_h - row_h * i
+            lines.add(
+                Line(
+                    [left, y, 0],
+                    [right, y, 0],
+                    color=LINE_COLOR,
+                    stroke_width=0.9,
+                )
+            )
+
+        # 縦線
+        x = left
+        for w in col_widths[:-1]:
+            x += w
+            lines.add(
+                Line(
+                    [x, top, 0],
+                    [x, bottom, 0],
+                    color=LINE_COLOR,
+                    stroke_width=0.9,
+                )
+            )
+
+        headers = ["指導日", "指導時間", "時給", "金額"]
+        header_group = VGroup()
+
+        cx = left
+        for header, width in zip(headers, col_widths):
+            center_x = cx + width / 2
+            head = self.make_text(
+                header,
+                font_size=22,
+                weight="BOLD",
+                color="#475467",
+                max_width=width - 0.4,
+            )
+            head.move_to([center_x, top - header_h / 2, 0])
+            header_group.add(head)
+            cx += width
+
+        rows = VGroup()
+
+        for i, session in enumerate(sessions):
+            y = top - header_h - row_h * i - row_h / 2
+
+            values = [
+                session.get("date", ""),
+                session.get("time", ""),
+                format_yen(session.get("hourly_rate")),
+                format_yen(session.get("amount")),
+            ]
+
+            cx = left
+            for value, width in zip(values, col_widths):
+                cell = self.make_text(
+                    value,
+                    font_size=22,
+                    max_width=width - 0.35,
+                )
+                cell.move_to([cx + width / 2, y, 0])
+                rows.add(cell)
+                cx += width
+
+        self.add(frame, header_bg, lines, header_group, rows)
+
+        return bottom
+
+    # ========================================================
+    # 集計
+    # ========================================================
+
+    def add_totals(self, table_bottom_y: float) -> float:
+
+        right_x = PAGE_RIGHT
+        block_right = right_x
+        block_width = 7.4
+
+        line1_y = table_bottom_y - 0.55
+        line2_y = table_bottom_y - 1.20
+
+        subtotal_label = self.make_text(
+            "指導料小計",
+            font_size=21,
+            color=MUTED_COLOR,
+        )
+        self.put_right(subtotal_label, block_right - 3.2, line1_y)
+
+        subtotal_value = self.make_text(
+            format_yen(CONTENT["tuition_subtotal"]),
+            font_size=23,
+            color=TEXT_COLOR,
+            max_width=2.8,
+        )
+        self.put_right(subtotal_value, block_right, line1_y)
+
+        expense_label = self.make_text(
+            "交通費",
+            font_size=21,
+            color=MUTED_COLOR,
+        )
+        self.put_right(expense_label, block_right - 3.2, line2_y)
+
+        expense_value = self.make_text(
+            format_yen(CONTENT["expense_total"]),
+            font_size=23,
+            color=TEXT_COLOR,
+            max_width=2.8,
+        )
+        self.put_right(expense_value, block_right, line2_y)
+
+        total_box = RoundedRectangle(
+            width=block_width,
+            height=1.2,
+            corner_radius=0.10,
+            stroke_color="#9DB4D1",
+            stroke_width=1.4,
+            fill_color=ACCENT_LIGHT,
+            fill_opacity=1.0,
+        )
+        total_box.move_to(
+            [
+                block_right - block_width / 2,
+                table_bottom_y - 2.15,
+                0,
+            ]
+        )
+
+        total_label = self.make_text(
+            "合計",
+            font_size=24,
+            weight="BOLD",
+        )
+        self.put_left(total_label, total_box.get_left()[0] + 0.40, total_box.get_center()[1])
+
+        total_value = self.make_text(
+            format_yen(CONTENT["grand_total"]),
+            font_size=30,
+            weight="BOLD",
+            color=ACCENT_COLOR,
+            max_width=3.9,
+        )
+        self.put_right(total_value, total_box.get_right()[0] - 0.25, total_box.get_center()[1])
+
+        self.add(
+            subtotal_label,
+            subtotal_value,
+            expense_label,
+            expense_value,
+            total_box,
+            total_label,
+            total_value,
+        )
+
+        return total_box.get_bottom()[1]
+
+    # ========================================================
+    # 領収文
+    # ========================================================
+
+    def add_receipt_note(self, total_bottom_y: float) -> float:
+
+        note = self.make_text(
+            "上記金額を、上記但し書きの内容として領収いたしました。",
+            font_size=19,
+            color="#475467",
+        )
+        self.put_left(note, PAGE_LEFT, total_bottom_y - 0.70)
+
+        self.add(note)
+
+        return total_bottom_y - 1.60
+
+    # ========================================================
+    # 発行者欄
+    # ========================================================
+
+    def add_issuer_box(self, top_y: float) -> None:
+
+        box_height = 3.2
+        box_width = 18.0
+        box = RoundedRectangle(
+            width=box_width,
+            height=box_height,
+            corner_radius=0.10,
+            stroke_color=LINE_COLOR,
+            stroke_width=1.0,
+            fill_color="#FCFCFD",
+            fill_opacity=1.0,
+        )
+        box.move_to([0, top_y - box_height / 2, 0])
+
+        issuer_label = self.make_text(
+            "発行者",
+            font_size=19,
+            color=MUTED_COLOR,
+        )
+        self.put_left(
+            issuer_label,
+            box.get_left()[0] + 0.45,
+            box.get_top()[1] - 0.65,
+        )
+
+        issuer_name = self.make_text(
+            CONTENT.get("issuer", {}).get("name", ""),
+            font_size=30,
+            weight="BOLD",
+            max_width=7.8,
+        )
+        self.put_left(
+            issuer_name,
+            box.get_left()[0] + 0.45,
+            box.get_center()[1] - 0.05,
+        )
+
+        contact = CONTENT.get("issuer", {}).get("contact", "").strip()
+        contact_mob = None
+        if contact:
+            contact_mob = self.make_text(
+                contact,
+                font_size=18,
+                color=MUTED_COLOR,
+                max_width=8.5,
+            )
+            self.put_left(
+                contact_mob,
+                box.get_left()[0] + 0.45,
+                box.get_bottom()[1] + 0.55,
+            )
+
+        # 右上の控えめな押印欄
+        stamp_label = self.make_text(
+            "印",
+            font_size=16,
+            color=MUTED_COLOR,
+        )
+
+        stamp_square = Rectangle(
+            width=1.45,
+            height=1.90,
+            stroke_color=STAMP_LINE_COLOR,
+            stroke_width=1.0,
+            fill_opacity=0,
+        )
+
+        stamp_group = VGroup(stamp_label, stamp_square)
+        stamp_label.next_to(stamp_square, UP, buff=0.12)
+        stamp_group.move_to(
+            [
+                box.get_right()[0] - 1.35,
+                box.get_center()[1],
+                0,
+            ]
+        )
+
+        self.add(box, issuer_label, issuer_name, stamp_group)
+
+        if contact_mob is not None:
+            self.add(contact_mob)
+
+    # ========================================================
+    # メイン
+    # ========================================================
+
+    def construct(self) -> None:
+        self.add_header()
+        self.add_recipient()
+        self.add_summary_info()
+
+        table_bottom_y = self.add_sessions_table()
+        total_bottom_y = self.add_totals(table_bottom_y)
+        issuer_top_y = self.add_receipt_note(total_bottom_y)
+        self.add_issuer_box(issuer_top_y)
+
+
+if __name__ == "__main__":
+    pass
