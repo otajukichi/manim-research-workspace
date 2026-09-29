@@ -170,14 +170,6 @@ TRACE_MAX_SIZE_RATIO = 0.76
 TRACE_X_OFFSET = 0.0
 TRACE_Y_OFFSET = 0.0
 
-# 小さいひらがなは、通常の文字と同じ中央ではなく
-# マスの左下寄りに配置する。
-SMALL_HIRAGANA = set("ぁぃぅぇぉゃゅょっゎ")
-
-# マスの左端・下端から文字までの余白
-SMALL_CHAR_LEFT_INSET = 0.18
-SMALL_CHAR_BOTTOM_INSET = 0.16
-
 
 # ============================================================
 # 下部の補足
@@ -566,26 +558,7 @@ def make_write_cell(
             trace_char,
             theme,
         )
-        if trace_char in SMALL_HIRAGANA:
-            # 小さい文字はマスの左下へ。
-            # 文字サイズを考慮して、文字全体がマス内に収まるようにする。
-            sample.move_to(
-                [
-                    box.get_left()[0]
-                    + SMALL_CHAR_LEFT_INSET
-                    + sample.width / 2,
-                    box.get_bottom()[1]
-                    + SMALL_CHAR_BOTTOM_INSET
-                    + sample.height / 2,
-                    0,
-                ]
-            )
-        else:
-            # 通常のひらがなは従来どおり中央。
-            sample.move_to(
-                box.get_center()
-            )
-
+        sample.move_to(box.get_center())
         cell.add(sample)
 
     return cell
