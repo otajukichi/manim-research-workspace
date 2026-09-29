@@ -1,0 +1,22 @@
+{
+    "title": "うみの どうぶつを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+    "problems": [
+        {
+            "icon": "marine_mammals/dolphin.png",
+            "answer": "いるか",
+            "trace": ["い", "る", "か"]
+        },
+        {
+            "icon": "marine_mammals/seal.png",
+            "answer": "あざらし",
+            "trace": ["あ", "ざ", "ら", "し"]
+        },
+        {
+            "icon": "marine_mammals/whale.png",
+            "answer": "くじら",
+            "trace": ["く", "じ", "ら"]
+        }
+    ]
+}

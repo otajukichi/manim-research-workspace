@@ -1,0 +1,22 @@
+{
+    "title": "ハロウィンの ことばを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "ちいさい「ゃ」「ょ」は、マスの ひだりしたに かこう！",
+    "problems": [
+        {
+            "icon": "halloween/ghost.png",
+            "answer": "おばけ",
+            "trace": ["お", "ば", "け"]
+        },
+        {
+            "icon": "halloween/pumpkin.png",
+            "answer": "かぼちゃ",
+            "trace": ["か", "ぼ", "ち", "ゃ"]
+        },
+        {
+            "icon": "halloween/witch.png",
+            "answer": "まじょ",
+            "trace": ["ま", "じ", "ょ"]
+        }
+    ]
+}

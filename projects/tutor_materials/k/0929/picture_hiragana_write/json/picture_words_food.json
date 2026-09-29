@@ -1,0 +1,22 @@
+{
+    "title": "おいしいものを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+    "problems": [
+        {
+            "icon": "dining_out/rice_ball.png",
+            "answer": "おにぎり",
+            "trace": ["お", "に", "ぎ", "り"]
+        },
+        {
+            "icon": "dining_out/sushi.png",
+            "answer": "すし",
+            "trace": ["す", "し"]
+        },
+        {
+            "icon": "dining_out/udon.png",
+            "answer": "うどん",
+            "trace": ["う", "ど", "ん"]
+        }
+    ]
+}

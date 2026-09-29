@@ -1,0 +1,22 @@
+{
+    "title": "うみの いきものを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+    "problems": [
+        {
+            "icon": "sea_creatures/jellyfish.png",
+            "answer": "くらげ",
+            "trace": ["く", "ら", "げ"]
+        },
+        {
+            "icon": "sea_creatures/octopus.png",
+            "answer": "たこ",
+            "trace": ["た", "こ"]
+        },
+        {
+            "icon": "sea_creatures/shark.png",
+            "answer": "さめ",
+            "trace": ["さ", "め"]
+        }
+    ]
+}
