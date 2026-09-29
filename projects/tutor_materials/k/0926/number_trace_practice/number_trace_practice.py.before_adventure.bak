@@ -1,13 +1,16 @@
 """A4縦・0〜9「すうじのぼうけん」プリント。
 
-0〜9を順番に進みながら、
+目的:
+    0〜9を自分で書けるようになる。
 
-1. 見本を見る
-2. 薄い数字をなぞる
-3. 自分で書く
-4. できたら星を塗る
+各数字:
+    1. 濃い見本を見る
+    2. 薄い数字を1回なぞる
+    3. 空欄に1回自力で書く
+    4. できたら小さな星を塗る
 
-という流れで練習する。
+0→9を蛇行する順番で進み、
+最後にゴールへ到達する構成。
 """
 
 import json
@@ -18,8 +21,8 @@ from manim import (
     DOWN,
     LEFT,
     RIGHT,
+    UP,
     Arrow,
-    DashedLine,
     Group,
     ImageMobject,
     RoundedRectangle,
@@ -27,6 +30,7 @@ from manim import (
     Star,
     Text,
     VGroup,
+    DashedLine,
     config,
 )
 
@@ -42,10 +46,20 @@ PIXEL_WIDTH = 2480
 PIXEL_HEIGHT = 3508
 
 BASE_DIR = Path(__file__).resolve().parent
-JSON_DIR = BASE_DIR / "json"
-FIGURES_DIR = BASE_DIR.parent / "figures"
 
-CONTENT_FILE = JSON_DIR / "number_trace_01.json"
+JSON_DIR = BASE_DIR / "json"
+
+FIGURES_DIR = (
+    BASE_DIR.parent
+    / "figures"
+)
+
+CONTENT_FILE_NAME = "number_trace_01.json"
+
+CONTENT_FILE = (
+    JSON_DIR
+    / CONTENT_FILE_NAME
+)
 
 
 # ============================================================
@@ -60,7 +74,10 @@ config.pixel_height = PIXEL_HEIGHT
 
 config.background_color = "#FFFDF7"
 
-config.output_file = "number_adventure_01"
+config.output_file = (
+    f"number_adventure_"
+    f"{CONTENT_FILE.stem}"
+)
 
 
 # ============================================================
@@ -71,7 +88,7 @@ TITLE_COLOR = "#B8663B"
 
 TEXT_COLOR = "#51443C"
 
-MUTED_COLOR = "#7C6E63"
+MUTED_TEXT_COLOR = "#7C6E63"
 
 CARD_STROKE = "#D7AF7E"
 
@@ -105,21 +122,25 @@ PREFERRED_FONTS = [
 ]
 
 
-def require_font():
+def require_education_font() -> str:
     available = set(
         manimpango.list_fonts()
     )
 
-    for name in PREFERRED_FONTS:
-        if name in available:
-            return name
+    for font_name in PREFERRED_FONTS:
+        if font_name in available:
+            return font_name
 
     raise ValueError(
-        "教育用フォントが見つかりません。"
+        "教育用フォントが"
+        "見つかりません: "
+        + ", ".join(PREFERRED_FONTS)
     )
 
 
-FONT = require_font()
+SELECTED_FONT = (
+    require_education_font()
+)
 
 
 # ============================================================
@@ -128,15 +149,40 @@ FONT = require_font()
 
 TITLE_Y = 13.35
 
-SUBTITLE_Y = 12.25
+SUBTITLE_Y = 12.20
 
 TITLE_FONT_SIZE = 58
 
-SUBTITLE_FONT_SIZE = 29
+SUBTITLE_FONT_SIZE = 31
 
 
 # ============================================================
-# カード配置
+# 数字カード
+# ============================================================
+
+CARD_WIDTH = 8.45
+
+CARD_HEIGHT = 3.25
+
+CARD_CORNER_RADIUS = 0.32
+
+CARD_STROKE_WIDTH = 2.4
+
+
+# 2列 × 5行
+LEFT_X = -4.62
+RIGHT_X = 4.62
+
+ROW_Y = [
+    9.65,
+    5.78,
+    1.91,
+    -1.96,
+    -5.83,
+]
+
+
+# 蛇行順
 #
 # 0 → 1
 #     ↓
@@ -147,25 +193,6 @@ SUBTITLE_FONT_SIZE = 29
 # 7 ← 6
 # ↓
 # 8 → 9
-# ============================================================
-
-CARD_WIDTH = 8.0
-
-CARD_HEIGHT = 3.05
-
-CARD_CORNER = 0.30
-
-LEFT_X = -4.3
-
-RIGHT_X = 4.3
-
-ROW_Y = [
-    9.45,
-    5.90,
-    2.35,
-    -1.20,
-    -4.75,
-]
 
 CARD_POSITIONS = [
     (LEFT_X, ROW_Y[0], 0),
@@ -189,86 +216,107 @@ CARD_POSITIONS = [
 # カード内部
 # ============================================================
 
-LABEL_FONT_SIZE = 18
+LABEL_FONT_SIZE = 19
 
-SAMPLE_FONT_SIZE = 76
+SAMPLE_FONT_SIZE = 79
 
-CELL_SIZE = 1.48
+CELL_SIZE = 1.58
 
-CELL_CORNER = 0.13
+CELL_CORNER_RADIUS = 0.14
 
-CELL_STROKE_WIDTH = 2.05
+CELL_STROKE_WIDTH = 2.1
 
-GUIDE_STROKE_WIDTH = 1.15
+GUIDE_INSET = 0.12
 
-GUIDE_OPACITY = 0.42
+GUIDE_STROKE_WIDTH = 1.2
 
-GUIDE_INSET = 0.11
+GUIDE_OPACITY = 0.43
 
-TRACE_FONT_SIZE = 105
+TRACE_FONT_SIZE = 110
 
-TRACE_OPACITY = 0.23
+TRACE_FILL_OPACITY = 0.24
 
-TRACE_MAX_RATIO = 0.74
+TRACE_STROKE_OPACITY = 0.24
 
-SAMPLE_X = -2.35
+TRACE_STROKE_WIDTH = 0.7
+
+TRACE_MAX_RATIO = 0.76
+
+SAMPLE_X = -2.45
 
 TRACE_X = 0.0
 
-WRITE_X = 2.35
+WRITE_X = 2.45
 
-LABEL_Y = 0.90
+CONTENT_Y_OFFSET = -0.28
 
-CONTENT_Y = -0.32
+LABEL_Y_OFFSET = 1.00
 
-CLEAR_STAR_X = 3.48
 
-CLEAR_STAR_Y = -1.02
+# ============================================================
+# クリア用の星
+# ============================================================
+
+CLEAR_STAR_RADIUS = 0.25
 
 
 # ============================================================
 # 道
 # ============================================================
 
-PATH_STROKE_WIDTH = 3.2
+PATH_STROKE_WIDTH = 3.6
 
-PATH_TIP_LENGTH = 0.13
+PATH_TIP_LENGTH = 0.14
 
 
 # ============================================================
-# スタート・ゴール
+# スタート
 # ============================================================
 
-START_X = -9.25
+START_IMAGE_MAX_HEIGHT = 1.05
+
+START_X = -9.55
 
 START_Y = ROW_Y[0]
 
-START_IMAGE_HEIGHT = 0.95
+START_TEXT_FONT_SIZE = 20
 
-GOAL_X = 9.25
+
+# ============================================================
+# ゴール
+# ============================================================
+
+GOAL_X = 9.55
 
 GOAL_Y = ROW_Y[4]
+
+GOAL_STAR_RADIUS = 0.52
+
+GOAL_TEXT_FONT_SIZE = 21
 
 
 # ============================================================
 # ゴールメッセージ
 # ============================================================
 
-BANNER_Y = -8.65
+GOAL_BANNER_Y = -9.55
 
-BANNER_WIDTH = 12.0
+GOAL_BANNER_WIDTH = 12.2
 
-BANNER_HEIGHT = 1.55
+GOAL_BANNER_HEIGHT = 1.75
+
+GOAL_BANNER_FONT_SIZE = 33
 
 
 # ============================================================
 # JSON
 # ============================================================
 
-def load_content():
+def load_content() -> dict:
     if not CONTENT_FILE.is_file():
         raise FileNotFoundError(
-            f"JSONがありません: {CONTENT_FILE}"
+            f"JSONがありません: "
+            f"{CONTENT_FILE}"
         )
 
     with CONTENT_FILE.open(
@@ -277,9 +325,27 @@ def load_content():
     ) as file:
         data = json.load(file)
 
-    if data.get("numbers") != list(range(10)):
+    for key in (
+        "title",
+        "subtitle",
+        "start_image",
+        "start_text",
+        "goal_text",
+        "goal_message",
+        "numbers",
+    ):
+        if key not in data:
+            raise ValueError(
+                f"JSONに {key} がありません。"
+            )
+
+    numbers = data["numbers"]
+
+    if numbers != list(range(10)):
         raise ValueError(
-            "numbers は 0〜9 にしてください。"
+            "numbers は "
+            "[0,1,2,3,4,5,6,7,8,9] "
+            "にしてください。"
         )
 
     get_image_path(
@@ -293,36 +359,59 @@ def load_content():
 # 画像
 # ============================================================
 
-def get_image_path(name):
-    path = FIGURES_DIR / name
+def get_image_path(
+    image_name: str,
+) -> Path:
+    direct = (
+        FIGURES_DIR
+        / image_name
+    )
 
-    if path.is_file():
-        return path
+    if direct.is_file():
+        return direct
 
-    matches = [
-        p
-        for p in FIGURES_DIR.rglob(name)
-        if p.is_file()
+    candidates = [
+        path
+        for path in FIGURES_DIR.rglob(
+            image_name
+        )
+        if path.is_file()
     ]
 
-    if len(matches) == 1:
-        return matches[0]
+    if len(candidates) == 1:
+        return candidates[0]
+
+    if len(candidates) > 1:
+        raise ValueError(
+            "同名画像が複数あります。"
+            "カテゴリ込みで指定してください: "
+            f"{image_name}"
+        )
 
     raise FileNotFoundError(
-        f"画像が見つかりません: {name}"
+        "画像がありません: "
+        f"{image_name}\n"
+        f"検索先: {FIGURES_DIR}"
     )
 
 
-def make_start_image(name):
+def make_start_image(
+    image_name: str,
+) -> ImageMobject:
     image = ImageMobject(
         str(
-            get_image_path(name)
+            get_image_path(
+                image_name
+            )
         )
     )
 
-    if image.height > START_IMAGE_HEIGHT:
+    if (
+        image.height
+        > START_IMAGE_MAX_HEIGHT
+    ):
         image.scale(
-            START_IMAGE_HEIGHT
+            START_IMAGE_MAX_HEIGHT
             / image.height
         )
 
@@ -330,10 +419,12 @@ def make_start_image(name):
 
 
 # ============================================================
-# マス
+# 書き込みマス
 # ============================================================
 
-def make_guides(box):
+def make_guides(
+    box: RoundedRectangle,
+) -> VGroup:
     center = box.get_center()
 
     half = (
@@ -352,10 +443,12 @@ def make_guides(box):
             center[1],
             0,
         ],
-        dash_length=0.12,
+        dash_length=0.13,
         dashed_ratio=0.55,
         color=GUIDE_COLOR,
-        stroke_width=GUIDE_STROKE_WIDTH,
+        stroke_width=(
+            GUIDE_STROKE_WIDTH
+        ),
     )
 
     horizontal.set_stroke(
@@ -373,10 +466,12 @@ def make_guides(box):
             center[1] + half,
             0,
         ],
-        dash_length=0.12,
+        dash_length=0.13,
         dashed_ratio=0.55,
         color=GUIDE_COLOR,
-        stroke_width=GUIDE_STROKE_WIDTH,
+        stroke_width=(
+            GUIDE_STROKE_WIDTH
+        ),
     )
 
     vertical.set_stroke(
@@ -389,42 +484,68 @@ def make_guides(box):
     )
 
 
-def make_empty_cell():
+def make_empty_cell() -> VGroup:
     box = RoundedRectangle(
         width=CELL_SIZE,
         height=CELL_SIZE,
-        corner_radius=CELL_CORNER,
+        corner_radius=(
+            CELL_CORNER_RADIUS
+        ),
         color=CELL_STROKE,
-        stroke_width=CELL_STROKE_WIDTH,
+        stroke_width=(
+            CELL_STROKE_WIDTH
+        ),
         fill_color=CELL_FILL,
         fill_opacity=1.0,
     )
 
+    guides = make_guides(
+        box
+    )
+
     return VGroup(
         box,
-        make_guides(box),
+        guides,
     )
 
 
-def make_trace_cell(number):
-    cell = make_empty_cell()
-
+def make_trace_number(
+    number: int,
+) -> Text:
     trace = Text(
         str(number),
-        font=FONT,
+        font=SELECTED_FONT,
         font_size=TRACE_FONT_SIZE,
         color=TRACE_COLOR,
     )
 
     trace.set_fill(
         TRACE_COLOR,
-        opacity=TRACE_OPACITY,
+        opacity=(
+            TRACE_FILL_OPACITY
+        ),
     )
 
     trace.set_stroke(
         TRACE_COLOR,
-        width=0.65,
-        opacity=TRACE_OPACITY,
+        width=(
+            TRACE_STROKE_WIDTH
+        ),
+        opacity=(
+            TRACE_STROKE_OPACITY
+        ),
+    )
+
+    return trace
+
+
+def make_trace_cell(
+    number: int,
+) -> VGroup:
+    cell = make_empty_cell()
+
+    trace = make_trace_number(
+        number
     )
 
     max_size = (
@@ -455,122 +576,150 @@ def make_trace_cell(number):
 
 
 # ============================================================
+# できた星
+# ============================================================
+
+def make_clear_star() -> Star:
+    star = Star(
+        n=5,
+        outer_radius=CLEAR_STAR_RADIUS,
+        color=STAR_COLOR,
+        stroke_width=2.0,
+    )
+
+    star.set_fill(
+        STAR_COLOR,
+        opacity=0.0,
+    )
+
+    return star
+
+
+# ============================================================
 # 数字カード
 # ============================================================
 
-def make_number_card(number):
+def make_number_card(
+    number: int,
+) -> VGroup:
     card = RoundedRectangle(
         width=CARD_WIDTH,
         height=CARD_HEIGHT,
-        corner_radius=CARD_CORNER,
+        corner_radius=(
+            CARD_CORNER_RADIUS
+        ),
         color=CARD_STROKE,
-        stroke_width=2.4,
+        stroke_width=(
+            CARD_STROKE_WIDTH
+        ),
         fill_color=CARD_FILL,
         fill_opacity=0.88,
     )
 
     center = card.get_center()
 
+    # --------------------------------------------------------
+    # 上の説明
+    # --------------------------------------------------------
+
     sample_label = Text(
         "みる",
-        font=FONT,
+        font=SELECTED_FONT,
         font_size=LABEL_FONT_SIZE,
-        color=MUTED_COLOR,
-    )
-
-    sample_label.move_to(
-        [
-            center[0] + SAMPLE_X,
-            center[1] + LABEL_Y,
-            0,
-        ]
+        color=MUTED_TEXT_COLOR,
     )
 
     trace_label = Text(
         "なぞる",
-        font=FONT,
+        font=SELECTED_FONT,
         font_size=LABEL_FONT_SIZE,
-        color=MUTED_COLOR,
-    )
-
-    trace_label.move_to(
-        [
-            center[0] + TRACE_X,
-            center[1] + LABEL_Y,
-            0,
-        ]
+        color=MUTED_TEXT_COLOR,
     )
 
     write_label = Text(
         "かく",
-        font=FONT,
+        font=SELECTED_FONT,
         font_size=LABEL_FONT_SIZE,
-        color=MUTED_COLOR,
+        color=MUTED_TEXT_COLOR,
+    )
+
+    sample_label.move_to(
+        center
+        + LEFT * abs(SAMPLE_X)
+        + UP * LABEL_Y_OFFSET
+    )
+
+    trace_label.move_to(
+        center
+        + UP * LABEL_Y_OFFSET
     )
 
     write_label.move_to(
-        [
-            center[0] + WRITE_X,
-            center[1] + LABEL_Y,
-            0,
-        ]
+        center
+        + RIGHT * WRITE_X
+        + UP * LABEL_Y_OFFSET
     )
+
+    # --------------------------------------------------------
+    # 見本
+    # --------------------------------------------------------
 
     sample = Text(
         str(number),
-        font=FONT,
+        font=SELECTED_FONT,
         font_size=SAMPLE_FONT_SIZE,
         color=TEXT_COLOR,
     )
 
     sample.move_to(
-        [
-            center[0] + SAMPLE_X,
-            center[1] + CONTENT_Y,
-            0,
-        ]
+        center
+        + LEFT * abs(SAMPLE_X)
+        + DOWN * abs(
+            CONTENT_Y_OFFSET
+        )
     )
+
+    # --------------------------------------------------------
+    # なぞる
+    # --------------------------------------------------------
 
     trace_cell = make_trace_cell(
         number
     )
 
     trace_cell.move_to(
-        [
-            center[0] + TRACE_X,
-            center[1] + CONTENT_Y,
-            0,
-        ]
+        center
+        + DOWN * abs(
+            CONTENT_Y_OFFSET
+        )
     )
+
+    # --------------------------------------------------------
+    # 自分で書く
+    # --------------------------------------------------------
 
     write_cell = make_empty_cell()
 
     write_cell.move_to(
-        [
-            center[0] + WRITE_X,
-            center[1] + CONTENT_Y,
-            0,
-        ]
+        center
+        + RIGHT * WRITE_X
+        + DOWN * abs(
+            CONTENT_Y_OFFSET
+        )
     )
 
-    clear_star = Star(
-        n=5,
-        outer_radius=0.23,
-        color=STAR_COLOR,
-        stroke_width=1.9,
-    )
+    # --------------------------------------------------------
+    # できたら塗る星
+    # --------------------------------------------------------
 
-    clear_star.set_fill(
-        STAR_COLOR,
-        opacity=0.0,
+    clear_star = (
+        make_clear_star()
     )
 
     clear_star.move_to(
-        [
-            center[0] + CLEAR_STAR_X,
-            center[1] + CLEAR_STAR_Y,
-            0,
-        ]
+        center
+        + RIGHT * 3.75
+        + DOWN * 1.20
     )
 
     return VGroup(
@@ -586,53 +735,67 @@ def make_number_card(number):
 
 
 # ============================================================
-# 道
+# 道の矢印
 # ============================================================
 
 def make_route_arrow(
     start_pos,
     end_pos,
-):
+) -> Arrow:
     sx, sy, _ = start_pos
     ex, ey, _ = end_pos
 
+    # 横移動
     if sy == ey:
         if ex > sx:
             start = [
-                sx + CARD_WIDTH / 2 + 0.05,
+                sx
+                + CARD_WIDTH / 2
+                + 0.05,
                 sy,
                 0,
             ]
 
             end = [
-                ex - CARD_WIDTH / 2 - 0.05,
+                ex
+                - CARD_WIDTH / 2
+                - 0.05,
                 ey,
                 0,
             ]
 
         else:
             start = [
-                sx - CARD_WIDTH / 2 - 0.05,
+                sx
+                - CARD_WIDTH / 2
+                - 0.05,
                 sy,
                 0,
             ]
 
             end = [
-                ex + CARD_WIDTH / 2 + 0.05,
+                ex
+                + CARD_WIDTH / 2
+                + 0.05,
                 ey,
                 0,
             ]
 
+    # 縦移動
     else:
         start = [
             sx,
-            sy - CARD_HEIGHT / 2 - 0.05,
+            sy
+            - CARD_HEIGHT / 2
+            - 0.05,
             0,
         ]
 
         end = [
             ex,
-            ey + CARD_HEIGHT / 2 + 0.05,
+            ey
+            + CARD_HEIGHT / 2
+            + 0.05,
             0,
         ]
 
@@ -641,12 +804,14 @@ def make_route_arrow(
         end=end,
         buff=0.0,
         color=PATH_COLOR,
-        stroke_width=PATH_STROKE_WIDTH,
+        stroke_width=(
+            PATH_STROKE_WIDTH
+        ),
         tip_length=PATH_TIP_LENGTH,
     )
 
 
-def make_route():
+def make_route() -> VGroup:
     arrows = VGroup()
 
     for index in range(
@@ -655,7 +820,9 @@ def make_route():
         arrows.add(
             make_route_arrow(
                 CARD_POSITIONS[index],
-                CARD_POSITIONS[index + 1],
+                CARD_POSITIONS[
+                    index + 1
+                ],
             )
         )
 
@@ -667,9 +834,9 @@ def make_route():
 # ============================================================
 
 def make_start_marker(
-    image_name,
-    start_text,
-):
+    image_name: str,
+    text: str,
+) -> Group:
     image = make_start_image(
         image_name
     )
@@ -677,27 +844,29 @@ def make_start_marker(
     image.move_to(
         [
             START_X,
-            START_Y + 0.22,
+            START_Y + 0.25,
             0,
         ]
     )
 
     label = Text(
-        start_text,
-        font=FONT,
-        font_size=18,
+        text,
+        font=SELECTED_FONT,
+        font_size=(
+            START_TEXT_FONT_SIZE
+        ),
         color=TITLE_COLOR,
     )
 
     label.next_to(
         image,
         DOWN,
-        buff=0.08,
+        buff=0.10,
     )
 
     arrow = Arrow(
         start=[
-            START_X + 0.4,
+            START_X + 0.45,
             START_Y,
             0,
         ],
@@ -710,8 +879,12 @@ def make_start_marker(
         ],
         buff=0.0,
         color=PATH_COLOR,
-        stroke_width=PATH_STROKE_WIDTH,
-        tip_length=PATH_TIP_LENGTH,
+        stroke_width=(
+            PATH_STROKE_WIDTH
+        ),
+        tip_length=(
+            PATH_TIP_LENGTH
+        ),
     )
 
     return Group(
@@ -726,13 +899,15 @@ def make_start_marker(
 # ============================================================
 
 def make_goal_marker(
-    goal_text,
-):
+    text: str,
+) -> VGroup:
     star = Star(
         n=5,
-        outer_radius=0.48,
+        outer_radius=(
+            GOAL_STAR_RADIUS
+        ),
         color=GOAL_STROKE,
-        stroke_width=2.3,
+        stroke_width=2.4,
     )
 
     star.set_fill(
@@ -749,16 +924,18 @@ def make_goal_marker(
     )
 
     label = Text(
-        goal_text,
-        font=FONT,
-        font_size=20,
+        text,
+        font=SELECTED_FONT,
+        font_size=(
+            GOAL_TEXT_FONT_SIZE
+        ),
         color=TITLE_COLOR,
     )
 
     label.next_to(
         star,
         DOWN,
-        buff=0.07,
+        buff=0.08,
     )
 
     arrow = Arrow(
@@ -770,14 +947,18 @@ def make_goal_marker(
             0,
         ],
         end=[
-            GOAL_X - 0.44,
+            GOAL_X - 0.48,
             GOAL_Y,
             0,
         ],
         buff=0.0,
         color=PATH_COLOR,
-        stroke_width=PATH_STROKE_WIDTH,
-        tip_length=PATH_TIP_LENGTH,
+        stroke_width=(
+            PATH_STROKE_WIDTH
+        ),
+        tip_length=(
+            PATH_TIP_LENGTH
+        ),
     )
 
     return VGroup(
@@ -792,30 +973,32 @@ def make_goal_marker(
 # ============================================================
 
 def make_goal_banner(
-    message,
-):
+    message: str,
+) -> VGroup:
     box = RoundedRectangle(
-        width=BANNER_WIDTH,
-        height=BANNER_HEIGHT,
-        corner_radius=0.34,
+        width=GOAL_BANNER_WIDTH,
+        height=GOAL_BANNER_HEIGHT,
+        corner_radius=0.35,
         color=GOAL_STROKE,
-        stroke_width=2.3,
+        stroke_width=2.4,
         fill_color=GOAL_FILL,
-        fill_opacity=0.75,
+        fill_opacity=0.72,
     )
 
     box.move_to(
         [
             0,
-            BANNER_Y,
+            GOAL_BANNER_Y,
             0,
         ]
     )
 
     message_text = Text(
         message,
-        font=FONT,
-        font_size=30,
+        font=SELECTED_FONT,
+        font_size=(
+            GOAL_BANNER_FONT_SIZE
+        ),
         color=TITLE_COLOR,
     )
 
@@ -823,8 +1006,36 @@ def make_goal_banner(
         box.get_center()
     )
 
+    left_star = Star(
+        n=5,
+        outer_radius=0.27,
+        color=STAR_COLOR,
+        stroke_width=2.0,
+    )
+
+    left_star.set_fill(
+        STAR_COLOR,
+        opacity=0.22,
+    )
+
+    right_star = (
+        left_star.copy()
+    )
+
+    left_star.move_to(
+        box.get_center()
+        + LEFT * 4.9
+    )
+
+    right_star.move_to(
+        box.get_center()
+        + RIGHT * 4.9
+    )
+
     return VGroup(
         box,
+        left_star,
+        right_star,
         message_text,
     )
 
@@ -836,13 +1047,19 @@ def make_goal_banner(
 class NumberTracePracticeWorksheet(
     Scene
 ):
-    def construct(self):
+    def construct(self) -> None:
         data = load_content()
+
+        # ----------------------------------------------------
+        # タイトル
+        # ----------------------------------------------------
 
         title = Text(
             data["title"],
-            font=FONT,
-            font_size=TITLE_FONT_SIZE,
+            font=SELECTED_FONT,
+            font_size=(
+                TITLE_FONT_SIZE
+            ),
             color=TITLE_COLOR,
         )
 
@@ -856,9 +1073,11 @@ class NumberTracePracticeWorksheet(
 
         subtitle = Text(
             data["subtitle"],
-            font=FONT,
-            font_size=SUBTITLE_FONT_SIZE,
-            color=MUTED_COLOR,
+            font=SELECTED_FONT,
+            font_size=(
+                SUBTITLE_FONT_SIZE
+            ),
+            color=MUTED_TEXT_COLOR,
         )
 
         subtitle.move_to(
@@ -869,7 +1088,15 @@ class NumberTracePracticeWorksheet(
             ]
         )
 
+        # ----------------------------------------------------
+        # 道
+        # ----------------------------------------------------
+
         route = make_route()
+
+        # ----------------------------------------------------
+        # 数字カード
+        # ----------------------------------------------------
 
         cards = Group()
 
@@ -889,6 +1116,10 @@ class NumberTracePracticeWorksheet(
                 card
             )
 
+        # ----------------------------------------------------
+        # スタートとゴール
+        # ----------------------------------------------------
+
         start_marker = (
             make_start_marker(
                 data["start_image"],
@@ -907,6 +1138,10 @@ class NumberTracePracticeWorksheet(
                 data["goal_message"]
             )
         )
+
+        # ----------------------------------------------------
+        # 描画
+        # ----------------------------------------------------
 
         self.add(
             title,

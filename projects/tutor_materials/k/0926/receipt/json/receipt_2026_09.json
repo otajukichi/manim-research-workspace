@@ -1,0 +1,50 @@
+{
+    "title": "家庭教師指導料 領収書",
+    "receipt_number": "",
+    "recipient": "熊谷",
+    "period": "2026年9月分",
+    "received_date": "2026年9月26日",
+    "description": "2026年9月分 家庭教師指導料として",
+    "sessions": [
+        {
+            "date": "9月8日",
+            "time": "19:00〜20:00",
+            "hours": 1,
+            "hourly_rate": 2000
+        },
+        {
+            "date": "9月11日",
+            "time": "19:00〜20:00",
+            "hours": 1,
+            "hourly_rate": 2000
+        },
+        {
+            "date": "9月15日",
+            "time": "19:00〜20:00",
+            "hours": 1,
+            "hourly_rate": 2000
+        },
+        {
+            "date": "9月18日",
+            "time": "19:00〜20:00",
+            "hours": 1,
+            "hourly_rate": 2000
+        },
+        {
+            "date": "9月26日",
+            "time": "19:00〜20:00",
+            "hours": 1,
+            "hourly_rate": 2000
+        }
+    ],
+    "expenses": [
+        {
+            "label": "交通費",
+            "amount": 0
+        }
+    ],
+    "issuer": {
+        "name": "大田重吉",
+        "contact": ""
+    }
+}

@@ -1,0 +1,1234 @@
+"""A4縦・家庭教師の月次指導明細兼領収書。
+
+JSONに入力した
+- 指導日
+- 指導時間
+- 時給
+- 交通費・教材費など
+
+から金額を自動計算して、A4の領収書を生成する。
+
+出力先は workspace の scripts/manim.sh に任せる。
+"""
+
+import json
+import os
+from pathlib import Path
+
+from manim import (
+    Line,
+    Rectangle,
+    RoundedRectangle,
+    Text,
+    VGroup,
+    config,
+)
+
+from manim_research import LightScene
+
+
+# ============================================================
+# 1. 用紙
+# ============================================================
+
+A4_WIDTH = 21.0
+A4_HEIGHT = 29.7
+
+PIXEL_WIDTH = 2480
+PIXEL_HEIGHT = 3508
+
+config.frame_width = A4_WIDTH
+config.frame_height = A4_HEIGHT
+config.pixel_width = PIXEL_WIDTH
+config.pixel_height = PIXEL_HEIGHT
+config.background_color = "#FFFFFF"
+
+
+# ============================================================
+# 2. データファイル
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+JSON_DIR = BASE_DIR / "json"
+
+DEFAULT_CONTENT_FILE_NAME = "receipt_2026_09.json"
+
+
+def resolve_content_file() -> Path:
+    requested = os.environ.get(
+        "MANIM_CONTENT_FILE",
+        DEFAULT_CONTENT_FILE_NAME,
+    )
+
+    requested_path = Path(requested).expanduser()
+
+    if requested_path.is_absolute():
+        return requested_path
+
+    cwd_path = Path.cwd() / requested_path
+
+    if cwd_path.is_file():
+        return cwd_path.resolve()
+
+    return JSON_DIR / requested_path
+
+
+CONTENT_FILE = resolve_content_file()
+
+config.output_file = f"tutoring_receipt_{CONTENT_FILE.stem}"
+
+
+# ============================================================
+# 3. 入力値チェック
+# ============================================================
+
+MAX_SESSION_ROWS = 8
+MAX_EXPENSE_ROWS = 4
+
+
+def number_or_none(value, field_name: str) -> float | None:
+    if value is None or value == "":
+        return None
+
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise TypeError(
+            f"{field_name} は数値または null にしてください。"
+        )
+
+    value = float(value)
+
+    if value < 0:
+        raise ValueError(
+            f"{field_name} は0以上にしてください。"
+        )
+
+    return value
+
+
+def load_content(path: Path) -> dict:
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"領収書JSONが見つかりません: {path}"
+        )
+
+    with path.open("r", encoding="utf-8") as file:
+        raw = json.load(file)
+
+    sessions = raw.get("sessions", [])
+    expenses = raw.get("expenses", [])
+
+    if not isinstance(sessions, list):
+        raise TypeError("sessions は配列にしてください。")
+
+    if not isinstance(expenses, list):
+        raise TypeError("expenses は配列にしてください。")
+
+    if len(sessions) > MAX_SESSION_ROWS:
+        raise ValueError(
+            f"sessions は最大{MAX_SESSION_ROWS}件までです。"
+        )
+
+    if len(expenses) > MAX_EXPENSE_ROWS:
+        raise ValueError(
+            f"expenses は最大{MAX_EXPENSE_ROWS}件までです。"
+        )
+
+    normalized_sessions = []
+
+    tuition_subtotal = 0.0
+    total_hours = 0.0
+
+    has_tuition = False
+    has_hours = False
+
+    for index, session in enumerate(sessions):
+        if not isinstance(session, dict):
+            raise TypeError(
+                f"sessions[{index}] は辞書にしてください。"
+            )
+
+        hours = number_or_none(
+            session.get("hours"),
+            f"sessions[{index}].hours",
+        )
+
+        hourly_rate = number_or_none(
+            session.get("hourly_rate"),
+            f"sessions[{index}].hourly_rate",
+        )
+
+        # 片方だけ入力されている場合はミスとして止める
+        if (hours is None) != (hourly_rate is None):
+            raise ValueError(
+                f"sessions[{index}] は hours と hourly_rate を"
+                "両方入力してください。"
+            )
+
+        amount = None
+
+        if hours is not None and hourly_rate is not None:
+            amount = round(hours * hourly_rate)
+
+            total_hours += hours
+            tuition_subtotal += amount
+
+            has_hours = True
+            has_tuition = True
+
+        normalized_sessions.append(
+            {
+                "date": str(session.get("date", "")),
+                "hours": hours,
+                "hourly_rate": hourly_rate,
+                "amount": amount,
+            }
+        )
+
+    normalized_expenses = []
+
+    expense_total = 0.0
+    has_expense = False
+
+    for index, expense in enumerate(expenses):
+        if not isinstance(expense, dict):
+            raise TypeError(
+                f"expenses[{index}] は辞書にしてください。"
+            )
+
+        amount = number_or_none(
+            expense.get("amount"),
+            f"expenses[{index}].amount",
+        )
+
+        if amount is not None:
+            expense_total += amount
+            has_expense = True
+
+        normalized_expenses.append(
+            {
+                "label": str(
+                    expense.get("label", "その他")
+                ),
+                "amount": amount,
+            }
+        )
+
+    issuer = raw.get("issuer", {})
+
+    if not isinstance(issuer, dict):
+        raise TypeError(
+            "issuer は辞書にしてください。"
+        )
+
+    grand_total = None
+
+    if has_tuition or has_expense:
+        grand_total = tuition_subtotal + expense_total
+
+    return {
+        "title": str(
+            raw.get(
+                "title",
+                "家庭教師指導料 領収書",
+            )
+        ),
+        "receipt_number": str(
+            raw.get("receipt_number", "")
+        ),
+        "recipient": str(
+            raw.get("recipient", "")
+        ),
+        "period": str(
+            raw.get("period", "")
+        ),
+        "received_date": str(
+            raw.get("received_date", "")
+        ),
+        "description": str(
+            raw.get(
+                "description",
+                "家庭教師指導料として",
+            )
+        ),
+        "sessions": normalized_sessions,
+        "expenses": normalized_expenses,
+        "issuer": {
+            "name": str(
+                issuer.get("name", "")
+            ),
+            "contact": str(
+                issuer.get("contact", "")
+            ),
+        },
+        "note": str(
+            raw.get("note", "")
+        ),
+        "total_hours": (
+            total_hours
+            if has_hours
+            else None
+        ),
+        "tuition_subtotal": (
+            tuition_subtotal
+            if has_tuition
+            else None
+        ),
+        "expense_total": (
+            expense_total
+            if has_expense
+            else None
+        ),
+        "grand_total": grand_total,
+    }
+
+
+CONTENT = load_content(CONTENT_FILE)
+
+
+# ============================================================
+# 4. 表示用
+# ============================================================
+
+def format_yen(
+    value: float | None,
+    blank: str = "",
+) -> str:
+    if value is None:
+        return blank
+
+    return f"{round(value):,}円"
+
+
+def format_hours(
+    value: float | None,
+) -> str:
+    if value is None:
+        return ""
+
+    if value.is_integer():
+        return f"{int(value)}時間"
+
+    return f"{value:g}時間"
+
+
+def recipient_text(
+    value: str,
+) -> str:
+    value = value.strip()
+
+    if not value:
+        return "＿＿＿＿＿＿＿＿＿＿＿＿ 様"
+
+    if value.endswith("様"):
+        return value
+
+    return f"{value} 様"
+
+
+# ============================================================
+# 5. デザイン
+# ============================================================
+
+PAGE_LEFT = -9.1
+PAGE_RIGHT = 9.1
+PAGE_WIDTH = PAGE_RIGHT - PAGE_LEFT
+
+TEXT_COLOR = "#263238"
+MUTED_COLOR = "#667085"
+
+ACCENT_COLOR = "#315C8C"
+ACCENT_LIGHT = "#EAF1F8"
+
+LINE_COLOR = "#98A2B3"
+SURFACE_COLOR = "#F7F8FA"
+
+TITLE_FONT_SIZE = 54
+BODY_FONT_SIZE = 30
+LABEL_FONT_SIZE = 24
+SMALL_FONT_SIZE = 21
+AMOUNT_FONT_SIZE = 44
+
+TABLE_FONT_SIZE = 25
+
+TABLE_TOP_Y = 6.45
+
+TABLE_HEADER_HEIGHT = 0.88
+TABLE_ROW_HEIGHT = 0.80
+
+TABLE_COLUMNS = [
+    ("指導日", 4.20),
+    ("指導時間", 3.20),
+    ("時給", 4.35),
+    ("金額", 6.45),
+]
+
+
+# ============================================================
+# 6. Scene
+# ============================================================
+
+class TutoringReceipt(LightScene):
+    def text(
+        self,
+        value: str,
+        *,
+        font_size: float = BODY_FONT_SIZE,
+        color=TEXT_COLOR,
+        weight: str = "NORMAL",
+        max_width: float | None = None,
+    ) -> Text:
+        mob = Text(
+            value if value else " ",
+            font=self.theme.sans_font,
+            font_size=font_size,
+            color=color,
+            weight=weight,
+        )
+
+        if (
+            max_width is not None
+            and mob.width > max_width
+        ):
+            mob.scale_to_fit_width(max_width)
+
+        return mob
+
+    @staticmethod
+    def put_left(
+        mob,
+        x: float,
+        y: float,
+    ):
+        mob.move_to(
+            [
+                x + mob.width / 2,
+                y,
+                0,
+            ]
+        )
+
+        return mob
+
+    @staticmethod
+    def put_right(
+        mob,
+        x: float,
+        y: float,
+    ):
+        mob.move_to(
+            [
+                x - mob.width / 2,
+                y,
+                0,
+            ]
+        )
+
+        return mob
+
+    # --------------------------------------------------------
+    # タイトル
+    # --------------------------------------------------------
+
+    def add_header(self) -> None:
+        title = self.text(
+            CONTENT["title"],
+            font_size=TITLE_FONT_SIZE,
+            weight="BOLD",
+        )
+
+        title.move_to(
+            [0, 13.25, 0]
+        )
+
+        self.add(title)
+
+        line = Line(
+            [PAGE_LEFT, 12.55, 0],
+            [PAGE_RIGHT, 12.55, 0],
+            color=ACCENT_COLOR,
+            stroke_width=2.2,
+        )
+
+        self.add(line)
+
+        if CONTENT["receipt_number"]:
+            number = self.text(
+                f"No. {CONTENT['receipt_number']}",
+                font_size=SMALL_FONT_SIZE,
+                color=MUTED_COLOR,
+            )
+
+            self.put_right(
+                number,
+                PAGE_RIGHT,
+                13.85,
+            )
+
+            self.add(number)
+
+    # --------------------------------------------------------
+    # 宛名
+    # --------------------------------------------------------
+
+    def add_recipient(self) -> None:
+        label = self.text(
+            "宛名",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        self.put_left(
+            label,
+            PAGE_LEFT,
+            11.75,
+        )
+
+        name = self.text(
+            recipient_text(
+                CONTENT["recipient"]
+            ),
+            font_size=40,
+            weight="BOLD",
+            max_width=13.5,
+        )
+
+        self.put_left(
+            name,
+            PAGE_LEFT,
+            11.05,
+        )
+
+        underline = Line(
+            [PAGE_LEFT, 10.48, 0],
+            [5.5, 10.48, 0],
+            color=LINE_COLOR,
+            stroke_width=1.2,
+        )
+
+        self.add(
+            label,
+            name,
+            underline,
+        )
+
+    # --------------------------------------------------------
+    # 領収金額
+    # --------------------------------------------------------
+
+    def add_amount_box(self) -> None:
+        box = RoundedRectangle(
+            width=PAGE_WIDTH,
+            height=1.72,
+            corner_radius=0.15,
+            color=ACCENT_COLOR,
+            stroke_width=2.0,
+            fill_color=ACCENT_LIGHT,
+            fill_opacity=1.0,
+        )
+
+        box.move_to(
+            [0, 9.15, 0]
+        )
+
+        label = self.text(
+            "領収金額",
+            font_size=LABEL_FONT_SIZE,
+            weight="BOLD",
+        )
+
+        self.put_left(
+            label,
+            PAGE_LEFT + 0.5,
+            9.15,
+        )
+
+        amount_string = format_yen(
+            CONTENT["grand_total"],
+            "＿＿＿＿＿＿＿＿円",
+        )
+
+        amount = self.text(
+            amount_string,
+            font_size=AMOUNT_FONT_SIZE,
+            color=ACCENT_COLOR,
+            weight="BOLD",
+            max_width=10.0,
+        )
+
+        self.put_right(
+            amount,
+            PAGE_RIGHT - 0.5,
+            9.15,
+        )
+
+        self.add(
+            box,
+            label,
+            amount,
+        )
+
+    # --------------------------------------------------------
+    # 対象月・領収日・但し書き
+    # --------------------------------------------------------
+
+    def add_metadata(self) -> None:
+        period_label = self.text(
+            "対象月",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        period = self.text(
+            CONTENT["period"]
+            or "＿＿＿＿年＿＿月分",
+            font_size=BODY_FONT_SIZE,
+            weight="BOLD",
+            max_width=5.4,
+        )
+
+        self.put_left(
+            period_label,
+            PAGE_LEFT,
+            7.80,
+        )
+
+        self.put_left(
+            period,
+            PAGE_LEFT + 1.65,
+            7.80,
+        )
+
+        date_label = self.text(
+            "領収日",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        date = self.text(
+            CONTENT["received_date"]
+            or "＿＿＿＿年＿＿月＿＿日",
+            font_size=BODY_FONT_SIZE,
+            max_width=6.0,
+        )
+
+        self.put_left(
+            date_label,
+            1.0,
+            7.80,
+        )
+
+        self.put_left(
+            date,
+            2.65,
+            7.80,
+        )
+
+        description_label = self.text(
+            "但し",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        description = self.text(
+            CONTENT["description"],
+            font_size=BODY_FONT_SIZE,
+            max_width=14.8,
+        )
+
+        self.put_left(
+            description_label,
+            PAGE_LEFT,
+            6.92,
+        )
+
+        self.put_left(
+            description,
+            PAGE_LEFT + 1.65,
+            6.92,
+        )
+
+        line = Line(
+            [PAGE_LEFT + 1.65, 6.50, 0],
+            [PAGE_RIGHT, 6.50, 0],
+            color=LINE_COLOR,
+            stroke_width=1.0,
+        )
+
+        self.add(
+            period_label,
+            period,
+            date_label,
+            date,
+            description_label,
+            description,
+            line,
+        )
+
+    # --------------------------------------------------------
+    # 指導明細
+    # --------------------------------------------------------
+
+    def make_session_table(
+        self,
+    ) -> tuple[VGroup, float]:
+        sessions = CONTENT["sessions"]
+
+        row_count = max(
+            5,
+            len(sessions),
+        )
+
+        row_count = min(
+            row_count,
+            MAX_SESSION_ROWS,
+        )
+
+        total_height = (
+            TABLE_HEADER_HEIGHT
+            + row_count * TABLE_ROW_HEIGHT
+        )
+
+        bottom_y = (
+            TABLE_TOP_Y
+            - total_height
+        )
+
+        table = VGroup()
+
+        border = Rectangle(
+            width=PAGE_WIDTH,
+            height=total_height,
+            color=LINE_COLOR,
+            stroke_width=1.4,
+        )
+
+        border.move_to(
+            [
+                0,
+                (
+                    TABLE_TOP_Y
+                    + bottom_y
+                ) / 2,
+                0,
+            ]
+        )
+
+        table.add(border)
+
+        header_background = Rectangle(
+            width=PAGE_WIDTH,
+            height=TABLE_HEADER_HEIGHT,
+            stroke_width=0,
+            fill_color=SURFACE_COLOR,
+            fill_opacity=1.0,
+        )
+
+        header_background.move_to(
+            [
+                0,
+                TABLE_TOP_Y
+                - TABLE_HEADER_HEIGHT / 2,
+                0,
+            ]
+        )
+
+        table.add(
+            header_background
+        )
+
+        x_positions = [
+            PAGE_LEFT
+        ]
+
+        current_x = PAGE_LEFT
+
+        for _, width in TABLE_COLUMNS:
+            current_x += width
+            x_positions.append(
+                current_x
+            )
+
+        # 縦線
+        for x in x_positions[1:-1]:
+            table.add(
+                Line(
+                    [x, TABLE_TOP_Y, 0],
+                    [x, bottom_y, 0],
+                    color=LINE_COLOR,
+                    stroke_width=0.9,
+                )
+            )
+
+        header_bottom = (
+            TABLE_TOP_Y
+            - TABLE_HEADER_HEIGHT
+        )
+
+        table.add(
+            Line(
+                [
+                    PAGE_LEFT,
+                    header_bottom,
+                    0,
+                ],
+                [
+                    PAGE_RIGHT,
+                    header_bottom,
+                    0,
+                ],
+                color=LINE_COLOR,
+                stroke_width=1.1,
+            )
+        )
+
+        # 横線
+        for row in range(
+            1,
+            row_count,
+        ):
+            y = (
+                header_bottom
+                - row * TABLE_ROW_HEIGHT
+            )
+
+            table.add(
+                Line(
+                    [PAGE_LEFT, y, 0],
+                    [PAGE_RIGHT, y, 0],
+                    color=LINE_COLOR,
+                    stroke_width=0.75,
+                )
+            )
+
+        # ヘッダー
+        x = PAGE_LEFT
+
+        for label, width in TABLE_COLUMNS:
+            text = self.text(
+                label,
+                font_size=TABLE_FONT_SIZE,
+                weight="BOLD",
+            )
+
+            text.move_to(
+                [
+                    x + width / 2,
+                    TABLE_TOP_Y
+                    - TABLE_HEADER_HEIGHT / 2,
+                    0,
+                ]
+            )
+
+            table.add(text)
+
+            x += width
+
+        # 各行
+        for row_index in range(
+            row_count
+        ):
+            if row_index < len(sessions):
+                session = sessions[
+                    row_index
+                ]
+
+                values = [
+                    session["date"],
+                    format_hours(
+                        session["hours"]
+                    ),
+                    format_yen(
+                        session["hourly_rate"]
+                    ),
+                    format_yen(
+                        session["amount"]
+                    ),
+                ]
+
+            else:
+                values = [
+                    "",
+                    "",
+                    "",
+                    "",
+                ]
+
+            row_y = (
+                header_bottom
+                - (
+                    row_index + 0.5
+                )
+                * TABLE_ROW_HEIGHT
+            )
+
+            x = PAGE_LEFT
+
+            for value, (_, width) in zip(
+                values,
+                TABLE_COLUMNS,
+            ):
+                text = self.text(
+                    value,
+                    font_size=TABLE_FONT_SIZE,
+                    max_width=width - 0.45,
+                )
+
+                text.move_to(
+                    [
+                        x + width / 2,
+                        row_y,
+                        0,
+                    ]
+                )
+
+                table.add(text)
+
+                x += width
+
+        return table, bottom_y
+
+    # --------------------------------------------------------
+    # 集計
+    # --------------------------------------------------------
+
+    def add_summary(
+        self,
+        table_bottom: float,
+    ) -> float:
+        first_y = (
+            table_bottom - 0.52
+        )
+
+        hours_label = self.text(
+            "指導時間 合計",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        hours_value = self.text(
+            format_hours(
+                CONTENT["total_hours"]
+            )
+            or "＿＿＿＿時間",
+            font_size=BODY_FONT_SIZE,
+            weight="BOLD",
+        )
+
+        self.put_left(
+            hours_label,
+            PAGE_LEFT,
+            first_y,
+        )
+
+        self.put_left(
+            hours_value,
+            PAGE_LEFT + 3.0,
+            first_y,
+        )
+
+        self.add(
+            hours_label,
+            hours_value,
+        )
+
+        rows = [
+            (
+                "指導料小計",
+                CONTENT[
+                    "tuition_subtotal"
+                ],
+            )
+        ]
+
+        for expense in CONTENT[
+            "expenses"
+        ]:
+            rows.append(
+                (
+                    expense["label"],
+                    expense["amount"],
+                )
+            )
+
+        row_gap = 0.67
+
+        for index, (
+            label,
+            amount,
+        ) in enumerate(rows):
+            y = (
+                first_y
+                - index * row_gap
+            )
+
+            label_mob = self.text(
+                label,
+                font_size=LABEL_FONT_SIZE,
+                color=MUTED_COLOR,
+            )
+
+            amount_mob = self.text(
+                format_yen(
+                    amount,
+                    "＿＿＿＿円",
+                ),
+                font_size=BODY_FONT_SIZE,
+                max_width=4.2,
+            )
+
+            self.put_left(
+                label_mob,
+                2.0,
+                y,
+            )
+
+            self.put_right(
+                amount_mob,
+                PAGE_RIGHT,
+                y,
+            )
+
+            self.add(
+                label_mob,
+                amount_mob,
+            )
+
+        total_y = (
+            first_y
+            - len(rows) * row_gap
+            - 0.10
+        )
+
+        total_box = RoundedRectangle(
+            width=7.25,
+            height=1.12,
+            corner_radius=0.12,
+            color=ACCENT_COLOR,
+            stroke_width=1.8,
+            fill_color=ACCENT_LIGHT,
+            fill_opacity=1.0,
+        )
+
+        total_box.move_to(
+            [5.48, total_y, 0]
+        )
+
+        total_label = self.text(
+            "合計",
+            font_size=BODY_FONT_SIZE,
+            weight="BOLD",
+        )
+
+        self.put_left(
+            total_label,
+            2.25,
+            total_y,
+        )
+
+        total_amount = self.text(
+            format_yen(
+                CONTENT["grand_total"],
+                "＿＿＿＿＿＿円",
+            ),
+            font_size=37,
+            color=ACCENT_COLOR,
+            weight="BOLD",
+            max_width=4.3,
+        )
+
+        self.put_right(
+            total_amount,
+            PAGE_RIGHT - 0.3,
+            total_y,
+        )
+
+        self.add(
+            total_box,
+            total_label,
+            total_amount,
+        )
+
+        return total_y
+
+    # --------------------------------------------------------
+    # 発行者
+    # --------------------------------------------------------
+
+    def add_footer(
+        self,
+        summary_bottom: float,
+    ) -> None:
+        statement_y = (
+            summary_bottom - 1.10
+        )
+
+        statement = self.text(
+            "上記金額を、上記但し書きの内容として領収いたしました。",
+            font_size=LABEL_FONT_SIZE,
+            max_width=PAGE_WIDTH,
+        )
+
+        self.put_left(
+            statement,
+            PAGE_LEFT,
+            statement_y,
+        )
+
+        self.add(statement)
+
+        next_y = (
+            statement_y - 0.65
+        )
+
+        if CONTENT["note"]:
+            note = self.text(
+                "備考："
+                + CONTENT["note"],
+                font_size=SMALL_FONT_SIZE,
+                color=MUTED_COLOR,
+                max_width=PAGE_WIDTH,
+            )
+
+            self.put_left(
+                note,
+                PAGE_LEFT,
+                next_y,
+            )
+
+            self.add(note)
+
+            next_y -= 0.55
+
+        panel_height = 3.15
+        panel_top = next_y - 0.35
+
+        panel = RoundedRectangle(
+            width=PAGE_WIDTH,
+            height=panel_height,
+            corner_radius=0.15,
+            color=LINE_COLOR,
+            stroke_width=1.2,
+            fill_color=SURFACE_COLOR,
+            fill_opacity=0.65,
+        )
+
+        panel_center_y = (
+            panel_top
+            - panel_height / 2
+        )
+
+        panel.move_to(
+            [0, panel_center_y, 0]
+        )
+
+        issuer_label = self.text(
+            "発行者",
+            font_size=LABEL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        issuer_name = self.text(
+            CONTENT["issuer"]["name"]
+            or "＿＿＿＿＿＿＿＿＿＿＿＿",
+            font_size=BODY_FONT_SIZE,
+            weight="BOLD",
+            max_width=10.5,
+        )
+
+        self.put_left(
+            issuer_label,
+            PAGE_LEFT + 0.5,
+            panel_center_y + 0.72,
+        )
+
+        self.put_left(
+            issuer_name,
+            PAGE_LEFT + 0.5,
+            panel_center_y + 0.10,
+        )
+
+        self.add(
+            panel,
+            issuer_label,
+            issuer_name,
+        )
+
+        if CONTENT["issuer"][
+            "contact"
+        ]:
+            contact = self.text(
+                CONTENT["issuer"][
+                    "contact"
+                ],
+                font_size=SMALL_FONT_SIZE,
+                color=MUTED_COLOR,
+                max_width=10.4,
+            )
+
+            self.put_left(
+                contact,
+                PAGE_LEFT + 0.5,
+                panel_center_y - 0.62,
+            )
+
+            self.add(contact)
+
+        stamp = Rectangle(
+            width=2.75,
+            height=2.20,
+            color=LINE_COLOR,
+            stroke_width=1.1,
+        )
+
+        stamp.move_to(
+            [
+                7.05,
+                panel_center_y - 0.05,
+                0,
+            ]
+        )
+
+        stamp_label = self.text(
+            "署名・押印",
+            font_size=SMALL_FONT_SIZE,
+            color=MUTED_COLOR,
+        )
+
+        stamp_label.move_to(
+            [
+                7.05,
+                panel_center_y + 1.30,
+                0,
+            ]
+        )
+
+        self.add(
+            stamp,
+            stamp_label,
+        )
+
+    # --------------------------------------------------------
+    # Scene
+    # --------------------------------------------------------
+
+    def construct(self) -> None:
+        self.add_header()
+        self.add_recipient()
+        self.add_amount_box()
+        self.add_metadata()
+
+        table, table_bottom = (
+            self.make_session_table()
+        )
+
+        self.add(table)
+
+        summary_bottom = (
+            self.add_summary(
+                table_bottom
+            )
+        )
+
+        self.add_footer(
+            summary_bottom
+        )

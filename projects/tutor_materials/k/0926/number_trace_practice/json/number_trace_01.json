@@ -1,22 +1,9 @@
 {
-  "title": "すうじを なぞろう",
-  "subtitle": "かずを かぞえて、うすい すうじを なぞって かいてみよう！",
-  "bottom_note": "せんの うえを ゆっくり なぞってね。",
-  "problems": [
-    {
-      "number": 1,
-      "motif": "apple",
-      "label": "りんご"
-    },
-    {
-      "number": 2,
-      "motif": "star",
-      "label": "ほし"
-    },
-    {
-      "number": 3,
-      "motif": "balloon",
-      "label": "ふうせん"
-    }
-  ]
+    "title": "0から9まで すうじのぼうけん",
+    "subtitle": "みる → なぞる → かく。できたら ほしを ぬろう！",
+    "start_image": "animal/rabbit.png",
+    "start_text": "スタート！",
+    "goal_text": "ゴール！",
+    "goal_message": "0から9まで ぜんぶ クリア！",
+    "numbers": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 }

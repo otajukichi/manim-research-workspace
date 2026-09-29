@@ -1,0 +1,41 @@
+{
+    "title": "家庭教師指導料 領収書",
+    "receipt_number": "",
+    "recipient": "",
+    "period": "2026年9月分",
+    "received_date": "",
+    "description": "2026年9月分 家庭教師指導料として",
+    "sessions": [
+        {
+            "date": "",
+            "hours": null,
+            "hourly_rate": null
+        },
+        {
+            "date": "",
+            "hours": null,
+            "hourly_rate": null
+        },
+        {
+            "date": "",
+            "hours": null,
+            "hourly_rate": null
+        },
+        {
+            "date": "",
+            "hours": null,
+            "hourly_rate": null
+        }
+    ],
+    "expenses": [
+        {
+            "label": "交通費",
+            "amount": null
+        }
+    ],
+    "issuer": {
+        "name": "",
+        "contact": ""
+    },
+    "note": ""
+}
