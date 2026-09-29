@@ -1,0 +1,22 @@
+{
+    "title": "あきのものを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "うえの もじを なぞって、したの マスにも かいてみよう！",
+    "problems": [
+        {
+            "icon": "autumn/chestnut.png",
+            "answer": "くり",
+            "trace": ["く", "り"]
+        },
+        {
+            "icon": "autumn/mushroom.png",
+            "answer": "きのこ",
+            "trace": ["き", "の", "こ"]
+        },
+        {
+            "icon": "autumn/acorn.png",
+            "answer": "どんぐり",
+            "trace": ["ど", "ん", "ぐ", "り"]
+        }
+    ]
+}

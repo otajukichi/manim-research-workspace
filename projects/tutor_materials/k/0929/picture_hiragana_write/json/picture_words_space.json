@@ -1,0 +1,22 @@
+{
+    "title": "うちゅうのものを かいてみよう",
+    "subtitle": "えをみて、なまえを ひらがなで かいてみよう！",
+    "bottom_note": "ちいさい「ゅ」や「っ」も、ひとマスに ひともじずつ かこう！",
+    "problems": [
+        {
+            "icon": "space/moon.png",
+            "answer": "つき",
+            "trace": ["つ", "き"]
+        },
+        {
+            "icon": "space/earth.png",
+            "answer": "ちきゅう",
+            "trace": ["ち", "き", "ゅ", "う"]
+        },
+        {
+            "icon": "space/rocket.png",
+            "answer": "ろけっと",
+            "trace": ["ろ", "け", "っ", "と"]
+        }
+    ]
+}

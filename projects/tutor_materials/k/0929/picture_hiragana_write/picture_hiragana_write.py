@@ -1,0 +1,798 @@
+"""A4縦・絵を見てひらがなを書くプリント。
+
+json/ の問題データと ../figures/ 以下のPNG絵素材を読み込む。
+answer は書き込みマス数の決定に使う。
+trace は各マスに薄く表示するなぞり書き文字を配列で指定する。
+問題JSONは --content-file で実行時に切り替えられる。\n出力先はワークスペースの scripts/manim.sh に任せる。
+"""
+
+import json
+import os
+from pathlib import Path
+
+import manimpango
+from manim import (
+    DOWN,
+    RIGHT,
+    UP,
+    DashedLine,
+    Group,
+    ImageMobject,
+    RoundedRectangle,
+    Text,
+    VGroup,
+    config,
+)
+
+from manim_research import EducationScene
+
+
+# ============================================================
+# 用紙・データ
+# ============================================================
+
+A4_WIDTH = 21.0
+A4_HEIGHT = 29.7
+PIXEL_WIDTH = 2480
+PIXEL_HEIGHT = 3508
+
+BASE_DIR = Path(__file__).resolve().parent
+JSON_DIR = BASE_DIR / "json"
+FIGURES_DIR = BASE_DIR.parent / "figures"
+
+DEFAULT_CONTENT_FILE_NAME = "picture_words_01.json"
+
+
+def resolve_content_file() -> Path:
+    """--content-file で指定されたJSONを解決する。
+
+    指定がなければ picture_words_01.json を使用する。
+
+    指定例:
+        picture_words_02.json
+
+    またはリポジトリルートからのパス:
+        projects/.../json/picture_words_02.json
+    """
+
+    requested = os.environ.get(
+        "MANIM_CONTENT_FILE",
+        DEFAULT_CONTENT_FILE_NAME,
+    )
+
+    requested_path = Path(requested).expanduser()
+
+    # 絶対パスならそのまま使う
+    if requested_path.is_absolute():
+        return requested_path
+
+    # カレントディレクトリ基準で実在する場合
+    cwd_path = Path.cwd() / requested_path
+
+    if cwd_path.is_file():
+        return cwd_path.resolve()
+
+    # ファイル名だけなら、この教材の json/ 以下として扱う
+    return JSON_DIR / requested_path
+
+
+CONTENT_FILE = resolve_content_file()
+
+OUTPUT_FILE_PREFIX = "picture_hiragana"
+
+
+# ============================================================
+# タイトル・説明文
+# ============================================================
+
+TITLE_FONT_SIZE = 66
+TITLE_TOP_BUFF = 1.0
+
+SUBTITLE_FONT_SIZE = 44
+SUBTITLE_BUFF = 0.28
+
+
+# ============================================================
+# 問題全体・各問題の枠
+# ============================================================
+
+PROBLEM_COUNT = 3
+
+PROBLEMS_CENTER_Y = -0.2
+PROBLEM_VERTICAL_BUFF = 0.55
+
+PROBLEM_BOX_WIDTH = 17.4
+PROBLEM_BOX_HEIGHT = 6.45
+
+PROBLEM_BOX_CORNER_RADIUS = 0.35
+PROBLEM_BOX_STROKE_WIDTH = 2.6
+PROBLEM_BOX_FILL_OPACITY = 0.34
+
+
+# ============================================================
+# 問題枠内の横並びレイアウト
+# 左: 大きな画像
+# 右: 最大4文字の書き込みマス
+# ============================================================
+
+CONTENT_SIDE_MARGIN = 0.8
+
+IMAGE_AREA_WIDTH = 5.4
+IMAGE_WRITE_GAP = 0.8
+
+ICON_MAX_WIDTH = 4.9
+ICON_MAX_HEIGHT = 4.9
+
+
+# ============================================================
+# 書き込みマス
+# ============================================================
+
+MAX_ANSWER_LENGTH = 4
+
+WRITE_CELL_SIZE = 2.15
+WRITE_CELL_GAP = 0.22
+
+# 上段（なぞり書き）と下段（自力書き）の縦間隔
+WRITE_ROW_GAP = 0.48
+
+WRITE_CELL_STROKE_WIDTH = 2.8
+WRITE_CELL_CORNER_RADIUS = 0.12
+
+WRITE_GUIDE_STROKE_WIDTH = 1.5
+WRITE_GUIDE_OPACITY = 0.45
+
+
+# ============================================================
+# なぞり書き用の薄い文字
+#
+# 0915/hiragana_trace_grid.py と同様に、
+# 教育用フォント + fill/stroke opacity で薄く表示する。
+# ============================================================
+
+PREFERRED_FONTS = [
+    "UD Digi Kyokasho N",
+    "UD Digi Kyokasho NP",
+    "UD Digi Kyokasho NK",
+]
+
+TRACE_FONT_SIZE = 132
+
+# 数字を大きくすると濃く、小さくすると薄くなる
+TRACE_FILL_OPACITY = 0.28
+TRACE_STROKE_OPACITY = 0.28
+
+TRACE_STROKE_WIDTH = 0.6
+
+# マスの一辺に対して文字が占めてよい最大割合
+TRACE_MAX_SIZE_RATIO = 0.76
+
+TRACE_X_OFFSET = 0.0
+TRACE_Y_OFFSET = 0.0
+
+
+# ============================================================
+# 下部の補足
+# ============================================================
+
+BOTTOM_NOTE_FONT_SIZE = 44
+BOTTOM_NOTE_BOTTOM_BUFF = 0.72
+
+
+# ============================================================
+# Manim設定
+# ============================================================
+
+config.frame_width = A4_WIDTH
+config.frame_height = A4_HEIGHT
+config.pixel_width = PIXEL_WIDTH
+config.pixel_height = PIXEL_HEIGHT
+
+config.output_file = f"{OUTPUT_FILE_PREFIX}_{CONTENT_FILE.stem}"
+
+
+# ============================================================
+# フォント
+# ============================================================
+
+def require_education_font() -> str:
+    """0915教材と同じ教育用フォントを優先順に探す。"""
+
+    available_fonts = set(manimpango.list_fonts())
+
+    for font_name in PREFERRED_FONTS:
+        if font_name in available_fonts:
+            return font_name
+
+    raise ValueError(
+        "教育用フォントが見つかりません。"
+        " 少なくとも次のいずれかを使用できるようにしてください: "
+        + ", ".join(PREFERRED_FONTS)
+    )
+
+
+SELECTED_FONT = require_education_font()
+
+
+# ============================================================
+# PNG画像
+# ============================================================
+
+def get_icon_path(icon: str) -> Path:
+    """0918/figures 以下からJSONで指定されたPNG画像を探す。
+
+    次の両方に対応する。
+
+    - "bear.png"
+    - "animal/bear.png"
+    - "food/apple.png"
+    - "vehicle/car.png"
+    """
+
+    # カテゴリまでJSONで指定している場合
+    direct_path = FIGURES_DIR / icon
+
+    if direct_path.is_file():
+        return direct_path
+
+    # ファイル名だけの場合は figures 以下を再帰検索する
+    candidates = [
+        path
+        for path in FIGURES_DIR.rglob(icon)
+        if path.is_file()
+    ]
+
+    if len(candidates) == 1:
+        return candidates[0]
+
+    if len(candidates) > 1:
+        relative_paths = "\n".join(
+            f"  - {path.relative_to(FIGURES_DIR)}"
+            for path in candidates
+        )
+
+        raise ValueError(
+            f"同名のPNG素材が複数あります: {icon}\n"
+            "JSONではカテゴリを含めて指定してください。\n"
+            f"{relative_paths}"
+        )
+
+    raise FileNotFoundError(
+        f"PNG素材が見つかりません: {icon}\n"
+        f"検索先: {FIGURES_DIR}"
+    )
+
+
+def make_icon(icon: str) -> ImageMobject:
+    """PNGの縦横比を保って指定サイズ内に収める。"""
+
+    icon_path = get_icon_path(icon)
+
+    picture = ImageMobject(str(icon_path))
+
+    if picture.width <= 0 or picture.height <= 0:
+        raise ValueError(
+            f"PNG画像を表示できません: {icon_path}"
+        )
+
+    picture.scale(
+        min(
+            ICON_MAX_WIDTH / picture.width,
+            ICON_MAX_HEIGHT / picture.height,
+        )
+    )
+
+    return picture
+
+
+# ============================================================
+# JSON読み込み
+# ============================================================
+
+def load_content() -> dict:
+    """問題データ、PNG、trace配列を検証する。"""
+
+    if not CONTENT_FILE.is_file():
+        raise FileNotFoundError(
+            f"教材データが見つかりません:\n{CONTENT_FILE}"
+        )
+
+    with CONTENT_FILE.open(
+        "r",
+        encoding="utf-8",
+    ) as file:
+        data = json.load(file)
+
+    if not isinstance(data, dict):
+        raise ValueError(
+            "JSONの最上位はオブジェクトにしてください。"
+        )
+
+    for key in (
+        "title",
+        "subtitle",
+        "problems",
+    ):
+        if key not in data:
+            raise ValueError(
+                f"JSONに必要なキーがありません: {key}"
+            )
+
+    for key in (
+        "title",
+        "subtitle",
+    ):
+        if not isinstance(data[key], str):
+            raise ValueError(
+                f"{key} は文字列にしてください。"
+            )
+
+    if (
+        "bottom_note" in data
+        and not isinstance(
+            data["bottom_note"],
+            str,
+        )
+    ):
+        raise ValueError(
+            "bottom_note は文字列にしてください。"
+        )
+
+    problems = data["problems"]
+
+    if not isinstance(problems, list):
+        raise ValueError(
+            "problems は配列にしてください。"
+        )
+
+    if len(problems) != PROBLEM_COUNT:
+        raise ValueError(
+            f"problems は {PROBLEM_COUNT} 問にしてください。"
+            f"現在: {len(problems)} 問"
+        )
+
+    for index, problem in enumerate(
+        problems,
+        start=1,
+    ):
+        if not isinstance(problem, dict):
+            raise ValueError(
+                f"{index}問目はオブジェクトにしてください。"
+            )
+
+        for key in (
+            "icon",
+            "answer",
+            "trace",
+        ):
+            if key not in problem:
+                raise ValueError(
+                    f"{index}問目に {key} がありません。"
+                )
+
+        if (
+            not isinstance(problem["icon"], str)
+            or not problem["icon"].strip()
+        ):
+            raise ValueError(
+                f"{index}問目の icon は"
+                "空ではない文字列にしてください。"
+            )
+
+        answer = problem["answer"]
+
+        if (
+            not isinstance(answer, str)
+            or not answer.strip()
+        ):
+            raise ValueError(
+                f"{index}問目の answer は"
+                "空ではない文字列にしてください。"
+            )
+
+        if len(answer) > MAX_ANSWER_LENGTH:
+            raise ValueError(
+                f"{index}問目の answer は最大 "
+                f"{MAX_ANSWER_LENGTH} 文字です。"
+                f" 現在: {len(answer)} 文字"
+            )
+
+        trace = problem["trace"]
+
+        if not isinstance(trace, list):
+            raise ValueError(
+                f"{index}問目の trace は配列にしてください。"
+            )
+
+        if len(trace) != len(answer):
+            raise ValueError(
+                f"{index}問目の trace の要素数は"
+                " answer の文字数と同じにしてください。"
+                f" answer={len(answer)} / trace={len(trace)}"
+            )
+
+        for char_index, char in enumerate(
+            trace,
+            start=1,
+        ):
+            if not isinstance(char, str):
+                raise ValueError(
+                    f"{index}問目 trace の"
+                    f"{char_index}番目は文字列にしてください。"
+                )
+
+            if len(char) > 1:
+                raise ValueError(
+                    f"{index}問目 trace の"
+                    f"{char_index}番目は"
+                    "1文字または空文字にしてください。"
+                )
+
+        get_icon_path(problem["icon"])
+
+    return data
+
+
+# ============================================================
+# なぞり書き文字
+# ============================================================
+
+def make_trace_character(
+    char: str,
+    theme,
+) -> Text:
+    """マス中央に薄い見本文字を作る。"""
+
+    sample = Text(
+        char,
+        font=SELECTED_FONT,
+        color=theme.foreground,
+        font_size=TRACE_FONT_SIZE,
+    )
+
+    max_size = (
+        WRITE_CELL_SIZE
+        * TRACE_MAX_SIZE_RATIO
+    )
+
+    if sample.width > max_size:
+        sample.scale_to_fit_width(max_size)
+
+    if sample.height > max_size:
+        sample.scale_to_fit_height(max_size)
+
+    sample.shift(
+        RIGHT * TRACE_X_OFFSET
+        + UP * TRACE_Y_OFFSET
+    )
+
+    sample.set_fill(
+        theme.foreground,
+        opacity=TRACE_FILL_OPACITY,
+    )
+
+    sample.set_stroke(
+        theme.foreground,
+        opacity=TRACE_STROKE_OPACITY,
+        width=TRACE_STROKE_WIDTH,
+    )
+
+    return sample
+
+
+# ============================================================
+# 書き込みマス
+# ============================================================
+
+def make_write_cell(
+    theme,
+    trace_char: str = "",
+) -> VGroup:
+    """中央に縦横破線と任意の薄い文字を持つマス。"""
+
+    box = RoundedRectangle(
+        width=WRITE_CELL_SIZE,
+        height=WRITE_CELL_SIZE,
+        corner_radius=WRITE_CELL_CORNER_RADIUS,
+        color=theme.muted,
+        stroke_width=WRITE_CELL_STROKE_WIDTH,
+        fill_color=theme.background,
+        fill_opacity=1.0,
+    )
+
+    half_length = (
+        WRITE_CELL_SIZE / 2
+        - 0.14
+    )
+
+    horizontal = DashedLine(
+        start=[
+            -half_length,
+            0,
+            0,
+        ],
+        end=[
+            half_length,
+            0,
+            0,
+        ],
+        dash_length=0.15,
+        dashed_ratio=0.52,
+        color=theme.secondary,
+        stroke_width=WRITE_GUIDE_STROKE_WIDTH,
+    )
+
+    vertical = DashedLine(
+        start=[
+            0,
+            -half_length,
+            0,
+        ],
+        end=[
+            0,
+            half_length,
+            0,
+        ],
+        dash_length=0.15,
+        dashed_ratio=0.52,
+        color=theme.secondary,
+        stroke_width=WRITE_GUIDE_STROKE_WIDTH,
+    )
+
+    horizontal.set_stroke(
+        opacity=WRITE_GUIDE_OPACITY
+    )
+
+    vertical.set_stroke(
+        opacity=WRITE_GUIDE_OPACITY
+    )
+
+    cell = VGroup(
+        box,
+        horizontal,
+        vertical,
+    )
+
+    if trace_char:
+        sample = make_trace_character(
+            trace_char,
+            theme,
+        )
+        sample.move_to(box.get_center())
+        cell.add(sample)
+
+    return cell
+
+
+def make_write_cells(
+    answer: str,
+    trace: list[str],
+    theme,
+) -> VGroup:
+    """answer文字数ぶんのマスを作り、trace配列の文字だけ薄く表示する。"""
+
+    cells = VGroup(
+        *(
+            make_write_cell(
+                theme,
+                trace_char=trace[index],
+            )
+            for index in range(len(answer))
+        )
+    )
+
+    cells.arrange(
+        RIGHT,
+        buff=WRITE_CELL_GAP,
+    )
+
+    return cells
+
+
+def make_write_rows(
+    answer: str,
+    trace: list[str],
+    theme,
+) -> VGroup:
+    """上段になぞり書き、下段に空白マスを配置する。"""
+
+    # 上段:
+    # JSON の trace 配列で指定された薄い文字を表示
+    trace_row = make_write_cells(
+        answer,
+        trace,
+        theme,
+    )
+
+    # 下段:
+    # 同じ文字数の完全な空白マス
+    blank_trace = [
+        ""
+        for _ in answer
+    ]
+
+    blank_row = make_write_cells(
+        answer,
+        blank_trace,
+        theme,
+    )
+
+    rows = VGroup(
+        trace_row,
+        blank_row,
+    )
+
+    rows.arrange(
+        DOWN,
+        buff=WRITE_ROW_GAP,
+    )
+
+    return rows
+
+
+# ============================================================
+# 1問ぶん
+# ============================================================
+
+def make_problem(
+    icon: str,
+    answer: str,
+    trace: list[str],
+    theme,
+) -> Group:
+    """左に画像、右に書き込みマスを配置する。"""
+
+    problem_box = RoundedRectangle(
+        width=PROBLEM_BOX_WIDTH,
+        height=PROBLEM_BOX_HEIGHT,
+        corner_radius=PROBLEM_BOX_CORNER_RADIUS,
+        color=theme.secondary,
+        stroke_width=PROBLEM_BOX_STROKE_WIDTH,
+        fill_color=theme.surface,
+        fill_opacity=PROBLEM_BOX_FILL_OPACITY,
+    )
+
+    # --------------------------------------------------------
+    # 左側: 画像
+    # --------------------------------------------------------
+
+    picture = make_icon(icon)
+
+    left_x = problem_box.get_left()[0]
+    center_y = problem_box.get_center()[1]
+
+    image_center_x = (
+        left_x
+        + CONTENT_SIDE_MARGIN
+        + IMAGE_AREA_WIDTH / 2
+    )
+
+    picture.move_to(
+        [
+            image_center_x,
+            center_y,
+            0,
+        ]
+    )
+
+    # --------------------------------------------------------
+    # 右側: 書き込みマス
+    # --------------------------------------------------------
+
+    write_rows = make_write_rows(
+        answer,
+        trace,
+        theme,
+    )
+
+    write_area_left_x = (
+        left_x
+        + CONTENT_SIDE_MARGIN
+        + IMAGE_AREA_WIDTH
+        + IMAGE_WRITE_GAP
+    )
+
+    write_area_right_x = (
+        problem_box.get_right()[0]
+        - CONTENT_SIDE_MARGIN
+    )
+
+    write_area_center_x = (
+        write_area_left_x
+        + write_area_right_x
+    ) / 2
+
+    write_rows.move_to(
+        [
+            write_area_center_x,
+            center_y,
+            0,
+        ]
+    )
+
+    return Group(
+        problem_box,
+        picture,
+        write_rows,
+    )
+
+
+# ============================================================
+# Scene
+# ============================================================
+
+class PictureHiraganaWriteWorksheet(EducationScene):
+    """絵を見て、ひらがなを書く練習プリント。"""
+
+    def construct(self) -> None:
+        content = load_content()
+
+        title = self.title_text(
+            content["title"],
+            font_size=TITLE_FONT_SIZE,
+            color=self.theme.accent,
+        )
+
+        title.to_edge(
+            UP,
+            buff=TITLE_TOP_BUFF,
+        )
+
+        subtitle = self.jp_text(
+            content["subtitle"],
+            font_size=SUBTITLE_FONT_SIZE,
+            color=self.theme.foreground,
+            weight="BOLD",
+        )
+
+        subtitle.next_to(
+            title,
+            DOWN,
+            buff=SUBTITLE_BUFF,
+        )
+
+        problems = Group(
+            *(
+                make_problem(
+                    problem["icon"],
+                    problem["answer"],
+                    problem["trace"],
+                    self.theme,
+                )
+                for problem in content["problems"]
+            )
+        )
+
+        problems.arrange(
+            DOWN,
+            buff=PROBLEM_VERTICAL_BUFF,
+        )
+
+        problems.move_to(
+            [
+                0,
+                PROBLEMS_CENTER_Y,
+                0,
+            ]
+        )
+
+        self.add(
+            title,
+            subtitle,
+            problems,
+        )
+
+        if content.get("bottom_note"):
+            bottom_note = self.jp_text(
+                content["bottom_note"],
+                font_size=BOTTOM_NOTE_FONT_SIZE,
+                color=self.theme.accent,
+                weight="BOLD",
+            )
+
+            bottom_note.to_edge(
+                DOWN,
+                buff=BOTTOM_NOTE_BOTTOM_BUFF,
+            )
+
+            self.add(bottom_note)
