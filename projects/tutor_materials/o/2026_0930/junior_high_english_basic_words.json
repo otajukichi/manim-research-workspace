@@ -1,0 +1,1451 @@
+{
+  "title": "中学英語 基本単語",
+  "fields": [
+    "no",
+    "english",
+    "pronunciation",
+    "meaning"
+  ],
+  "entries": [
+    {
+      "no": 1,
+      "english": "arrive",
+      "pronunciation": "アライヴ",
+      "meaning": "到着する"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 5,
+      "english": "believe",
+      "pronunciation": "ビリーヴ",
+      "meaning": "～を信じる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 8,
+      "english": "build",
+      "pronunciation": "ビルドゥ",
+      "meaning": "～を建てる"
+    },
+    {
+      "no": 9,
+      "english": "buy",
+      "pronunciation": "バイ",
+      "meaning": "～を買う"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 15,
+      "english": "close",
+      "pronunciation": "クロース",
+      "meaning": "～を閉める"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 19,
+      "english": "cry",
+      "pronunciation": "クライ",
+      "meaning": "泣く、叫ぶ"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 21,
+      "english": "decide",
+      "pronunciation": "ディサイドゥ",
+      "meaning": "～を決める"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 23,
+      "english": "do",
+      "pronunciation": "ドゥ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 25,
+      "english": "eat",
+      "pronunciation": "イート",
+      "meaning": "～を食べる"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 29,
+      "english": "find",
+      "pronunciation": "ファインド",
+      "meaning": "～を見つける"
+    },
+    {
+      "no": 30,
+      "english": "finish",
+      "pronunciation": "フィニッシュ",
+      "meaning": "～を終える"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 32,
+      "english": "forget",
+      "pronunciation": "フォゲット",
+      "meaning": "忘れる"
+    },
+    {
+      "no": 33,
+      "english": "get",
+      "pronunciation": "ゲット",
+      "meaning": "～を手に入れる、～になる"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 37,
+      "english": "have",
+      "pronunciation": "ハヴ",
+      "meaning": "～を持っている"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 40,
+      "english": "hold",
+      "pronunciation": "ホールド",
+      "meaning": "～を持つ"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 43,
+      "english": "know",
+      "pronunciation": "ノウ",
+      "meaning": "～を知っている"
+    },
+    {
+      "no": 44,
+      "english": "laugh",
+      "pronunciation": "ラフ",
+      "meaning": "笑う"
+    },
+    {
+      "no": 45,
+      "english": "learn",
+      "pronunciation": "ラーン",
+      "meaning": "～を学ぶ、習う"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 47,
+      "english": "lend",
+      "pronunciation": "レンド",
+      "meaning": "貸す"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 49,
+      "english": "listen",
+      "pronunciation": "リスン",
+      "meaning": "聞く"
+    },
+    {
+      "no": 50,
+      "english": "live",
+      "pronunciation": "リヴ",
+      "meaning": "住む、暮らす"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 52,
+      "english": "make",
+      "pronunciation": "メイク",
+      "meaning": "～を作る、～にする"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 55,
+      "english": "move",
+      "pronunciation": "ムーヴ",
+      "meaning": "動く、感動させる"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 60,
+      "english": "put",
+      "pronunciation": "プット",
+      "meaning": "～を置く"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    },
+    {
+      "no": 62,
+      "english": "reach",
+      "pronunciation": "リーチ",
+      "meaning": "～に到着する"
+    },
+    {
+      "no": 63,
+      "english": "read",
+      "pronunciation": "リード",
+      "meaning": "～を読む"
+    },
+    {
+      "no": 64,
+      "english": "receive",
+      "pronunciation": "リスィーヴ",
+      "meaning": "～を受け取る"
+    },
+    {
+      "no": 65,
+      "english": "remember",
+      "pronunciation": "リメンバー",
+      "meaning": "～を思い出す"
+    },
+    {
+      "no": 66,
+      "english": "ride",
+      "pronunciation": "ライド",
+      "meaning": "～に乗る"
+    },
+    {
+      "no": 67,
+      "english": "run",
+      "pronunciation": "ラン",
+      "meaning": "走る"
+    },
+    {
+      "no": 68,
+      "english": "save",
+      "pronunciation": "セイヴ",
+      "meaning": "～を救う"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 72,
+      "english": "send",
+      "pronunciation": "センド",
+      "meaning": "～を送る"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 74,
+      "english": "sing",
+      "pronunciation": "スィング",
+      "meaning": "～を歌う"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 76,
+      "english": "sleep",
+      "pronunciation": "スリープ",
+      "meaning": "眠る"
+    },
+    {
+      "no": 77,
+      "english": "speak",
+      "pronunciation": "スピーク",
+      "meaning": "～を話す"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 79,
+      "english": "stand",
+      "pronunciation": "スタンド",
+      "meaning": "立つ"
+    },
+    {
+      "no": 80,
+      "english": "start",
+      "pronunciation": "スタート",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 82,
+      "english": "stop",
+      "pronunciation": "ストップ",
+      "meaning": "～をやめる、止まる"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 84,
+      "english": "swim",
+      "pronunciation": "スウィム",
+      "meaning": "泳ぐ"
+    },
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 86,
+      "english": "talk",
+      "pronunciation": "トーク",
+      "meaning": "話す"
+    },
+    {
+      "no": 87,
+      "english": "teach",
+      "pronunciation": "ティーチ",
+      "meaning": "～を教える"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 90,
+      "english": "think",
+      "pronunciation": "スィンク",
+      "meaning": "～と思う、考える"
+    },
+    {
+      "no": 91,
+      "english": "try",
+      "pronunciation": "トライ",
+      "meaning": "～を試してみる"
+    },
+    {
+      "no": 92,
+      "english": "turn",
+      "pronunciation": "ターン",
+      "meaning": "曲がる"
+    },
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    },
+    {
+      "no": 97,
+      "english": "walk",
+      "pronunciation": "ウォーク",
+      "meaning": "歩く"
+    },
+    {
+      "no": 98,
+      "english": "want",
+      "pronunciation": "ウォント",
+      "meaning": "～がほしい"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 103,
+      "english": "work",
+      "pronunciation": "ワーク",
+      "meaning": "働く"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 105,
+      "english": "January",
+      "pronunciation": "ジャニュアリ",
+      "meaning": "1月"
+    },
+    {
+      "no": 106,
+      "english": "February",
+      "pronunciation": "フェビュラリ",
+      "meaning": "2月"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 110,
+      "english": "June",
+      "pronunciation": "ジューン",
+      "meaning": "6月"
+    },
+    {
+      "no": 111,
+      "english": "July",
+      "pronunciation": "ジュライ",
+      "meaning": "7月"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 118,
+      "english": "summer",
+      "pronunciation": "サマー",
+      "meaning": "夏"
+    },
+    {
+      "no": 119,
+      "english": "fall",
+      "pronunciation": "フォール",
+      "meaning": "秋"
+    },
+    {
+      "no": 120,
+      "english": "winter",
+      "pronunciation": "ウィンター",
+      "meaning": "冬"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 122,
+      "english": "Monday",
+      "pronunciation": "マンデイ",
+      "meaning": "月曜日"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    },
+    {
+      "no": 124,
+      "english": "Wednesday",
+      "pronunciation": "ウェンズデイ",
+      "meaning": "水曜日"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 126,
+      "english": "Friday",
+      "pronunciation": "フライデイ",
+      "meaning": "金曜日"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 132,
+      "english": "evening",
+      "pronunciation": "イーヴニング",
+      "meaning": "夕方"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 134,
+      "english": "yesterday",
+      "pronunciation": "イエスタデイ",
+      "meaning": "昨日"
+    },
+    {
+      "no": 135,
+      "english": "week",
+      "pronunciation": "ウィーク",
+      "meaning": "週"
+    },
+    {
+      "no": 136,
+      "english": "month",
+      "pronunciation": "マンス",
+      "meaning": "月、1ヶ月"
+    },
+    {
+      "no": 137,
+      "english": "year",
+      "pronunciation": "イヤー",
+      "meaning": "年、1年"
+    },
+    {
+      "no": 138,
+      "english": "family",
+      "pronunciation": "ファミリー",
+      "meaning": "家族"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 140,
+      "english": "child",
+      "pronunciation": "チャイルド",
+      "meaning": "子ども"
+    },
+    {
+      "no": 141,
+      "english": "people",
+      "pronunciation": "ピーポゥ",
+      "meaning": "人々"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    },
+    {
+      "no": 144,
+      "english": "son",
+      "pronunciation": "サン",
+      "meaning": "息子"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    },
+    {
+      "no": 148,
+      "english": "job",
+      "pronunciation": "ジョブ",
+      "meaning": "仕事"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 151,
+      "english": "teacher",
+      "pronunciation": "ティーチャー",
+      "meaning": "先生"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 153,
+      "english": "city",
+      "pronunciation": "スィティー",
+      "meaning": "市、都市"
+    },
+    {
+      "no": 154,
+      "english": "town",
+      "pronunciation": "タウン",
+      "meaning": "町"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 156,
+      "english": "building",
+      "pronunciation": "ビルディング",
+      "meaning": "建物"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 160,
+      "english": "museum",
+      "pronunciation": "ミュージアム",
+      "meaning": "博物館、美術館"
+    },
+    {
+      "no": 161,
+      "english": "park",
+      "pronunciation": "パーク",
+      "meaning": "公園"
+    },
+    {
+      "no": 162,
+      "english": "school",
+      "pronunciation": "スクール",
+      "meaning": "学校"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 164,
+      "english": "student",
+      "pronunciation": "スチューデント",
+      "meaning": "生徒"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 166,
+      "english": "answer",
+      "pronunciation": "アンサー",
+      "meaning": "答え、返事"
+    },
+    {
+      "no": 167,
+      "english": "word",
+      "pronunciation": "ワード",
+      "meaning": "単語"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 169,
+      "english": "subject",
+      "pronunciation": "サブジェクト",
+      "meaning": "教科"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 175,
+      "english": "chair",
+      "pronunciation": "チェアー",
+      "meaning": "いす"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    },
+    {
+      "no": 177,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "腕時計"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 179,
+      "english": "paper",
+      "pronunciation": "ペイパー",
+      "meaning": "紙"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 182,
+      "english": "breakfast",
+      "pronunciation": "ブレックファースト",
+      "meaning": "朝食"
+    },
+    {
+      "no": 183,
+      "english": "lunch",
+      "pronunciation": "ランチ",
+      "meaning": "昼食"
+    },
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 187,
+      "english": "front",
+      "pronunciation": "フロント",
+      "meaning": "前"
+    },
+    {
+      "no": 188,
+      "english": "world",
+      "pronunciation": "ワールド",
+      "meaning": "世界"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 190,
+      "english": "trip",
+      "pronunciation": "トリップ",
+      "meaning": "旅行"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 193,
+      "english": "shopping",
+      "pronunciation": "ショッピング",
+      "meaning": "買い物"
+    },
+    {
+      "no": 194,
+      "english": "money",
+      "pronunciation": "マニー",
+      "meaning": "お金"
+    },
+    {
+      "no": 195,
+      "english": "letter",
+      "pronunciation": "レター",
+      "meaning": "手紙、文字"
+    },
+    {
+      "no": 196,
+      "english": "present",
+      "pronunciation": "プレゼント",
+      "meaning": "プレゼント"
+    },
+    {
+      "no": 197,
+      "english": "culture",
+      "pronunciation": "カルチャー",
+      "meaning": "文化"
+    },
+    {
+      "no": 198,
+      "english": "tradition",
+      "pronunciation": "トラディション",
+      "meaning": "伝統"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 200,
+      "english": "difference",
+      "pronunciation": "ディファレンス",
+      "meaning": "違い"
+    },
+    {
+      "no": 201,
+      "english": "experience",
+      "pronunciation": "イクスペアリエンス",
+      "meaning": "経験"
+    },
+    {
+      "no": 202,
+      "english": "nature",
+      "pronunciation": "ネイチャー",
+      "meaning": "自然"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 205,
+      "english": "sun",
+      "pronunciation": "サン",
+      "meaning": "太陽"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    },
+    {
+      "no": 207,
+      "english": "water",
+      "pronunciation": "ウォーター",
+      "meaning": "水"
+    },
+    {
+      "no": 208,
+      "english": "hundred",
+      "pronunciation": "ハンドゥレッド",
+      "meaning": "100"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    },
+    {
+      "no": 210,
+      "english": "first",
+      "pronunciation": "ファースト",
+      "meaning": "1番目"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 212,
+      "english": "third",
+      "pronunciation": "サード",
+      "meaning": "3番目"
+    },
+    {
+      "no": 213,
+      "english": "problem",
+      "pronunciation": "プロブレム",
+      "meaning": "問題"
+    },
+    {
+      "no": 214,
+      "english": "thing",
+      "pronunciation": "スィング",
+      "meaning": "もの、こと"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 219,
+      "english": "easy",
+      "pronunciation": "イーズィー",
+      "meaning": "やさしい、簡単な"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 222,
+      "english": "sad",
+      "pronunciation": "サッド",
+      "meaning": "悲しい"
+    },
+    {
+      "no": 223,
+      "english": "different",
+      "pronunciation": "ディファレント",
+      "meaning": "違った"
+    },
+    {
+      "no": 224,
+      "english": "same",
+      "pronunciation": "セイム",
+      "meaning": "同じ"
+    },
+    {
+      "no": 225,
+      "english": "beautiful",
+      "pronunciation": "ビューティフル",
+      "meaning": "美しい"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 229,
+      "english": "enough",
+      "pronunciation": "イナフ",
+      "meaning": "十分な"
+    },
+    {
+      "no": 230,
+      "english": "every",
+      "pronunciation": "エヴリ",
+      "meaning": "毎～、～ごとに"
+    },
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 233,
+      "english": "favorite",
+      "pronunciation": "フェイヴァリット",
+      "meaning": "大好きな"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 239,
+      "english": "popular",
+      "pronunciation": "ポピュラー",
+      "meaning": "人気のある"
+    },
+    {
+      "no": 240,
+      "english": "surprised",
+      "pronunciation": "サープライズド",
+      "meaning": "驚いた"
+    }
+  ]
+}
