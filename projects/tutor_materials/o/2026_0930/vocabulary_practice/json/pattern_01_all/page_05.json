@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　5/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 5,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    154,
+    226,
+    71,
+    85,
+    240,
+    117,
+    239,
+    91,
+    187,
+    157,
+    231,
+    52,
+    4,
+    209,
+    171,
+    137,
+    44,
+    145,
+    79,
+    12,
+    229,
+    194,
+    126,
+    95,
+    175,
+    134,
+    42,
+    28,
+    131,
+    191
+  ],
+  "entries": [
+    {
+      "no": 154,
+      "english": "town",
+      "pronunciation": "タウン",
+      "meaning": "町"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 240,
+      "english": "surprised",
+      "pronunciation": "サープライズド",
+      "meaning": "驚いた"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 239,
+      "english": "popular",
+      "pronunciation": "ポピュラー",
+      "meaning": "人気のある"
+    },
+    {
+      "no": 91,
+      "english": "try",
+      "pronunciation": "トライ",
+      "meaning": "～を試してみる"
+    },
+    {
+      "no": 187,
+      "english": "front",
+      "pronunciation": "フロント",
+      "meaning": "前"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 52,
+      "english": "make",
+      "pronunciation": "メイク",
+      "meaning": "～を作る、～にする"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 137,
+      "english": "year",
+      "pronunciation": "イヤー",
+      "meaning": "年、1年"
+    },
+    {
+      "no": 44,
+      "english": "laugh",
+      "pronunciation": "ラフ",
+      "meaning": "笑う"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 79,
+      "english": "stand",
+      "pronunciation": "スタンド",
+      "meaning": "立つ"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 229,
+      "english": "enough",
+      "pronunciation": "イナフ",
+      "meaning": "十分な"
+    },
+    {
+      "no": 194,
+      "english": "money",
+      "pronunciation": "マニー",
+      "meaning": "お金"
+    },
+    {
+      "no": 126,
+      "english": "Friday",
+      "pronunciation": "フライデイ",
+      "meaning": "金曜日"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    },
+    {
+      "no": 175,
+      "english": "chair",
+      "pronunciation": "チェアー",
+      "meaning": "いす"
+    },
+    {
+      "no": 134,
+      "english": "yesterday",
+      "pronunciation": "イエスタデイ",
+      "meaning": "昨日"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    }
+  ]
+}

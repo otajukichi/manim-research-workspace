@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン⑧　前半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 1,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    35,
+    7,
+    40,
+    21,
+    10,
+    1,
+    5,
+    49,
+    23,
+    19,
+    47,
+    17,
+    31,
+    50,
+    12,
+    8,
+    11,
+    34,
+    28,
+    38,
+    20,
+    43,
+    54,
+    36,
+    52,
+    22,
+    4,
+    59,
+    39,
+    29
+  ],
+  "entries": [
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 40,
+      "english": "hold",
+      "pronunciation": "ホールド",
+      "meaning": "～を持つ"
+    },
+    {
+      "no": 21,
+      "english": "decide",
+      "pronunciation": "ディサイドゥ",
+      "meaning": "～を決める"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 1,
+      "english": "arrive",
+      "pronunciation": "アライヴ",
+      "meaning": "到着する"
+    },
+    {
+      "no": 5,
+      "english": "believe",
+      "pronunciation": "ビリーヴ",
+      "meaning": "～を信じる"
+    },
+    {
+      "no": 49,
+      "english": "listen",
+      "pronunciation": "リスン",
+      "meaning": "聞く"
+    },
+    {
+      "no": 23,
+      "english": "do",
+      "pronunciation": "ドゥ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 19,
+      "english": "cry",
+      "pronunciation": "クライ",
+      "meaning": "泣く、叫ぶ"
+    },
+    {
+      "no": 47,
+      "english": "lend",
+      "pronunciation": "レンド",
+      "meaning": "貸す"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 50,
+      "english": "live",
+      "pronunciation": "リヴ",
+      "meaning": "住む、暮らす"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 8,
+      "english": "build",
+      "pronunciation": "ビルドゥ",
+      "meaning": "～を建てる"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 43,
+      "english": "know",
+      "pronunciation": "ノウ",
+      "meaning": "～を知っている"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 52,
+      "english": "make",
+      "pronunciation": "メイク",
+      "meaning": "～を作る、～にする"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 29,
+      "english": "find",
+      "pronunciation": "ファインド",
+      "meaning": "～を見つける"
+    }
+  ]
+}

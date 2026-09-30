@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン④　前半",
+  "mode": "group_pattern",
+  "pattern_number": 4,
+  "seed": 4,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    231,
+    223,
+    204,
+    203,
+    211,
+    192,
+    200,
+    236,
+    181,
+    218,
+    185,
+    182,
+    216,
+    198,
+    215,
+    189,
+    238,
+    221,
+    210,
+    213,
+    217,
+    226,
+    202,
+    220,
+    191,
+    186,
+    199,
+    235,
+    187,
+    224
+  ],
+  "entries": [
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 223,
+      "english": "different",
+      "pronunciation": "ディファレント",
+      "meaning": "違った"
+    },
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 200,
+      "english": "difference",
+      "pronunciation": "ディファレンス",
+      "meaning": "違い"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 182,
+      "english": "breakfast",
+      "pronunciation": "ブレックファースト",
+      "meaning": "朝食"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 198,
+      "english": "tradition",
+      "pronunciation": "トラディション",
+      "meaning": "伝統"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 210,
+      "english": "first",
+      "pronunciation": "ファースト",
+      "meaning": "1番目"
+    },
+    {
+      "no": 213,
+      "english": "problem",
+      "pronunciation": "プロブレム",
+      "meaning": "問題"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    },
+    {
+      "no": 202,
+      "english": "nature",
+      "pronunciation": "ネイチャー",
+      "meaning": "自然"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 187,
+      "english": "front",
+      "pronunciation": "フロント",
+      "meaning": "前"
+    },
+    {
+      "no": 224,
+      "english": "same",
+      "pronunciation": "セイム",
+      "meaning": "同じ"
+    }
+  ]
+}

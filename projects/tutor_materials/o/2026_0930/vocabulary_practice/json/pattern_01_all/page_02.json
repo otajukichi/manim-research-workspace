@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　2/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    93,
+    150,
+    119,
+    148,
+    14,
+    211,
+    39,
+    203,
+    87,
+    13,
+    218,
+    22,
+    224,
+    20,
+    164,
+    105,
+    173,
+    68,
+    21,
+    64,
+    84,
+    97,
+    208,
+    147,
+    18,
+    88,
+    149,
+    34,
+    219,
+    61
+  ],
+  "entries": [
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 119,
+      "english": "fall",
+      "pronunciation": "フォール",
+      "meaning": "秋"
+    },
+    {
+      "no": 148,
+      "english": "job",
+      "pronunciation": "ジョブ",
+      "meaning": "仕事"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 87,
+      "english": "teach",
+      "pronunciation": "ティーチ",
+      "meaning": "～を教える"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 224,
+      "english": "same",
+      "pronunciation": "セイム",
+      "meaning": "同じ"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 164,
+      "english": "student",
+      "pronunciation": "スチューデント",
+      "meaning": "生徒"
+    },
+    {
+      "no": 105,
+      "english": "January",
+      "pronunciation": "ジャニュアリ",
+      "meaning": "1月"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 68,
+      "english": "save",
+      "pronunciation": "セイヴ",
+      "meaning": "～を救う"
+    },
+    {
+      "no": 21,
+      "english": "decide",
+      "pronunciation": "ディサイドゥ",
+      "meaning": "～を決める"
+    },
+    {
+      "no": 64,
+      "english": "receive",
+      "pronunciation": "リスィーヴ",
+      "meaning": "～を受け取る"
+    },
+    {
+      "no": 84,
+      "english": "swim",
+      "pronunciation": "スウィム",
+      "meaning": "泳ぐ"
+    },
+    {
+      "no": 97,
+      "english": "walk",
+      "pronunciation": "ウォーク",
+      "meaning": "歩く"
+    },
+    {
+      "no": 208,
+      "english": "hundred",
+      "pronunciation": "ハンドゥレッド",
+      "meaning": "100"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    },
+    {
+      "no": 219,
+      "english": "easy",
+      "pronunciation": "イーズィー",
+      "meaning": "やさしい、簡単な"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    }
+  ]
+}

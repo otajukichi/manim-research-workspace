@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン⑤　前半",
+  "mode": "group_pattern",
+  "pattern_number": 5,
+  "seed": 5,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    194,
+    231,
+    209,
+    184,
+    187,
+    195,
+    193,
+    185,
+    197,
+    224,
+    181,
+    200,
+    232,
+    237,
+    217,
+    216,
+    208,
+    196,
+    189,
+    222,
+    207,
+    233,
+    182,
+    219,
+    228,
+    203,
+    218,
+    223,
+    238,
+    226
+  ],
+  "entries": [
+    {
+      "no": 194,
+      "english": "money",
+      "pronunciation": "マニー",
+      "meaning": "お金"
+    },
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    },
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 187,
+      "english": "front",
+      "pronunciation": "フロント",
+      "meaning": "前"
+    },
+    {
+      "no": 195,
+      "english": "letter",
+      "pronunciation": "レター",
+      "meaning": "手紙、文字"
+    },
+    {
+      "no": 193,
+      "english": "shopping",
+      "pronunciation": "ショッピング",
+      "meaning": "買い物"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 197,
+      "english": "culture",
+      "pronunciation": "カルチャー",
+      "meaning": "文化"
+    },
+    {
+      "no": 224,
+      "english": "same",
+      "pronunciation": "セイム",
+      "meaning": "同じ"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 200,
+      "english": "difference",
+      "pronunciation": "ディファレンス",
+      "meaning": "違い"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 208,
+      "english": "hundred",
+      "pronunciation": "ハンドゥレッド",
+      "meaning": "100"
+    },
+    {
+      "no": 196,
+      "english": "present",
+      "pronunciation": "プレゼント",
+      "meaning": "プレゼント"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 222,
+      "english": "sad",
+      "pronunciation": "サッド",
+      "meaning": "悲しい"
+    },
+    {
+      "no": 207,
+      "english": "water",
+      "pronunciation": "ウォーター",
+      "meaning": "水"
+    },
+    {
+      "no": 233,
+      "english": "favorite",
+      "pronunciation": "フェイヴァリット",
+      "meaning": "大好きな"
+    },
+    {
+      "no": 182,
+      "english": "breakfast",
+      "pronunciation": "ブレックファースト",
+      "meaning": "朝食"
+    },
+    {
+      "no": 219,
+      "english": "easy",
+      "pronunciation": "イーズィー",
+      "meaning": "やさしい、簡単な"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 223,
+      "english": "different",
+      "pronunciation": "ディファレント",
+      "meaning": "違った"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    }
+  ]
+}

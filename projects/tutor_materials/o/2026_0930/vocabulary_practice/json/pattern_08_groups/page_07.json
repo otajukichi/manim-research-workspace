@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン⑧　前半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    230,
+    236,
+    234,
+    228,
+    191,
+    185,
+    198,
+    201,
+    199,
+    202,
+    196,
+    215,
+    220,
+    208,
+    223,
+    207,
+    183,
+    197,
+    194,
+    192,
+    229,
+    226,
+    200,
+    203,
+    181,
+    216,
+    227,
+    224,
+    221,
+    214
+  ],
+  "entries": [
+    {
+      "no": 230,
+      "english": "every",
+      "pronunciation": "エヴリ",
+      "meaning": "毎～、～ごとに"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 198,
+      "english": "tradition",
+      "pronunciation": "トラディション",
+      "meaning": "伝統"
+    },
+    {
+      "no": 201,
+      "english": "experience",
+      "pronunciation": "イクスペアリエンス",
+      "meaning": "経験"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 202,
+      "english": "nature",
+      "pronunciation": "ネイチャー",
+      "meaning": "自然"
+    },
+    {
+      "no": 196,
+      "english": "present",
+      "pronunciation": "プレゼント",
+      "meaning": "プレゼント"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 208,
+      "english": "hundred",
+      "pronunciation": "ハンドゥレッド",
+      "meaning": "100"
+    },
+    {
+      "no": 223,
+      "english": "different",
+      "pronunciation": "ディファレント",
+      "meaning": "違った"
+    },
+    {
+      "no": 207,
+      "english": "water",
+      "pronunciation": "ウォーター",
+      "meaning": "水"
+    },
+    {
+      "no": 183,
+      "english": "lunch",
+      "pronunciation": "ランチ",
+      "meaning": "昼食"
+    },
+    {
+      "no": 197,
+      "english": "culture",
+      "pronunciation": "カルチャー",
+      "meaning": "文化"
+    },
+    {
+      "no": 194,
+      "english": "money",
+      "pronunciation": "マニー",
+      "meaning": "お金"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 229,
+      "english": "enough",
+      "pronunciation": "イナフ",
+      "meaning": "十分な"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    },
+    {
+      "no": 200,
+      "english": "difference",
+      "pronunciation": "ディファレンス",
+      "meaning": "違い"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 224,
+      "english": "same",
+      "pronunciation": "セイム",
+      "meaning": "同じ"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 214,
+      "english": "thing",
+      "pronunciation": "スィング",
+      "meaning": "もの、こと"
+    }
+  ]
+}

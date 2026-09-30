@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン⑧　後半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 4,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    86,
+    65,
+    101,
+    116,
+    94,
+    104,
+    70,
+    80,
+    73,
+    100,
+    93,
+    92,
+    102,
+    114,
+    81,
+    105,
+    95,
+    67,
+    99,
+    109,
+    71,
+    69,
+    88,
+    83,
+    96,
+    79,
+    89,
+    117,
+    98,
+    107
+  ],
+  "entries": [
+    {
+      "no": 86,
+      "english": "talk",
+      "pronunciation": "トーク",
+      "meaning": "話す"
+    },
+    {
+      "no": 65,
+      "english": "remember",
+      "pronunciation": "リメンバー",
+      "meaning": "～を思い出す"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 80,
+      "english": "start",
+      "pronunciation": "スタート",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 92,
+      "english": "turn",
+      "pronunciation": "ターン",
+      "meaning": "曲がる"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 105,
+      "english": "January",
+      "pronunciation": "ジャニュアリ",
+      "meaning": "1月"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    },
+    {
+      "no": 67,
+      "english": "run",
+      "pronunciation": "ラン",
+      "meaning": "走る"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    },
+    {
+      "no": 79,
+      "english": "stand",
+      "pronunciation": "スタンド",
+      "meaning": "立つ"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 98,
+      "english": "want",
+      "pronunciation": "ウォント",
+      "meaning": "～がほしい"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    }
+  ]
+}

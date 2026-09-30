@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン⑦　前半",
+  "mode": "group_pattern",
+  "pattern_number": 7,
+  "seed": 7,
+  "page_index": 1,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    13,
+    46,
+    11,
+    41,
+    51,
+    54,
+    31,
+    17,
+    1,
+    20,
+    25,
+    12,
+    9,
+    30,
+    60,
+    52,
+    22,
+    40,
+    23,
+    48,
+    19,
+    32,
+    29,
+    43,
+    47,
+    59,
+    57,
+    50,
+    18,
+    2
+  ],
+  "entries": [
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 1,
+      "english": "arrive",
+      "pronunciation": "アライヴ",
+      "meaning": "到着する"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 25,
+      "english": "eat",
+      "pronunciation": "イート",
+      "meaning": "～を食べる"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 9,
+      "english": "buy",
+      "pronunciation": "バイ",
+      "meaning": "～を買う"
+    },
+    {
+      "no": 30,
+      "english": "finish",
+      "pronunciation": "フィニッシュ",
+      "meaning": "～を終える"
+    },
+    {
+      "no": 60,
+      "english": "put",
+      "pronunciation": "プット",
+      "meaning": "～を置く"
+    },
+    {
+      "no": 52,
+      "english": "make",
+      "pronunciation": "メイク",
+      "meaning": "～を作る、～にする"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 40,
+      "english": "hold",
+      "pronunciation": "ホールド",
+      "meaning": "～を持つ"
+    },
+    {
+      "no": 23,
+      "english": "do",
+      "pronunciation": "ドゥ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 19,
+      "english": "cry",
+      "pronunciation": "クライ",
+      "meaning": "泣く、叫ぶ"
+    },
+    {
+      "no": 32,
+      "english": "forget",
+      "pronunciation": "フォゲット",
+      "meaning": "忘れる"
+    },
+    {
+      "no": 29,
+      "english": "find",
+      "pronunciation": "ファインド",
+      "meaning": "～を見つける"
+    },
+    {
+      "no": 43,
+      "english": "know",
+      "pronunciation": "ノウ",
+      "meaning": "～を知っている"
+    },
+    {
+      "no": 47,
+      "english": "lend",
+      "pronunciation": "レンド",
+      "meaning": "貸す"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 50,
+      "english": "live",
+      "pronunciation": "リヴ",
+      "meaning": "住む、暮らす"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    }
+  ]
+}

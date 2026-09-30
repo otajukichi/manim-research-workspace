@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン⑧　後半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 8,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    182,
+    237,
+    184,
+    235,
+    210,
+    204,
+    206,
+    217,
+    233,
+    238,
+    213,
+    225,
+    189,
+    222,
+    240,
+    218,
+    187,
+    239,
+    205,
+    190,
+    231,
+    211,
+    232,
+    212,
+    195,
+    219,
+    193,
+    186,
+    188,
+    209
+  ],
+  "entries": [
+    {
+      "no": 182,
+      "english": "breakfast",
+      "pronunciation": "ブレックファースト",
+      "meaning": "朝食"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    },
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 210,
+      "english": "first",
+      "pronunciation": "ファースト",
+      "meaning": "1番目"
+    },
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 233,
+      "english": "favorite",
+      "pronunciation": "フェイヴァリット",
+      "meaning": "大好きな"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 213,
+      "english": "problem",
+      "pronunciation": "プロブレム",
+      "meaning": "問題"
+    },
+    {
+      "no": 225,
+      "english": "beautiful",
+      "pronunciation": "ビューティフル",
+      "meaning": "美しい"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 222,
+      "english": "sad",
+      "pronunciation": "サッド",
+      "meaning": "悲しい"
+    },
+    {
+      "no": 240,
+      "english": "surprised",
+      "pronunciation": "サープライズド",
+      "meaning": "驚いた"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 187,
+      "english": "front",
+      "pronunciation": "フロント",
+      "meaning": "前"
+    },
+    {
+      "no": 239,
+      "english": "popular",
+      "pronunciation": "ポピュラー",
+      "meaning": "人気のある"
+    },
+    {
+      "no": 205,
+      "english": "sun",
+      "pronunciation": "サン",
+      "meaning": "太陽"
+    },
+    {
+      "no": 190,
+      "english": "trip",
+      "pronunciation": "トリップ",
+      "meaning": "旅行"
+    },
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 212,
+      "english": "third",
+      "pronunciation": "サード",
+      "meaning": "3番目"
+    },
+    {
+      "no": 195,
+      "english": "letter",
+      "pronunciation": "レター",
+      "meaning": "手紙、文字"
+    },
+    {
+      "no": 219,
+      "english": "easy",
+      "pronunciation": "イーズィー",
+      "meaning": "やさしい、簡単な"
+    },
+    {
+      "no": 193,
+      "english": "shopping",
+      "pronunciation": "ショッピング",
+      "meaning": "買い物"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 188,
+      "english": "world",
+      "pronunciation": "ワールド",
+      "meaning": "世界"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    }
+  ]
+}

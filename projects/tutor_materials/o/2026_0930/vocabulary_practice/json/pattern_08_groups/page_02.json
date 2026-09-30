@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン⑧　後半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    51,
+    27,
+    18,
+    55,
+    60,
+    41,
+    53,
+    48,
+    56,
+    37,
+    44,
+    58,
+    45,
+    32,
+    30,
+    2,
+    42,
+    26,
+    14,
+    33,
+    16,
+    57,
+    6,
+    3,
+    46,
+    13,
+    9,
+    25,
+    24,
+    15
+  ],
+  "entries": [
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 55,
+      "english": "move",
+      "pronunciation": "ムーヴ",
+      "meaning": "動く、感動させる"
+    },
+    {
+      "no": 60,
+      "english": "put",
+      "pronunciation": "プット",
+      "meaning": "～を置く"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 37,
+      "english": "have",
+      "pronunciation": "ハヴ",
+      "meaning": "～を持っている"
+    },
+    {
+      "no": 44,
+      "english": "laugh",
+      "pronunciation": "ラフ",
+      "meaning": "笑う"
+    },
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 45,
+      "english": "learn",
+      "pronunciation": "ラーン",
+      "meaning": "～を学ぶ、習う"
+    },
+    {
+      "no": 32,
+      "english": "forget",
+      "pronunciation": "フォゲット",
+      "meaning": "忘れる"
+    },
+    {
+      "no": 30,
+      "english": "finish",
+      "pronunciation": "フィニッシュ",
+      "meaning": "～を終える"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 33,
+      "english": "get",
+      "pronunciation": "ゲット",
+      "meaning": "～を手に入れる、～になる"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 9,
+      "english": "buy",
+      "pronunciation": "バイ",
+      "meaning": "～を買う"
+    },
+    {
+      "no": 25,
+      "english": "eat",
+      "pronunciation": "イート",
+      "meaning": "～を食べる"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 15,
+      "english": "close",
+      "pronunciation": "クロース",
+      "meaning": "～を閉める"
+    }
+  ]
+}

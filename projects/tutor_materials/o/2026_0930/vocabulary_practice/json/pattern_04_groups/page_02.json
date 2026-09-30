@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン④　後半",
+  "mode": "group_pattern",
+  "pattern_number": 4,
+  "seed": 4,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    54,
+    59,
+    11,
+    13,
+    42,
+    39,
+    51,
+    14,
+    17,
+    58,
+    12,
+    18,
+    24,
+    35,
+    34,
+    15,
+    4,
+    19,
+    36,
+    56,
+    2,
+    5,
+    6,
+    10,
+    31,
+    26,
+    47,
+    7,
+    20,
+    16
+  ],
+  "entries": [
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    },
+    {
+      "no": 15,
+      "english": "close",
+      "pronunciation": "クロース",
+      "meaning": "～を閉める"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 19,
+      "english": "cry",
+      "pronunciation": "クライ",
+      "meaning": "泣く、叫ぶ"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    },
+    {
+      "no": 5,
+      "english": "believe",
+      "pronunciation": "ビリーヴ",
+      "meaning": "～を信じる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 47,
+      "english": "lend",
+      "pronunciation": "レンド",
+      "meaning": "貸す"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    }
+  ]
+}

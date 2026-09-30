@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン⑤　後半",
+  "mode": "group_pattern",
+  "pattern_number": 5,
+  "seed": 5,
+  "page_index": 8,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    183,
+    204,
+    236,
+    213,
+    229,
+    239,
+    186,
+    221,
+    202,
+    234,
+    192,
+    215,
+    205,
+    188,
+    190,
+    206,
+    230,
+    199,
+    198,
+    211,
+    201,
+    227,
+    225,
+    212,
+    240,
+    214,
+    191,
+    235,
+    220,
+    210
+  ],
+  "entries": [
+    {
+      "no": 183,
+      "english": "lunch",
+      "pronunciation": "ランチ",
+      "meaning": "昼食"
+    },
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 213,
+      "english": "problem",
+      "pronunciation": "プロブレム",
+      "meaning": "問題"
+    },
+    {
+      "no": 229,
+      "english": "enough",
+      "pronunciation": "イナフ",
+      "meaning": "十分な"
+    },
+    {
+      "no": 239,
+      "english": "popular",
+      "pronunciation": "ポピュラー",
+      "meaning": "人気のある"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 202,
+      "english": "nature",
+      "pronunciation": "ネイチャー",
+      "meaning": "自然"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 205,
+      "english": "sun",
+      "pronunciation": "サン",
+      "meaning": "太陽"
+    },
+    {
+      "no": 188,
+      "english": "world",
+      "pronunciation": "ワールド",
+      "meaning": "世界"
+    },
+    {
+      "no": 190,
+      "english": "trip",
+      "pronunciation": "トリップ",
+      "meaning": "旅行"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    },
+    {
+      "no": 230,
+      "english": "every",
+      "pronunciation": "エヴリ",
+      "meaning": "毎～、～ごとに"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 198,
+      "english": "tradition",
+      "pronunciation": "トラディション",
+      "meaning": "伝統"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 201,
+      "english": "experience",
+      "pronunciation": "イクスペアリエンス",
+      "meaning": "経験"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 225,
+      "english": "beautiful",
+      "pronunciation": "ビューティフル",
+      "meaning": "美しい"
+    },
+    {
+      "no": 212,
+      "english": "third",
+      "pronunciation": "サード",
+      "meaning": "3番目"
+    },
+    {
+      "no": 240,
+      "english": "surprised",
+      "pronunciation": "サープライズド",
+      "meaning": "驚いた"
+    },
+    {
+      "no": 214,
+      "english": "thing",
+      "pronunciation": "スィング",
+      "meaning": "もの、こと"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 210,
+      "english": "first",
+      "pronunciation": "ファースト",
+      "meaning": "1番目"
+    }
+  ]
+}

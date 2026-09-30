@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　4/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 4,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    70,
+    212,
+    120,
+    155,
+    225,
+    46,
+    158,
+    53,
+    65,
+    177,
+    159,
+    166,
+    47,
+    62,
+    189,
+    55,
+    207,
+    72,
+    220,
+    67,
+    235,
+    163,
+    234,
+    144,
+    114,
+    106,
+    110,
+    138,
+    50,
+    215
+  ],
+  "entries": [
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 212,
+      "english": "third",
+      "pronunciation": "サード",
+      "meaning": "3番目"
+    },
+    {
+      "no": 120,
+      "english": "winter",
+      "pronunciation": "ウィンター",
+      "meaning": "冬"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 225,
+      "english": "beautiful",
+      "pronunciation": "ビューティフル",
+      "meaning": "美しい"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 65,
+      "english": "remember",
+      "pronunciation": "リメンバー",
+      "meaning": "～を思い出す"
+    },
+    {
+      "no": 177,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "腕時計"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 166,
+      "english": "answer",
+      "pronunciation": "アンサー",
+      "meaning": "答え、返事"
+    },
+    {
+      "no": 47,
+      "english": "lend",
+      "pronunciation": "レンド",
+      "meaning": "貸す"
+    },
+    {
+      "no": 62,
+      "english": "reach",
+      "pronunciation": "リーチ",
+      "meaning": "～に到着する"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 55,
+      "english": "move",
+      "pronunciation": "ムーヴ",
+      "meaning": "動く、感動させる"
+    },
+    {
+      "no": 207,
+      "english": "water",
+      "pronunciation": "ウォーター",
+      "meaning": "水"
+    },
+    {
+      "no": 72,
+      "english": "send",
+      "pronunciation": "センド",
+      "meaning": "～を送る"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 67,
+      "english": "run",
+      "pronunciation": "ラン",
+      "meaning": "走る"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 144,
+      "english": "son",
+      "pronunciation": "サン",
+      "meaning": "息子"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 106,
+      "english": "February",
+      "pronunciation": "フェビュラリ",
+      "meaning": "2月"
+    },
+    {
+      "no": 110,
+      "english": "June",
+      "pronunciation": "ジューン",
+      "meaning": "6月"
+    },
+    {
+      "no": 138,
+      "english": "family",
+      "pronunciation": "ファミリー",
+      "meaning": "家族"
+    },
+    {
+      "no": 50,
+      "english": "live",
+      "pronunciation": "リヴ",
+      "meaning": "住む、暮らす"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    }
+  ]
+}

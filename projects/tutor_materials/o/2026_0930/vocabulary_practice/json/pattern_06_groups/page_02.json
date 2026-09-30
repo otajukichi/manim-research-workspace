@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン⑥　後半",
+  "mode": "group_pattern",
+  "pattern_number": 6,
+  "seed": 6,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    58,
+    22,
+    28,
+    57,
+    54,
+    36,
+    42,
+    7,
+    40,
+    35,
+    27,
+    13,
+    56,
+    18,
+    2,
+    21,
+    24,
+    31,
+    38,
+    43,
+    10,
+    1,
+    3,
+    17,
+    49,
+    32,
+    6,
+    53,
+    37,
+    51
+  ],
+  "entries": [
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 40,
+      "english": "hold",
+      "pronunciation": "ホールド",
+      "meaning": "～を持つ"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    },
+    {
+      "no": 21,
+      "english": "decide",
+      "pronunciation": "ディサイドゥ",
+      "meaning": "～を決める"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 43,
+      "english": "know",
+      "pronunciation": "ノウ",
+      "meaning": "～を知っている"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 1,
+      "english": "arrive",
+      "pronunciation": "アライヴ",
+      "meaning": "到着する"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 49,
+      "english": "listen",
+      "pronunciation": "リスン",
+      "meaning": "聞く"
+    },
+    {
+      "no": 32,
+      "english": "forget",
+      "pronunciation": "フォゲット",
+      "meaning": "忘れる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 37,
+      "english": "have",
+      "pronunciation": "ハヴ",
+      "meaning": "～を持っている"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    }
+  ]
+}

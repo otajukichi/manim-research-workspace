@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン②　前半",
+  "mode": "group_pattern",
+  "pattern_number": 2,
+  "seed": 2,
+  "page_index": 5,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    178,
+    173,
+    170,
+    176,
+    165,
+    155,
+    146,
+    140,
+    150,
+    142,
+    172,
+    145,
+    161,
+    131,
+    130,
+    162,
+    168,
+    141,
+    151,
+    179,
+    174,
+    139,
+    133,
+    121,
+    143,
+    152,
+    149,
+    153,
+    159,
+    147
+  ],
+  "entries": [
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 140,
+      "english": "child",
+      "pronunciation": "チャイルド",
+      "meaning": "子ども"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 161,
+      "english": "park",
+      "pronunciation": "パーク",
+      "meaning": "公園"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 162,
+      "english": "school",
+      "pronunciation": "スクール",
+      "meaning": "学校"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 141,
+      "english": "people",
+      "pronunciation": "ピーポゥ",
+      "meaning": "人々"
+    },
+    {
+      "no": 151,
+      "english": "teacher",
+      "pronunciation": "ティーチャー",
+      "meaning": "先生"
+    },
+    {
+      "no": 179,
+      "english": "paper",
+      "pronunciation": "ペイパー",
+      "meaning": "紙"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 153,
+      "english": "city",
+      "pronunciation": "スィティー",
+      "meaning": "市、都市"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    }
+  ]
+}

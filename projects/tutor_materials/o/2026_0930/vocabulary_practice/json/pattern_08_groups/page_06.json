@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン⑧　後半",
+  "mode": "group_pattern",
+  "pattern_number": 8,
+  "seed": 8,
+  "page_index": 6,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    146,
+    130,
+    144,
+    155,
+    154,
+    159,
+    163,
+    123,
+    127,
+    139,
+    125,
+    158,
+    126,
+    165,
+    168,
+    149,
+    172,
+    147,
+    129,
+    135,
+    148,
+    157,
+    131,
+    174,
+    142,
+    145,
+    169,
+    171,
+    121,
+    128
+  ],
+  "entries": [
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 144,
+      "english": "son",
+      "pronunciation": "サン",
+      "meaning": "息子"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 154,
+      "english": "town",
+      "pronunciation": "タウン",
+      "meaning": "町"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 126,
+      "english": "Friday",
+      "pronunciation": "フライデイ",
+      "meaning": "金曜日"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 135,
+      "english": "week",
+      "pronunciation": "ウィーク",
+      "meaning": "週"
+    },
+    {
+      "no": 148,
+      "english": "job",
+      "pronunciation": "ジョブ",
+      "meaning": "仕事"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 169,
+      "english": "subject",
+      "pronunciation": "サブジェクト",
+      "meaning": "教科"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    }
+  ]
+}

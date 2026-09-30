@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン①　前半",
+  "mode": "group_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    184,
+    215,
+    196,
+    220,
+    183,
+    235,
+    209,
+    192,
+    233,
+    190,
+    228,
+    217,
+    230,
+    236,
+    189,
+    231,
+    206,
+    221,
+    232,
+    234,
+    237,
+    216,
+    203,
+    195,
+    186,
+    204,
+    227,
+    185,
+    219,
+    181
+  ],
+  "entries": [
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 196,
+      "english": "present",
+      "pronunciation": "プレゼント",
+      "meaning": "プレゼント"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 183,
+      "english": "lunch",
+      "pronunciation": "ランチ",
+      "meaning": "昼食"
+    },
+    {
+      "no": 235,
+      "english": "important",
+      "pronunciation": "インポータント",
+      "meaning": "重要な、大切な"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 233,
+      "english": "favorite",
+      "pronunciation": "フェイヴァリット",
+      "meaning": "大好きな"
+    },
+    {
+      "no": 190,
+      "english": "trip",
+      "pronunciation": "トリップ",
+      "meaning": "旅行"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 230,
+      "english": "every",
+      "pronunciation": "エヴリ",
+      "meaning": "毎～、～ごとに"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 189,
+      "english": "language",
+      "pronunciation": "ラングウィッヂ",
+      "meaning": "言語、ことば"
+    },
+    {
+      "no": 231,
+      "english": "exciting",
+      "pronunciation": "エキサイティング",
+      "meaning": "興奮させる"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 195,
+      "english": "letter",
+      "pronunciation": "レター",
+      "meaning": "手紙、文字"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 219,
+      "english": "easy",
+      "pronunciation": "イーズィー",
+      "meaning": "やさしい、簡単な"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    }
+  ]
+}

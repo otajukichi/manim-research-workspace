@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　1/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 1,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    124,
+    29,
+    16,
+    172,
+    108,
+    193,
+    51,
+    122,
+    170,
+    74,
+    168,
+    38,
+    103,
+    184,
+    160,
+    132,
+    216,
+    41,
+    199,
+    230,
+    221,
+    213,
+    37,
+    83,
+    198,
+    181,
+    99,
+    92,
+    112,
+    40
+  ],
+  "entries": [
+    {
+      "no": 124,
+      "english": "Wednesday",
+      "pronunciation": "ウェンズデイ",
+      "meaning": "水曜日"
+    },
+    {
+      "no": 29,
+      "english": "find",
+      "pronunciation": "ファインド",
+      "meaning": "～を見つける"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 193,
+      "english": "shopping",
+      "pronunciation": "ショッピング",
+      "meaning": "買い物"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 122,
+      "english": "Monday",
+      "pronunciation": "マンデイ",
+      "meaning": "月曜日"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 74,
+      "english": "sing",
+      "pronunciation": "スィング",
+      "meaning": "～を歌う"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 103,
+      "english": "work",
+      "pronunciation": "ワーク",
+      "meaning": "働く"
+    },
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 160,
+      "english": "museum",
+      "pronunciation": "ミュージアム",
+      "meaning": "博物館、美術館"
+    },
+    {
+      "no": 132,
+      "english": "evening",
+      "pronunciation": "イーヴニング",
+      "meaning": "夕方"
+    },
+    {
+      "no": 216,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "種類"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 230,
+      "english": "every",
+      "pronunciation": "エヴリ",
+      "meaning": "毎～、～ごとに"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 213,
+      "english": "problem",
+      "pronunciation": "プロブレム",
+      "meaning": "問題"
+    },
+    {
+      "no": 37,
+      "english": "have",
+      "pronunciation": "ハヴ",
+      "meaning": "～を持っている"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 198,
+      "english": "tradition",
+      "pronunciation": "トラディション",
+      "meaning": "伝統"
+    },
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 92,
+      "english": "turn",
+      "pronunciation": "ターン",
+      "meaning": "曲がる"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 40,
+      "english": "hold",
+      "pronunciation": "ホールド",
+      "meaning": "～を持つ"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　6/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 6,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    23,
+    96,
+    141,
+    94,
+    45,
+    180,
+    104,
+    63,
+    123,
+    9,
+    178,
+    101,
+    169,
+    128,
+    151,
+    73,
+    78,
+    49,
+    130,
+    238,
+    129,
+    86,
+    233,
+    76,
+    162,
+    48,
+    26,
+    165,
+    143,
+    107
+  ],
+  "entries": [
+    {
+      "no": 23,
+      "english": "do",
+      "pronunciation": "ドゥ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    },
+    {
+      "no": 141,
+      "english": "people",
+      "pronunciation": "ピーポゥ",
+      "meaning": "人々"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 45,
+      "english": "learn",
+      "pronunciation": "ラーン",
+      "meaning": "～を学ぶ、習う"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 63,
+      "english": "read",
+      "pronunciation": "リード",
+      "meaning": "～を読む"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    },
+    {
+      "no": 9,
+      "english": "buy",
+      "pronunciation": "バイ",
+      "meaning": "～を買う"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 169,
+      "english": "subject",
+      "pronunciation": "サブジェクト",
+      "meaning": "教科"
+    },
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    },
+    {
+      "no": 151,
+      "english": "teacher",
+      "pronunciation": "ティーチャー",
+      "meaning": "先生"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 49,
+      "english": "listen",
+      "pronunciation": "リスン",
+      "meaning": "聞く"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 86,
+      "english": "talk",
+      "pronunciation": "トーク",
+      "meaning": "話す"
+    },
+    {
+      "no": 233,
+      "english": "favorite",
+      "pronunciation": "フェイヴァリット",
+      "meaning": "大好きな"
+    },
+    {
+      "no": 76,
+      "english": "sleep",
+      "pronunciation": "スリープ",
+      "meaning": "眠る"
+    },
+    {
+      "no": 162,
+      "english": "school",
+      "pronunciation": "スクール",
+      "meaning": "学校"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    }
+  ]
+}

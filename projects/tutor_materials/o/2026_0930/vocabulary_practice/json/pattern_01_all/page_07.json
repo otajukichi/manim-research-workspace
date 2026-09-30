@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　7/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    204,
+    75,
+    118,
+    192,
+    174,
+    188,
+    89,
+    60,
+    142,
+    232,
+    113,
+    57,
+    136,
+    205,
+    186,
+    109,
+    56,
+    176,
+    227,
+    3,
+    139,
+    228,
+    7,
+    6,
+    222,
+    82,
+    27,
+    152,
+    59,
+    237
+  ],
+  "entries": [
+    {
+      "no": 204,
+      "english": "flower",
+      "pronunciation": "フラワー",
+      "meaning": "花"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 118,
+      "english": "summer",
+      "pronunciation": "サマー",
+      "meaning": "夏"
+    },
+    {
+      "no": 192,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 188,
+      "english": "world",
+      "pronunciation": "ワールド",
+      "meaning": "世界"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 60,
+      "english": "put",
+      "pronunciation": "プット",
+      "meaning": "～を置く"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 136,
+      "english": "month",
+      "pronunciation": "マンス",
+      "meaning": "月、1ヶ月"
+    },
+    {
+      "no": 205,
+      "english": "sun",
+      "pronunciation": "サン",
+      "meaning": "太陽"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 222,
+      "english": "sad",
+      "pronunciation": "サッド",
+      "meaning": "悲しい"
+    },
+    {
+      "no": 82,
+      "english": "stop",
+      "pronunciation": "ストップ",
+      "meaning": "～をやめる、止まる"
+    },
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "181-240",
+  "subtitle": "パターン③　前半",
+  "mode": "group_pattern",
+  "pattern_number": 3,
+  "seed": 3,
+  "page_index": 7,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    181,
+    227,
+    220,
+    218,
+    221,
+    225,
+    210,
+    194,
+    234,
+    232,
+    185,
+    207,
+    190,
+    193,
+    209,
+    203,
+    238,
+    184,
+    188,
+    226,
+    211,
+    199,
+    215,
+    214,
+    237,
+    191,
+    183,
+    186,
+    228,
+    206
+  ],
+  "entries": [
+    {
+      "no": 181,
+      "english": "food",
+      "pronunciation": "フード",
+      "meaning": "食べ物"
+    },
+    {
+      "no": 227,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "きれいな、清潔な"
+    },
+    {
+      "no": 220,
+      "english": "difficult",
+      "pronunciation": "ディフィカルト",
+      "meaning": "難しい"
+    },
+    {
+      "no": 218,
+      "english": "fun",
+      "pronunciation": "ファン",
+      "meaning": "楽しいこと"
+    },
+    {
+      "no": 221,
+      "english": "glad",
+      "pronunciation": "グラッド",
+      "meaning": "うれしい"
+    },
+    {
+      "no": 225,
+      "english": "beautiful",
+      "pronunciation": "ビューティフル",
+      "meaning": "美しい"
+    },
+    {
+      "no": 210,
+      "english": "first",
+      "pronunciation": "ファースト",
+      "meaning": "1番目"
+    },
+    {
+      "no": 194,
+      "english": "money",
+      "pronunciation": "マニー",
+      "meaning": "お金"
+    },
+    {
+      "no": 234,
+      "english": "foreign",
+      "pronunciation": "フォーリン",
+      "meaning": "外国からの"
+    },
+    {
+      "no": 232,
+      "english": "famous",
+      "pronunciation": "フェイマス",
+      "meaning": "有名な"
+    },
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 207,
+      "english": "water",
+      "pronunciation": "ウォーター",
+      "meaning": "水"
+    },
+    {
+      "no": 190,
+      "english": "trip",
+      "pronunciation": "トリップ",
+      "meaning": "旅行"
+    },
+    {
+      "no": 193,
+      "english": "shopping",
+      "pronunciation": "ショッピング",
+      "meaning": "買い物"
+    },
+    {
+      "no": 209,
+      "english": "thousand",
+      "pronunciation": "サウザンド",
+      "meaning": "1000"
+    },
+    {
+      "no": 203,
+      "english": "mountain",
+      "pronunciation": "マウンテン",
+      "meaning": "山"
+    },
+    {
+      "no": 238,
+      "english": "necessary",
+      "pronunciation": "ネセサリィ",
+      "meaning": "必要な"
+    },
+    {
+      "no": 184,
+      "english": "dinner",
+      "pronunciation": "ディナー",
+      "meaning": "夕食"
+    },
+    {
+      "no": 188,
+      "english": "world",
+      "pronunciation": "ワールド",
+      "meaning": "世界"
+    },
+    {
+      "no": 226,
+      "english": "careful",
+      "pronunciation": "ケアフォゥ",
+      "meaning": "注意深い"
+    },
+    {
+      "no": 211,
+      "english": "second",
+      "pronunciation": "セカンド",
+      "meaning": "2番目"
+    },
+    {
+      "no": 199,
+      "english": "custom",
+      "pronunciation": "カスタム",
+      "meaning": "慣習"
+    },
+    {
+      "no": 215,
+      "english": "example",
+      "pronunciation": "イグザンプル",
+      "meaning": "例"
+    },
+    {
+      "no": 214,
+      "english": "thing",
+      "pronunciation": "スィング",
+      "meaning": "もの、こと"
+    },
+    {
+      "no": 237,
+      "english": "kind",
+      "pronunciation": "カインド",
+      "meaning": "親切な"
+    },
+    {
+      "no": 191,
+      "english": "purpose",
+      "pronunciation": "パーパス",
+      "meaning": "目的"
+    },
+    {
+      "no": 183,
+      "english": "lunch",
+      "pronunciation": "ランチ",
+      "meaning": "昼食"
+    },
+    {
+      "no": 186,
+      "english": "right",
+      "pronunciation": "ライト",
+      "meaning": "右"
+    },
+    {
+      "no": 228,
+      "english": "each",
+      "pronunciation": "イーチ",
+      "meaning": "それぞれの、各"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    }
+  ]
+}

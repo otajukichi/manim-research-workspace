@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン④　後半",
+  "mode": "group_pattern",
+  "pattern_number": 4,
+  "seed": 4,
+  "page_index": 6,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    152,
+    134,
+    171,
+    127,
+    170,
+    163,
+    161,
+    165,
+    150,
+    123,
+    144,
+    121,
+    157,
+    142,
+    131,
+    159,
+    145,
+    137,
+    129,
+    174,
+    149,
+    133,
+    178,
+    139,
+    125,
+    173,
+    164,
+    160,
+    180,
+    176
+  ],
+  "entries": [
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 134,
+      "english": "yesterday",
+      "pronunciation": "イエスタデイ",
+      "meaning": "昨日"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 161,
+      "english": "park",
+      "pronunciation": "パーク",
+      "meaning": "公園"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    },
+    {
+      "no": 144,
+      "english": "son",
+      "pronunciation": "サン",
+      "meaning": "息子"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 137,
+      "english": "year",
+      "pronunciation": "イヤー",
+      "meaning": "年、1年"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 164,
+      "english": "student",
+      "pronunciation": "スチューデント",
+      "meaning": "生徒"
+    },
+    {
+      "no": 160,
+      "english": "museum",
+      "pronunciation": "ミュージアム",
+      "meaning": "博物館、美術館"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    }
+  ]
+}

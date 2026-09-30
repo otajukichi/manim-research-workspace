@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン①　前半",
+  "mode": "group_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 1,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    27,
+    60,
+    24,
+    10,
+    3,
+    6,
+    19,
+    44,
+    48,
+    23,
+    58,
+    26,
+    20,
+    11,
+    4,
+    12,
+    30,
+    38,
+    16,
+    36,
+    53,
+    54,
+    41,
+    46,
+    35,
+    22,
+    13,
+    51,
+    59,
+    34
+  ],
+  "entries": [
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 60,
+      "english": "put",
+      "pronunciation": "プット",
+      "meaning": "～を置く"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 19,
+      "english": "cry",
+      "pronunciation": "クライ",
+      "meaning": "泣く、叫ぶ"
+    },
+    {
+      "no": 44,
+      "english": "laugh",
+      "pronunciation": "ラフ",
+      "meaning": "笑う"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 23,
+      "english": "do",
+      "pronunciation": "ドゥ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 30,
+      "english": "finish",
+      "pronunciation": "フィニッシュ",
+      "meaning": "～を終える"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 22,
+      "english": "die",
+      "pronunciation": "ダイ",
+      "meaning": "死ぬ"
+    },
+    {
+      "no": 13,
+      "english": "change",
+      "pronunciation": "チェインジ",
+      "meaning": "～を変える"
+    },
+    {
+      "no": 51,
+      "english": "look",
+      "pronunciation": "ルック",
+      "meaning": "見る、～に見える"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    }
+  ]
+}

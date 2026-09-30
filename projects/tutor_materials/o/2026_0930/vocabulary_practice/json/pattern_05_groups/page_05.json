@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン⑤　前半",
+  "mode": "group_pattern",
+  "pattern_number": 5,
+  "seed": 5,
+  "page_index": 5,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    128,
+    139,
+    169,
+    156,
+    121,
+    158,
+    180,
+    154,
+    133,
+    150,
+    137,
+    171,
+    176,
+    175,
+    149,
+    143,
+    127,
+    157,
+    152,
+    172,
+    145,
+    122,
+    125,
+    178,
+    170,
+    135,
+    129,
+    147,
+    163,
+    159
+  ],
+  "entries": [
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 169,
+      "english": "subject",
+      "pronunciation": "サブジェクト",
+      "meaning": "教科"
+    },
+    {
+      "no": 156,
+      "english": "building",
+      "pronunciation": "ビルディング",
+      "meaning": "建物"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 154,
+      "english": "town",
+      "pronunciation": "タウン",
+      "meaning": "町"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 137,
+      "english": "year",
+      "pronunciation": "イヤー",
+      "meaning": "年、1年"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    },
+    {
+      "no": 175,
+      "english": "chair",
+      "pronunciation": "チェアー",
+      "meaning": "いす"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 122,
+      "english": "Monday",
+      "pronunciation": "マンデイ",
+      "meaning": "月曜日"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 135,
+      "english": "week",
+      "pronunciation": "ウィーク",
+      "meaning": "週"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    }
+  ]
+}

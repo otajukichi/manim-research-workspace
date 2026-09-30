@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-240",
+  "subtitle": "パターン①　8/8",
+  "mode": "all_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 8,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    185,
+    69,
+    115,
+    179,
+    1,
+    197,
+    236,
+    156,
+    111,
+    100,
+    214,
+    8,
+    125,
+    25,
+    54,
+    202,
+    98,
+    167,
+    121,
+    116,
+    195,
+    127,
+    31,
+    66,
+    17,
+    196,
+    206,
+    217,
+    146,
+    35
+  ],
+  "entries": [
+    {
+      "no": 185,
+      "english": "left",
+      "pronunciation": "レフト",
+      "meaning": "左"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 179,
+      "english": "paper",
+      "pronunciation": "ペイパー",
+      "meaning": "紙"
+    },
+    {
+      "no": 1,
+      "english": "arrive",
+      "pronunciation": "アライヴ",
+      "meaning": "到着する"
+    },
+    {
+      "no": 197,
+      "english": "culture",
+      "pronunciation": "カルチャー",
+      "meaning": "文化"
+    },
+    {
+      "no": 236,
+      "english": "interesting",
+      "pronunciation": "インタレスティング",
+      "meaning": "おもしろい"
+    },
+    {
+      "no": 156,
+      "english": "building",
+      "pronunciation": "ビルディング",
+      "meaning": "建物"
+    },
+    {
+      "no": 111,
+      "english": "July",
+      "pronunciation": "ジュライ",
+      "meaning": "7月"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 214,
+      "english": "thing",
+      "pronunciation": "スィング",
+      "meaning": "もの、こと"
+    },
+    {
+      "no": 8,
+      "english": "build",
+      "pronunciation": "ビルドゥ",
+      "meaning": "～を建てる"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 25,
+      "english": "eat",
+      "pronunciation": "イート",
+      "meaning": "～を食べる"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 202,
+      "english": "nature",
+      "pronunciation": "ネイチャー",
+      "meaning": "自然"
+    },
+    {
+      "no": 98,
+      "english": "want",
+      "pronunciation": "ウォント",
+      "meaning": "～がほしい"
+    },
+    {
+      "no": 167,
+      "english": "word",
+      "pronunciation": "ワード",
+      "meaning": "単語"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 195,
+      "english": "letter",
+      "pronunciation": "レター",
+      "meaning": "手紙、文字"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 31,
+      "english": "fly",
+      "pronunciation": "フライ",
+      "meaning": "飛ぶ"
+    },
+    {
+      "no": 66,
+      "english": "ride",
+      "pronunciation": "ライド",
+      "meaning": "～に乗る"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 196,
+      "english": "present",
+      "pronunciation": "プレゼント",
+      "meaning": "プレゼント"
+    },
+    {
+      "no": 206,
+      "english": "weather",
+      "pronunciation": "ウェザー",
+      "meaning": "天気"
+    },
+    {
+      "no": 217,
+      "english": "piece",
+      "pronunciation": "ピース",
+      "meaning": "1つ、1きれ、1枚"
+    },
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    }
+  ]
+}

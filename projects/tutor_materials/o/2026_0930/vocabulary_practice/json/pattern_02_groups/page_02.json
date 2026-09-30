@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン②　後半",
+  "mode": "group_pattern",
+  "pattern_number": 2,
+  "seed": 2,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    12,
+    2,
+    45,
+    18,
+    46,
+    29,
+    35,
+    59,
+    33,
+    26,
+    41,
+    28,
+    53,
+    38,
+    3,
+    52,
+    14,
+    39,
+    17,
+    20,
+    43,
+    48,
+    11,
+    54,
+    24,
+    57,
+    6,
+    4,
+    55,
+    56
+  ],
+  "entries": [
+    {
+      "no": 12,
+      "english": "catch",
+      "pronunciation": "キャッチ",
+      "meaning": "～を捕まえる"
+    },
+    {
+      "no": 2,
+      "english": "ask",
+      "pronunciation": "アスク",
+      "meaning": "尋ねる、頼む"
+    },
+    {
+      "no": 45,
+      "english": "learn",
+      "pronunciation": "ラーン",
+      "meaning": "～を学ぶ、習う"
+    },
+    {
+      "no": 18,
+      "english": "cook",
+      "pronunciation": "クック",
+      "meaning": "～を料理する"
+    },
+    {
+      "no": 46,
+      "english": "leave",
+      "pronunciation": "リーヴ",
+      "meaning": "～を去る、～を残す"
+    },
+    {
+      "no": 29,
+      "english": "find",
+      "pronunciation": "ファインド",
+      "meaning": "～を見つける"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 59,
+      "english": "practice",
+      "pronunciation": "プラクティス",
+      "meaning": "～を練習する"
+    },
+    {
+      "no": 33,
+      "english": "get",
+      "pronunciation": "ゲット",
+      "meaning": "～を手に入れる、～になる"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 41,
+      "english": "hope",
+      "pronunciation": "ホウプ",
+      "meaning": "～を望む"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 52,
+      "english": "make",
+      "pronunciation": "メイク",
+      "meaning": "～を作る、～にする"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 17,
+      "english": "come",
+      "pronunciation": "カム",
+      "meaning": "来る"
+    },
+    {
+      "no": 20,
+      "english": "cut",
+      "pronunciation": "カット",
+      "meaning": "～を切る"
+    },
+    {
+      "no": 43,
+      "english": "know",
+      "pronunciation": "ノウ",
+      "meaning": "～を知っている"
+    },
+    {
+      "no": 48,
+      "english": "like",
+      "pronunciation": "ライク",
+      "meaning": "が好き"
+    },
+    {
+      "no": 11,
+      "english": "carry",
+      "pronunciation": "キャリー",
+      "meaning": "～を運ぶ"
+    },
+    {
+      "no": 54,
+      "english": "meet",
+      "pronunciation": "ミート",
+      "meaning": "～に会う"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 57,
+      "english": "open",
+      "pronunciation": "オウプン",
+      "meaning": "～を開ける、開く"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 55,
+      "english": "move",
+      "pronunciation": "ムーヴ",
+      "meaning": "動く、感動させる"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    }
+  ]
+}

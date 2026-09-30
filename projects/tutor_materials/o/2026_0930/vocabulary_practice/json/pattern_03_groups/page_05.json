@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン③　前半",
+  "mode": "group_pattern",
+  "pattern_number": 3,
+  "seed": 3,
+  "page_index": 5,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    166,
+    143,
+    146,
+    134,
+    123,
+    124,
+    165,
+    177,
+    126,
+    152,
+    158,
+    130,
+    149,
+    128,
+    157,
+    180,
+    163,
+    132,
+    135,
+    173,
+    167,
+    171,
+    122,
+    125,
+    178,
+    151,
+    155,
+    133,
+    168,
+    131
+  ],
+  "entries": [
+    {
+      "no": 166,
+      "english": "answer",
+      "pronunciation": "アンサー",
+      "meaning": "答え、返事"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    },
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 134,
+      "english": "yesterday",
+      "pronunciation": "イエスタデイ",
+      "meaning": "昨日"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    },
+    {
+      "no": 124,
+      "english": "Wednesday",
+      "pronunciation": "ウェンズデイ",
+      "meaning": "水曜日"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 177,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "腕時計"
+    },
+    {
+      "no": 126,
+      "english": "Friday",
+      "pronunciation": "フライデイ",
+      "meaning": "金曜日"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 132,
+      "english": "evening",
+      "pronunciation": "イーヴニング",
+      "meaning": "夕方"
+    },
+    {
+      "no": 135,
+      "english": "week",
+      "pronunciation": "ウィーク",
+      "meaning": "週"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 167,
+      "english": "word",
+      "pronunciation": "ワード",
+      "meaning": "単語"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 122,
+      "english": "Monday",
+      "pronunciation": "マンデイ",
+      "meaning": "月曜日"
+    },
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 151,
+      "english": "teacher",
+      "pronunciation": "ティーチャー",
+      "meaning": "先生"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    }
+  ]
+}

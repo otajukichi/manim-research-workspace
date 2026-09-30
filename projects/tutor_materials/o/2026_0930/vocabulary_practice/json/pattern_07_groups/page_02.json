@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "1-60",
+  "subtitle": "パターン⑦　後半",
+  "mode": "group_pattern",
+  "pattern_number": 7,
+  "seed": 7,
+  "page_index": 2,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    39,
+    34,
+    58,
+    37,
+    15,
+    8,
+    49,
+    44,
+    36,
+    45,
+    16,
+    55,
+    27,
+    28,
+    6,
+    3,
+    14,
+    33,
+    56,
+    38,
+    24,
+    7,
+    35,
+    53,
+    5,
+    4,
+    42,
+    26,
+    10,
+    21
+  ],
+  "entries": [
+    {
+      "no": 39,
+      "english": "help",
+      "pronunciation": "ヘルプ",
+      "meaning": "～を手伝う、助ける"
+    },
+    {
+      "no": 34,
+      "english": "give",
+      "pronunciation": "ギヴ",
+      "meaning": "～を与える"
+    },
+    {
+      "no": 58,
+      "english": "play",
+      "pronunciation": "プレイ",
+      "meaning": "～をする"
+    },
+    {
+      "no": 37,
+      "english": "have",
+      "pronunciation": "ハヴ",
+      "meaning": "～を持っている"
+    },
+    {
+      "no": 15,
+      "english": "close",
+      "pronunciation": "クロース",
+      "meaning": "～を閉める"
+    },
+    {
+      "no": 8,
+      "english": "build",
+      "pronunciation": "ビルドゥ",
+      "meaning": "～を建てる"
+    },
+    {
+      "no": 49,
+      "english": "listen",
+      "pronunciation": "リスン",
+      "meaning": "聞く"
+    },
+    {
+      "no": 44,
+      "english": "laugh",
+      "pronunciation": "ラフ",
+      "meaning": "笑う"
+    },
+    {
+      "no": 36,
+      "english": "grow",
+      "pronunciation": "グロウ",
+      "meaning": "成長する"
+    },
+    {
+      "no": 45,
+      "english": "learn",
+      "pronunciation": "ラーン",
+      "meaning": "～を学ぶ、習う"
+    },
+    {
+      "no": 16,
+      "english": "collect",
+      "pronunciation": "コレクト",
+      "meaning": "～を集める"
+    },
+    {
+      "no": 55,
+      "english": "move",
+      "pronunciation": "ムーヴ",
+      "meaning": "動く、感動させる"
+    },
+    {
+      "no": 27,
+      "english": "explain",
+      "pronunciation": "イクスプレイン",
+      "meaning": "～を説明する"
+    },
+    {
+      "no": 28,
+      "english": "feel",
+      "pronunciation": "フィール",
+      "meaning": "～を感じる"
+    },
+    {
+      "no": 6,
+      "english": "borrow",
+      "pronunciation": "ボロウ",
+      "meaning": "～を借りる"
+    },
+    {
+      "no": 3,
+      "english": "become",
+      "pronunciation": "ビカム",
+      "meaning": "～になる"
+    },
+    {
+      "no": 14,
+      "english": "clean",
+      "pronunciation": "クリーン",
+      "meaning": "～を掃除する"
+    },
+    {
+      "no": 33,
+      "english": "get",
+      "pronunciation": "ゲット",
+      "meaning": "～を手に入れる、～になる"
+    },
+    {
+      "no": 56,
+      "english": "need",
+      "pronunciation": "ニード",
+      "meaning": "～が必要である"
+    },
+    {
+      "no": 38,
+      "english": "hear",
+      "pronunciation": "ヒアー",
+      "meaning": "～を聞く"
+    },
+    {
+      "no": 24,
+      "english": "drink",
+      "pronunciation": "ドリンク",
+      "meaning": "～を飲む"
+    },
+    {
+      "no": 7,
+      "english": "bring",
+      "pronunciation": "ブリング",
+      "meaning": "～を持ってくる"
+    },
+    {
+      "no": 35,
+      "english": "go",
+      "pronunciation": "ゴウ",
+      "meaning": "行く"
+    },
+    {
+      "no": 53,
+      "english": "mean",
+      "pronunciation": "ミーン",
+      "meaning": "～を意味する"
+    },
+    {
+      "no": 5,
+      "english": "believe",
+      "pronunciation": "ビリーヴ",
+      "meaning": "～を信じる"
+    },
+    {
+      "no": 4,
+      "english": "begin",
+      "pronunciation": "ビギン",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 42,
+      "english": "invite",
+      "pronunciation": "インヴァイト",
+      "meaning": "～を招待する"
+    },
+    {
+      "no": 26,
+      "english": "enjoy",
+      "pronunciation": "エンジョイ",
+      "meaning": "～を楽しむ"
+    },
+    {
+      "no": 10,
+      "english": "call",
+      "pronunciation": "コール",
+      "meaning": "～と呼ぶ、～に電話する"
+    },
+    {
+      "no": 21,
+      "english": "decide",
+      "pronunciation": "ディサイドゥ",
+      "meaning": "～を決める"
+    }
+  ]
+}

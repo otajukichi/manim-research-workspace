@@ -1,0 +1,232 @@
+from __future__ import annotations
+
+import json
+import random
+import sys
+from pathlib import Path
+
+WORDS_PER_PAGE = 30
+GROUP_SIZE = 60
+TOTAL_WORDS = 240
+GROUP_RANGES = [
+    (1, 60),
+    (61, 120),
+    (121, 180),
+    (181, 240),
+]
+
+
+def load_entries(path: Path) -> tuple[str, list[dict[str, object]]]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    title = str(data.get("title", "中学英語 基本単語"))
+    entries = data.get("entries")
+
+    if not isinstance(entries, list):
+        raise ValueError("'entries' must be a list")
+
+    if len(entries) != TOTAL_WORDS:
+        raise ValueError(f"Expected {TOTAL_WORDS} entries, found {len(entries)}")
+
+    required = {"no", "english", "pronunciation", "meaning"}
+
+    for index, entry in enumerate(entries, start=1):
+        if not isinstance(entry, dict):
+            raise ValueError(f"Entry {index} is not an object")
+        missing = required - set(entry)
+        if missing:
+            raise ValueError(f"Entry {index} missing fields: {sorted(missing)}")
+        if entry["no"] != index:
+            raise ValueError(f"Expected no={index}, found {entry['no']}")
+
+    return title, entries
+
+
+def write_page(
+    out_path: Path,
+    *,
+    title: str,
+    header_range: str,
+    mode: str,
+    page_index: int,
+    page_count: int,
+    entries: list[dict[str, object]],
+) -> None:
+    payload = {
+        "title": title,
+        "header_range": header_range,
+        "mode": mode,
+        "page_index": page_index,
+        "page_count": page_count,
+        "entry_count": len(entries),
+        "numbers": [int(entry["no"]) for entry in entries],
+        "entries": entries,
+    }
+    out_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def chunked(entries: list[dict[str, object]], size: int) -> list[list[dict[str, object]]]:
+    return [entries[i : i + size] for i in range(0, len(entries), size)]
+
+
+def build_ordered(
+    *,
+    title: str,
+    entries: list[dict[str, object]],
+    out_dir: Path,
+) -> None:
+    pages = chunked(entries, WORDS_PER_PAGE)
+
+    if len(pages) != 8:
+        raise ValueError("Ordered pages must be 8")
+
+    for page_index, page_entries in enumerate(pages, start=1):
+        group_index = (page_index - 1) // 2
+        start_no, end_no = GROUP_RANGES[group_index]
+        header_range = f"{start_no}-{end_no}"
+
+        write_page(
+            out_dir / f"page_{page_index:02d}.json",
+            title=title,
+            header_range=header_range,
+            mode="ordered",
+            page_index=page_index,
+            page_count=len(pages),
+            entries=page_entries,
+        )
+
+
+def build_shuffle_groups(
+    *,
+    title: str,
+    entries: list[dict[str, object]],
+    out_dir: Path,
+    seed: int,
+) -> None:
+    rng = random.Random(seed)
+    page_index = 1
+
+    for start_no, end_no in GROUP_RANGES:
+        group_entries = [
+            entry for entry in entries
+            if start_no <= int(entry["no"]) <= end_no
+        ]
+
+        if len(group_entries) != GROUP_SIZE:
+            raise ValueError(
+                f"Group {start_no}-{end_no} expected {GROUP_SIZE} entries, "
+                f"found {len(group_entries)}"
+            )
+
+        shuffled = list(group_entries)
+        rng.shuffle(shuffled)
+
+        pages = chunked(shuffled, WORDS_PER_PAGE)
+
+        if len(pages) != 2:
+            raise ValueError(f"Group {start_no}-{end_no} must split into 2 pages")
+
+        for page_entries in pages:
+            write_page(
+                out_dir / f"page_{page_index:02d}.json",
+                title=title,
+                header_range=f"{start_no}-{end_no}",
+                mode=f"shuffle_groups_seed{seed}",
+                page_index=page_index,
+                page_count=8,
+                entries=page_entries,
+            )
+            page_index += 1
+
+
+def build_shuffle_all(
+    *,
+    title: str,
+    entries: list[dict[str, object]],
+    out_dir: Path,
+    seed: int,
+) -> None:
+    rng = random.Random(seed)
+    shuffled = list(entries)
+    rng.shuffle(shuffled)
+
+    pages = chunked(shuffled, WORDS_PER_PAGE)
+
+    if len(pages) != 8:
+        raise ValueError("All-shuffle pages must be 8")
+
+    for page_index, page_entries in enumerate(pages, start=1):
+        write_page(
+            out_dir / f"page_{page_index:02d}.json",
+            title=title,
+            header_range="1-240",
+            mode=f"shuffle_all_seed{seed}",
+            page_index=page_index,
+            page_count=len(pages),
+            entries=page_entries,
+        )
+
+
+def main() -> None:
+    if len(sys.argv) != 3:
+        raise SystemExit(
+            "Usage: pixi run python build_practice_jsons.py "
+            "<source_json> <json_root>"
+        )
+
+    source_json = Path(sys.argv[1]).resolve()
+    json_root = Path(sys.argv[2]).resolve()
+
+    ordered_dir = json_root / "ordered"
+    group_shuffle_dir = json_root / "shuffle_groups_seed49"
+    all_shuffle_dir = json_root / "shuffle_all_seed49"
+
+    ordered_dir.mkdir(parents=True, exist_ok=True)
+    group_shuffle_dir.mkdir(parents=True, exist_ok=True)
+    all_shuffle_dir.mkdir(parents=True, exist_ok=True)
+
+    title, entries = load_entries(source_json)
+
+    build_ordered(
+        title=title,
+        entries=entries,
+        out_dir=ordered_dir,
+    )
+
+    build_shuffle_groups(
+        title=title,
+        entries=entries,
+        out_dir=group_shuffle_dir,
+        seed=49,
+    )
+
+    build_shuffle_all(
+        title=title,
+        entries=entries,
+        out_dir=all_shuffle_dir,
+        seed=49,
+    )
+
+    print("=== generated sets ===")
+    for label, directory in [
+        ("ordered", ordered_dir),
+        ("shuffle_groups_seed49", group_shuffle_dir),
+        ("shuffle_all_seed49", all_shuffle_dir),
+    ]:
+        files = sorted(directory.glob("page_*.json"))
+        print(f"{label}: {len(files)} files")
+        for path in files:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            nums = data["numbers"]
+            print(
+                f"  {path.name}: "
+                f"header={data['header_range']} "
+                f"count={len(nums)} "
+                f"no={nums[0]}..{nums[-1]}"
+            )
+
+
+if __name__ == "__main__":
+    main()

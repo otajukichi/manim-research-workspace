@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン②　後半",
+  "mode": "group_pattern",
+  "pattern_number": 2,
+  "seed": 2,
+  "page_index": 4,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    85,
+    107,
+    117,
+    81,
+    75,
+    114,
+    101,
+    96,
+    97,
+    103,
+    111,
+    112,
+    83,
+    105,
+    93,
+    113,
+    78,
+    92,
+    76,
+    94,
+    102,
+    90,
+    108,
+    106,
+    86,
+    109,
+    71,
+    89,
+    115,
+    84
+  ],
+  "entries": [
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    },
+    {
+      "no": 97,
+      "english": "walk",
+      "pronunciation": "ウォーク",
+      "meaning": "歩く"
+    },
+    {
+      "no": 103,
+      "english": "work",
+      "pronunciation": "ワーク",
+      "meaning": "働く"
+    },
+    {
+      "no": 111,
+      "english": "July",
+      "pronunciation": "ジュライ",
+      "meaning": "7月"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 105,
+      "english": "January",
+      "pronunciation": "ジャニュアリ",
+      "meaning": "1月"
+    },
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 92,
+      "english": "turn",
+      "pronunciation": "ターン",
+      "meaning": "曲がる"
+    },
+    {
+      "no": 76,
+      "english": "sleep",
+      "pronunciation": "スリープ",
+      "meaning": "眠る"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 90,
+      "english": "think",
+      "pronunciation": "スィンク",
+      "meaning": "～と思う、考える"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 106,
+      "english": "February",
+      "pronunciation": "フェビュラリ",
+      "meaning": "2月"
+    },
+    {
+      "no": 86,
+      "english": "talk",
+      "pronunciation": "トーク",
+      "meaning": "話す"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 84,
+      "english": "swim",
+      "pronunciation": "スウィム",
+      "meaning": "泳ぐ"
+    }
+  ]
+}

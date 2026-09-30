@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン⑦　後半",
+  "mode": "group_pattern",
+  "pattern_number": 7,
+  "seed": 7,
+  "page_index": 6,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    125,
+    135,
+    145,
+    180,
+    147,
+    178,
+    161,
+    148,
+    171,
+    138,
+    156,
+    167,
+    149,
+    179,
+    126,
+    176,
+    173,
+    146,
+    136,
+    168,
+    129,
+    139,
+    170,
+    134,
+    124,
+    152,
+    128,
+    160,
+    131,
+    143
+  ],
+  "entries": [
+    {
+      "no": 125,
+      "english": "Thursday",
+      "pronunciation": "サーズデイ",
+      "meaning": "木曜日"
+    },
+    {
+      "no": 135,
+      "english": "week",
+      "pronunciation": "ウィーク",
+      "meaning": "週"
+    },
+    {
+      "no": 145,
+      "english": "daughter",
+      "pronunciation": "ドーター",
+      "meaning": "娘"
+    },
+    {
+      "no": 180,
+      "english": "festival",
+      "pronunciation": "フェスティヴァル",
+      "meaning": "祭り"
+    },
+    {
+      "no": 147,
+      "english": "dream",
+      "pronunciation": "ドリーム",
+      "meaning": "夢"
+    },
+    {
+      "no": 178,
+      "english": "computer",
+      "pronunciation": "コンピューター",
+      "meaning": "コンピュータ"
+    },
+    {
+      "no": 161,
+      "english": "park",
+      "pronunciation": "パーク",
+      "meaning": "公園"
+    },
+    {
+      "no": 148,
+      "english": "job",
+      "pronunciation": "ジョブ",
+      "meaning": "仕事"
+    },
+    {
+      "no": 171,
+      "english": "home",
+      "pronunciation": "ホーム",
+      "meaning": "家、家庭"
+    },
+    {
+      "no": 138,
+      "english": "family",
+      "pronunciation": "ファミリー",
+      "meaning": "家族"
+    },
+    {
+      "no": 156,
+      "english": "building",
+      "pronunciation": "ビルディング",
+      "meaning": "建物"
+    },
+    {
+      "no": 167,
+      "english": "word",
+      "pronunciation": "ワード",
+      "meaning": "単語"
+    },
+    {
+      "no": 149,
+      "english": "musician",
+      "pronunciation": "ミュージシャン",
+      "meaning": "音楽家"
+    },
+    {
+      "no": 179,
+      "english": "paper",
+      "pronunciation": "ペイパー",
+      "meaning": "紙"
+    },
+    {
+      "no": 126,
+      "english": "Friday",
+      "pronunciation": "フライデイ",
+      "meaning": "金曜日"
+    },
+    {
+      "no": 176,
+      "english": "phone",
+      "pronunciation": "フォーン",
+      "meaning": "電話"
+    },
+    {
+      "no": 173,
+      "english": "room",
+      "pronunciation": "ルーム",
+      "meaning": "部屋"
+    },
+    {
+      "no": 146,
+      "english": "hobby",
+      "pronunciation": "ホビー",
+      "meaning": "趣味"
+    },
+    {
+      "no": 136,
+      "english": "month",
+      "pronunciation": "マンス",
+      "meaning": "月、1ヶ月"
+    },
+    {
+      "no": 168,
+      "english": "homework",
+      "pronunciation": "ホームワーク",
+      "meaning": "宿題"
+    },
+    {
+      "no": 129,
+      "english": "minute",
+      "pronunciation": "ミニット",
+      "meaning": "1分"
+    },
+    {
+      "no": 139,
+      "english": "friend",
+      "pronunciation": "フレンド",
+      "meaning": "友達"
+    },
+    {
+      "no": 170,
+      "english": "house",
+      "pronunciation": "ハウス",
+      "meaning": "家"
+    },
+    {
+      "no": 134,
+      "english": "yesterday",
+      "pronunciation": "イエスタデイ",
+      "meaning": "昨日"
+    },
+    {
+      "no": 124,
+      "english": "Wednesday",
+      "pronunciation": "ウェンズデイ",
+      "meaning": "水曜日"
+    },
+    {
+      "no": 152,
+      "english": "place",
+      "pronunciation": "プレイス",
+      "meaning": "場所"
+    },
+    {
+      "no": 128,
+      "english": "hour",
+      "pronunciation": "アワー",
+      "meaning": "1時間"
+    },
+    {
+      "no": 160,
+      "english": "museum",
+      "pronunciation": "ミュージアム",
+      "meaning": "博物館、美術館"
+    },
+    {
+      "no": 131,
+      "english": "afternoon",
+      "pronunciation": "アフタヌーン",
+      "meaning": "午後"
+    },
+    {
+      "no": 143,
+      "english": "aunt",
+      "pronunciation": "アーント",
+      "meaning": "おば"
+    }
+  ]
+}

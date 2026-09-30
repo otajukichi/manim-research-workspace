@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "121-180",
+  "subtitle": "パターン⑦　前半",
+  "mode": "group_pattern",
+  "pattern_number": 7,
+  "seed": 7,
+  "page_index": 5,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    153,
+    132,
+    122,
+    127,
+    137,
+    164,
+    175,
+    157,
+    166,
+    150,
+    154,
+    133,
+    162,
+    141,
+    140,
+    174,
+    158,
+    144,
+    130,
+    159,
+    163,
+    172,
+    169,
+    121,
+    155,
+    142,
+    177,
+    151,
+    165,
+    123
+  ],
+  "entries": [
+    {
+      "no": 153,
+      "english": "city",
+      "pronunciation": "スィティー",
+      "meaning": "市、都市"
+    },
+    {
+      "no": 132,
+      "english": "evening",
+      "pronunciation": "イーヴニング",
+      "meaning": "夕方"
+    },
+    {
+      "no": 122,
+      "english": "Monday",
+      "pronunciation": "マンデイ",
+      "meaning": "月曜日"
+    },
+    {
+      "no": 127,
+      "english": "Saturday",
+      "pronunciation": "サタデイ",
+      "meaning": "土曜日"
+    },
+    {
+      "no": 137,
+      "english": "year",
+      "pronunciation": "イヤー",
+      "meaning": "年、1年"
+    },
+    {
+      "no": 164,
+      "english": "student",
+      "pronunciation": "スチューデント",
+      "meaning": "生徒"
+    },
+    {
+      "no": 175,
+      "english": "chair",
+      "pronunciation": "チェアー",
+      "meaning": "いす"
+    },
+    {
+      "no": 157,
+      "english": "hospital",
+      "pronunciation": "ホスピタル",
+      "meaning": "病院"
+    },
+    {
+      "no": 166,
+      "english": "answer",
+      "pronunciation": "アンサー",
+      "meaning": "答え、返事"
+    },
+    {
+      "no": 150,
+      "english": "scientist",
+      "pronunciation": "サイエンティスト",
+      "meaning": "科学者"
+    },
+    {
+      "no": 154,
+      "english": "town",
+      "pronunciation": "タウン",
+      "meaning": "町"
+    },
+    {
+      "no": 133,
+      "english": "tomorrow",
+      "pronunciation": "トゥモロー",
+      "meaning": "明日"
+    },
+    {
+      "no": 162,
+      "english": "school",
+      "pronunciation": "スクール",
+      "meaning": "学校"
+    },
+    {
+      "no": 141,
+      "english": "people",
+      "pronunciation": "ピーポゥ",
+      "meaning": "人々"
+    },
+    {
+      "no": 140,
+      "english": "child",
+      "pronunciation": "チャイルド",
+      "meaning": "子ども"
+    },
+    {
+      "no": 174,
+      "english": "table",
+      "pronunciation": "テイボゥ",
+      "meaning": "テーブル"
+    },
+    {
+      "no": 158,
+      "english": "shop",
+      "pronunciation": "ショップ",
+      "meaning": "店"
+    },
+    {
+      "no": 144,
+      "english": "son",
+      "pronunciation": "サン",
+      "meaning": "息子"
+    },
+    {
+      "no": 130,
+      "english": "morning",
+      "pronunciation": "モーニング",
+      "meaning": "朝"
+    },
+    {
+      "no": 159,
+      "english": "library",
+      "pronunciation": "ライブラリ",
+      "meaning": "図書館"
+    },
+    {
+      "no": 163,
+      "english": "classroom",
+      "pronunciation": "クラスルーム",
+      "meaning": "教室"
+    },
+    {
+      "no": 172,
+      "english": "wall",
+      "pronunciation": "ウォール",
+      "meaning": "壁"
+    },
+    {
+      "no": 169,
+      "english": "subject",
+      "pronunciation": "サブジェクト",
+      "meaning": "教科"
+    },
+    {
+      "no": 121,
+      "english": "Sunday",
+      "pronunciation": "サンデイ",
+      "meaning": "日曜日"
+    },
+    {
+      "no": 155,
+      "english": "station",
+      "pronunciation": "ステイション",
+      "meaning": "駅"
+    },
+    {
+      "no": 142,
+      "english": "uncle",
+      "pronunciation": "アンクル",
+      "meaning": "おじ"
+    },
+    {
+      "no": 177,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "腕時計"
+    },
+    {
+      "no": 151,
+      "english": "teacher",
+      "pronunciation": "ティーチャー",
+      "meaning": "先生"
+    },
+    {
+      "no": 165,
+      "english": "question",
+      "pronunciation": "クエスチョン",
+      "meaning": "質問"
+    },
+    {
+      "no": 123,
+      "english": "Tuesday",
+      "pronunciation": "チューズデイ",
+      "meaning": "火曜日"
+    }
+  ]
+}

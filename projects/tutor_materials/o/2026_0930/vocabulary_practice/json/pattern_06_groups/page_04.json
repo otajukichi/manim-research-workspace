@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン⑥　後半",
+  "mode": "group_pattern",
+  "pattern_number": 6,
+  "seed": 6,
+  "page_index": 4,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    70,
+    119,
+    109,
+    84,
+    110,
+    82,
+    62,
+    71,
+    108,
+    61,
+    116,
+    74,
+    113,
+    69,
+    75,
+    91,
+    85,
+    115,
+    107,
+    80,
+    78,
+    103,
+    99,
+    68,
+    73,
+    94,
+    104,
+    117,
+    93,
+    66
+  ],
+  "entries": [
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 119,
+      "english": "fall",
+      "pronunciation": "フォール",
+      "meaning": "秋"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 84,
+      "english": "swim",
+      "pronunciation": "スウィム",
+      "meaning": "泳ぐ"
+    },
+    {
+      "no": 110,
+      "english": "June",
+      "pronunciation": "ジューン",
+      "meaning": "6月"
+    },
+    {
+      "no": 82,
+      "english": "stop",
+      "pronunciation": "ストップ",
+      "meaning": "～をやめる、止まる"
+    },
+    {
+      "no": 62,
+      "english": "reach",
+      "pronunciation": "リーチ",
+      "meaning": "～に到着する"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    },
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 74,
+      "english": "sing",
+      "pronunciation": "スィング",
+      "meaning": "～を歌う"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 91,
+      "english": "try",
+      "pronunciation": "トライ",
+      "meaning": "～を試してみる"
+    },
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    },
+    {
+      "no": 80,
+      "english": "start",
+      "pronunciation": "スタート",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 103,
+      "english": "work",
+      "pronunciation": "ワーク",
+      "meaning": "働く"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 68,
+      "english": "save",
+      "pronunciation": "セイヴ",
+      "meaning": "～を救う"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 66,
+      "english": "ride",
+      "pronunciation": "ライド",
+      "meaning": "～に乗る"
+    }
+  ]
+}

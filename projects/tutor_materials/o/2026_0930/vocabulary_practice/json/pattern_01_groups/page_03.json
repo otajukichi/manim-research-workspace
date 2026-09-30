@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン①　前半",
+  "mode": "group_pattern",
+  "pattern_number": 1,
+  "seed": 1,
+  "page_index": 3,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    78,
+    111,
+    81,
+    82,
+    68,
+    104,
+    65,
+    108,
+    101,
+    71,
+    75,
+    74,
+    83,
+    64,
+    69,
+    94,
+    90,
+    116,
+    110,
+    70,
+    62,
+    113,
+    61,
+    97,
+    102,
+    99,
+    112,
+    100,
+    77,
+    95
+  ],
+  "entries": [
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 111,
+      "english": "July",
+      "pronunciation": "ジュライ",
+      "meaning": "7月"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 82,
+      "english": "stop",
+      "pronunciation": "ストップ",
+      "meaning": "～をやめる、止まる"
+    },
+    {
+      "no": 68,
+      "english": "save",
+      "pronunciation": "セイヴ",
+      "meaning": "～を救う"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 65,
+      "english": "remember",
+      "pronunciation": "リメンバー",
+      "meaning": "～を思い出す"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 74,
+      "english": "sing",
+      "pronunciation": "スィング",
+      "meaning": "～を歌う"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 64,
+      "english": "receive",
+      "pronunciation": "リスィーヴ",
+      "meaning": "～を受け取る"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 90,
+      "english": "think",
+      "pronunciation": "スィンク",
+      "meaning": "～と思う、考える"
+    },
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 110,
+      "english": "June",
+      "pronunciation": "ジューン",
+      "meaning": "6月"
+    },
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 62,
+      "english": "reach",
+      "pronunciation": "リーチ",
+      "meaning": "～に到着する"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    },
+    {
+      "no": 97,
+      "english": "walk",
+      "pronunciation": "ウォーク",
+      "meaning": "歩く"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 77,
+      "english": "speak",
+      "pronunciation": "スピーク",
+      "meaning": "～を話す"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン⑦　前半",
+  "mode": "group_pattern",
+  "pattern_number": 7,
+  "seed": 7,
+  "page_index": 3,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    69,
+    73,
+    95,
+    67,
+    64,
+    112,
+    81,
+    74,
+    102,
+    61,
+    62,
+    118,
+    119,
+    100,
+    101,
+    77,
+    104,
+    75,
+    86,
+    115,
+    108,
+    114,
+    83,
+    88,
+    109,
+    103,
+    78,
+    85,
+    107,
+    96
+  ],
+  "entries": [
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    },
+    {
+      "no": 67,
+      "english": "run",
+      "pronunciation": "ラン",
+      "meaning": "走る"
+    },
+    {
+      "no": 64,
+      "english": "receive",
+      "pronunciation": "リスィーヴ",
+      "meaning": "～を受け取る"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 74,
+      "english": "sing",
+      "pronunciation": "スィング",
+      "meaning": "～を歌う"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    },
+    {
+      "no": 62,
+      "english": "reach",
+      "pronunciation": "リーチ",
+      "meaning": "～に到着する"
+    },
+    {
+      "no": 118,
+      "english": "summer",
+      "pronunciation": "サマー",
+      "meaning": "夏"
+    },
+    {
+      "no": 119,
+      "english": "fall",
+      "pronunciation": "フォール",
+      "meaning": "秋"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 77,
+      "english": "speak",
+      "pronunciation": "スピーク",
+      "meaning": "～を話す"
+    },
+    {
+      "no": 104,
+      "english": "write",
+      "pronunciation": "ライト",
+      "meaning": "～を書く"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 86,
+      "english": "talk",
+      "pronunciation": "トーク",
+      "meaning": "話す"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 103,
+      "english": "work",
+      "pronunciation": "ワーク",
+      "meaning": "働く"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 107,
+      "english": "March",
+      "pronunciation": "マーチ",
+      "meaning": "3月"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    }
+  ]
+}

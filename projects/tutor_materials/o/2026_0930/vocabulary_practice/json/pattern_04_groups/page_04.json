@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン④　後半",
+  "mode": "group_pattern",
+  "pattern_number": 4,
+  "seed": 4,
+  "page_index": 4,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    98,
+    99,
+    81,
+    88,
+    83,
+    72,
+    109,
+    89,
+    106,
+    87,
+    65,
+    73,
+    70,
+    82,
+    91,
+    102,
+    95,
+    94,
+    78,
+    101,
+    90,
+    114,
+    66,
+    63,
+    112,
+    113,
+    77,
+    80,
+    75,
+    71
+  ],
+  "entries": [
+    {
+      "no": 98,
+      "english": "want",
+      "pronunciation": "ウォント",
+      "meaning": "～がほしい"
+    },
+    {
+      "no": 99,
+      "english": "wash",
+      "pronunciation": "ウォッシュ",
+      "meaning": "～を洗う"
+    },
+    {
+      "no": 81,
+      "english": "stay",
+      "pronunciation": "ステイ",
+      "meaning": "滞在する"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 83,
+      "english": "study",
+      "pronunciation": "スタディー",
+      "meaning": "～を勉強する"
+    },
+    {
+      "no": 72,
+      "english": "send",
+      "pronunciation": "センド",
+      "meaning": "～を送る"
+    },
+    {
+      "no": 109,
+      "english": "May",
+      "pronunciation": "メイ",
+      "meaning": "5月"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 106,
+      "english": "February",
+      "pronunciation": "フェビュラリ",
+      "meaning": "2月"
+    },
+    {
+      "no": 87,
+      "english": "teach",
+      "pronunciation": "ティーチ",
+      "meaning": "～を教える"
+    },
+    {
+      "no": 65,
+      "english": "remember",
+      "pronunciation": "リメンバー",
+      "meaning": "～を思い出す"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 82,
+      "english": "stop",
+      "pronunciation": "ストップ",
+      "meaning": "～をやめる、止まる"
+    },
+    {
+      "no": 91,
+      "english": "try",
+      "pronunciation": "トライ",
+      "meaning": "～を試してみる"
+    },
+    {
+      "no": 102,
+      "english": "wish",
+      "pronunciation": "ウィッシュ",
+      "meaning": "願う"
+    },
+    {
+      "no": 95,
+      "english": "visit",
+      "pronunciation": "ヴィズィット",
+      "meaning": "～を訪れる"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 78,
+      "english": "spend",
+      "pronunciation": "スペンド",
+      "meaning": "時間を過ごす"
+    },
+    {
+      "no": 101,
+      "english": "wear",
+      "pronunciation": "ウェアー",
+      "meaning": "～を着る、身につける"
+    },
+    {
+      "no": 90,
+      "english": "think",
+      "pronunciation": "スィンク",
+      "meaning": "～と思う、考える"
+    },
+    {
+      "no": 114,
+      "english": "October",
+      "pronunciation": "オクトーバー",
+      "meaning": "10月"
+    },
+    {
+      "no": 66,
+      "english": "ride",
+      "pronunciation": "ライド",
+      "meaning": "～に乗る"
+    },
+    {
+      "no": 63,
+      "english": "read",
+      "pronunciation": "リード",
+      "meaning": "～を読む"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 77,
+      "english": "speak",
+      "pronunciation": "スピーク",
+      "meaning": "～を話す"
+    },
+    {
+      "no": 80,
+      "english": "start",
+      "pronunciation": "スタート",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 75,
+      "english": "sit",
+      "pronunciation": "スィット",
+      "meaning": "座る"
+    },
+    {
+      "no": 71,
+      "english": "sell",
+      "pronunciation": "セル",
+      "meaning": "～を売る"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "title": "中学英語 基本単語",
+  "header_range": "61-120",
+  "subtitle": "パターン③　前半",
+  "mode": "group_pattern",
+  "pattern_number": 3,
+  "seed": 3,
+  "page_index": 3,
+  "page_count": 8,
+  "entry_count": 30,
+  "numbers": [
+    116,
+    93,
+    100,
+    72,
+    90,
+    84,
+    119,
+    77,
+    94,
+    120,
+    113,
+    88,
+    87,
+    92,
+    76,
+    69,
+    110,
+    73,
+    117,
+    108,
+    80,
+    115,
+    64,
+    85,
+    89,
+    70,
+    61,
+    96,
+    112,
+    63
+  ],
+  "entries": [
+    {
+      "no": 116,
+      "english": "December",
+      "pronunciation": "ディセンバー",
+      "meaning": "12月"
+    },
+    {
+      "no": 93,
+      "english": "understand",
+      "pronunciation": "アンダスタンド",
+      "meaning": "～を理解する"
+    },
+    {
+      "no": 100,
+      "english": "watch",
+      "pronunciation": "ウォッチ",
+      "meaning": "～を見る"
+    },
+    {
+      "no": 72,
+      "english": "send",
+      "pronunciation": "センド",
+      "meaning": "～を送る"
+    },
+    {
+      "no": 90,
+      "english": "think",
+      "pronunciation": "スィンク",
+      "meaning": "～と思う、考える"
+    },
+    {
+      "no": 84,
+      "english": "swim",
+      "pronunciation": "スウィム",
+      "meaning": "泳ぐ"
+    },
+    {
+      "no": 119,
+      "english": "fall",
+      "pronunciation": "フォール",
+      "meaning": "秋"
+    },
+    {
+      "no": 77,
+      "english": "speak",
+      "pronunciation": "スピーク",
+      "meaning": "～を話す"
+    },
+    {
+      "no": 94,
+      "english": "use",
+      "pronunciation": "ユーズ",
+      "meaning": "～を使う"
+    },
+    {
+      "no": 120,
+      "english": "winter",
+      "pronunciation": "ウィンター",
+      "meaning": "冬"
+    },
+    {
+      "no": 113,
+      "english": "September",
+      "pronunciation": "セプテンバー",
+      "meaning": "9月"
+    },
+    {
+      "no": 88,
+      "english": "tell",
+      "pronunciation": "テル",
+      "meaning": "～を話す、教える"
+    },
+    {
+      "no": 87,
+      "english": "teach",
+      "pronunciation": "ティーチ",
+      "meaning": "～を教える"
+    },
+    {
+      "no": 92,
+      "english": "turn",
+      "pronunciation": "ターン",
+      "meaning": "曲がる"
+    },
+    {
+      "no": 76,
+      "english": "sleep",
+      "pronunciation": "スリープ",
+      "meaning": "眠る"
+    },
+    {
+      "no": 69,
+      "english": "say",
+      "pronunciation": "セイ",
+      "meaning": "～と言う"
+    },
+    {
+      "no": 110,
+      "english": "June",
+      "pronunciation": "ジューン",
+      "meaning": "6月"
+    },
+    {
+      "no": 73,
+      "english": "show",
+      "pronunciation": "ショウ",
+      "meaning": "～を見せる"
+    },
+    {
+      "no": 117,
+      "english": "spring",
+      "pronunciation": "スプリング",
+      "meaning": "春"
+    },
+    {
+      "no": 108,
+      "english": "April",
+      "pronunciation": "エイプリル",
+      "meaning": "4月"
+    },
+    {
+      "no": 80,
+      "english": "start",
+      "pronunciation": "スタート",
+      "meaning": "始まる、～を始める"
+    },
+    {
+      "no": 115,
+      "english": "November",
+      "pronunciation": "ノヴェンバー",
+      "meaning": "11月"
+    },
+    {
+      "no": 64,
+      "english": "receive",
+      "pronunciation": "リスィーヴ",
+      "meaning": "～を受け取る"
+    },
+    {
+      "no": 85,
+      "english": "take",
+      "pronunciation": "テイク",
+      "meaning": "～を連れて行く、乗る"
+    },
+    {
+      "no": 89,
+      "english": "thank",
+      "pronunciation": "サンク",
+      "meaning": "～に感謝する"
+    },
+    {
+      "no": 70,
+      "english": "see",
+      "pronunciation": "スィー",
+      "meaning": "～を見る、～に会う"
+    },
+    {
+      "no": 61,
+      "english": "rain",
+      "pronunciation": "レイン",
+      "meaning": "雨が降る"
+    },
+    {
+      "no": 96,
+      "english": "wait",
+      "pronunciation": "ウェイト",
+      "meaning": "待つ"
+    },
+    {
+      "no": 112,
+      "english": "August",
+      "pronunciation": "オーガスト",
+      "meaning": "8月"
+    },
+    {
+      "no": 63,
+      "english": "read",
+      "pronunciation": "リード",
+      "meaning": "～を読む"
+    }
+  ]
+}
