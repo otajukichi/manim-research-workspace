@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 2",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "亡",
+      "reading_type": "kun",
+      "reading": "ない"
+    },
+    {
+      "kanji": "密",
+      "reading_type": "on",
+      "reading": "ミツ"
+    },
+    {
+      "kanji": "障",
+      "reading_type": "on",
+      "reading": "ショウ"
+    },
+    {
+      "kanji": "姿",
+      "reading_type": "on",
+      "reading": "シ"
+    },
+    {
+      "kanji": "異",
+      "reading_type": "on",
+      "reading": "イ"
+    },
+    {
+      "kanji": "卵",
+      "reading_type": "on",
+      "reading": "ラン"
+    },
+    {
+      "kanji": "律",
+      "reading_type": "on",
+      "reading": "リチ"
+    },
+    {
+      "kanji": "認",
+      "reading_type": "on",
+      "reading": "ニン"
+    },
+    {
+      "kanji": "看",
+      "reading_type": "on",
+      "reading": "カン"
+    },
+    {
+      "kanji": "疑",
+      "reading_type": "kun",
+      "reading": "うたがう"
+    },
+    {
+      "kanji": "収",
+      "reading_type": "kun",
+      "reading": "おさめる"
+    },
+    {
+      "kanji": "批",
+      "reading_type": "on",
+      "reading": "ヒ"
+    },
+    {
+      "kanji": "装",
+      "reading_type": "on",
+      "reading": "ショウ"
+    },
+    {
+      "kanji": "私",
+      "reading_type": "kun",
+      "reading": "わたし"
+    },
+    {
+      "kanji": "腸",
+      "reading_type": "on",
+      "reading": "チョウ"
+    },
+    {
+      "kanji": "磁",
+      "reading_type": "on",
+      "reading": "ジ"
+    },
+    {
+      "kanji": "層",
+      "reading_type": "on",
+      "reading": "ソウ"
+    },
+    {
+      "kanji": "処",
+      "reading_type": "on",
+      "reading": "ショ"
+    },
+    {
+      "kanji": "済",
+      "reading_type": "kun",
+      "reading": "すむ"
+    },
+    {
+      "kanji": "頂",
+      "reading_type": "kun",
+      "reading": "いただき"
+    }
+  ]
+}

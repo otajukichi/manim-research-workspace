@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 4",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "秘",
+      "reading_type": "kun",
+      "reading": "ひめる"
+    },
+    {
+      "kanji": "権",
+      "reading_type": "on",
+      "reading": "ゴン"
+    },
+    {
+      "kanji": "党",
+      "reading_type": "on",
+      "reading": "トウ"
+    },
+    {
+      "kanji": "乱",
+      "reading_type": "kun",
+      "reading": "みだれる"
+    },
+    {
+      "kanji": "舌",
+      "reading_type": "on",
+      "reading": "ゼツ"
+    },
+    {
+      "kanji": "策",
+      "reading_type": "on",
+      "reading": "サク"
+    },
+    {
+      "kanji": "盟",
+      "reading_type": "on",
+      "reading": "メイ"
+    },
+    {
+      "kanji": "善",
+      "reading_type": "on",
+      "reading": "ゼン"
+    },
+    {
+      "kanji": "割",
+      "reading_type": "kun",
+      "reading": "さく"
+    },
+    {
+      "kanji": "遺",
+      "reading_type": "on",
+      "reading": "ユイ"
+    },
+    {
+      "kanji": "己",
+      "reading_type": "kun",
+      "reading": "おのれ"
+    },
+    {
+      "kanji": "尺",
+      "reading_type": "on",
+      "reading": "シャク"
+    },
+    {
+      "kanji": "棒",
+      "reading_type": "on",
+      "reading": "ボウ"
+    },
+    {
+      "kanji": "覧",
+      "reading_type": "on",
+      "reading": "ラン"
+    },
+    {
+      "kanji": "樹",
+      "reading_type": "on",
+      "reading": "ジュ"
+    },
+    {
+      "kanji": "承",
+      "reading_type": "kun",
+      "reading": "うけたまわる"
+    },
+    {
+      "kanji": "届",
+      "reading_type": "kun",
+      "reading": "とどける"
+    },
+    {
+      "kanji": "段",
+      "reading_type": "on",
+      "reading": "ダン"
+    },
+    {
+      "kanji": "洗",
+      "reading_type": "on",
+      "reading": "セン"
+    },
+    {
+      "kanji": "若",
+      "reading_type": "on",
+      "reading": "ニャク"
+    }
+  ]
+}

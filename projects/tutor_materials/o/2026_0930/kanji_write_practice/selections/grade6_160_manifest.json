@@ -1,0 +1,1610 @@
+{
+  "grade": 6,
+  "seed": 20260930,
+  "selection_policy": "grade6 entries を固定seedでshuffleし先頭160字を採用。各漢字の読み候補から固定seedで1つ選択。",
+  "total_kanji": 160,
+  "questions_per_sheet": 20,
+  "sheet_count": 8,
+  "items": [
+    {
+      "no": 1,
+      "kanji": "郷",
+      "reading_type": "on",
+      "reading": "キョウ",
+      "word": "郷里",
+      "word_reading": "きょうり",
+      "sentence": "祖父は久しぶりに郷里へ帰った。",
+      "okurigana": ""
+    },
+    {
+      "no": 2,
+      "kanji": "誕",
+      "reading_type": "on",
+      "reading": "タン",
+      "word": "誕生日",
+      "word_reading": "たんじょうび",
+      "sentence": "家族で妹の誕生日を祝う。",
+      "okurigana": ""
+    },
+    {
+      "no": 3,
+      "kanji": "盛",
+      "reading_type": "on",
+      "reading": "セイ",
+      "word": "盛衰",
+      "word_reading": "せいすい",
+      "sentence": "歴史を通して国の盛衰を学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 4,
+      "kanji": "筋",
+      "reading_type": "on",
+      "reading": "キン",
+      "word": "筋肉",
+      "word_reading": "きんにく",
+      "sentence": "運動すると筋肉が使われる。",
+      "okurigana": ""
+    },
+    {
+      "no": 5,
+      "kanji": "穀",
+      "reading_type": "on",
+      "reading": "コク",
+      "word": "穀物",
+      "word_reading": "こくもつ",
+      "sentence": "米や麦などの穀物を育てる。",
+      "okurigana": ""
+    },
+    {
+      "no": 6,
+      "kanji": "視",
+      "reading_type": "on",
+      "reading": "シ",
+      "word": "視野",
+      "word_reading": "しや",
+      "sentence": "広い視野で問題を考える。",
+      "okurigana": ""
+    },
+    {
+      "no": 7,
+      "kanji": "勤",
+      "reading_type": "kun",
+      "reading": "つとめる",
+      "word": "勤める",
+      "word_reading": "つとめる",
+      "sentence": "父は町の病院に勤める。",
+      "okurigana": "める"
+    },
+    {
+      "no": 8,
+      "kanji": "諸",
+      "reading_type": "on",
+      "reading": "ショ",
+      "word": "諸国",
+      "word_reading": "しょこく",
+      "sentence": "昔の諸国の位置を地図で確かめる。",
+      "okurigana": ""
+    },
+    {
+      "no": 9,
+      "kanji": "派",
+      "reading_type": "on",
+      "reading": "ハ",
+      "word": "派生",
+      "word_reading": "はせい",
+      "sentence": "一つの言葉から派生した語を調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 10,
+      "kanji": "株",
+      "reading_type": "kun",
+      "reading": "かぶ",
+      "word": "株",
+      "word_reading": "かぶ",
+      "sentence": "庭にバラを三株植える。",
+      "okurigana": ""
+    },
+    {
+      "no": 11,
+      "kanji": "蒸",
+      "reading_type": "kun",
+      "reading": "むれる",
+      "word": "蒸れる",
+      "word_reading": "むれる",
+      "sentence": "雨具を長く着ると中が蒸れる。",
+      "okurigana": "れる"
+    },
+    {
+      "no": 12,
+      "kanji": "危",
+      "reading_type": "kun",
+      "reading": "あやぶむ",
+      "word": "危ぶむ",
+      "word_reading": "あやぶむ",
+      "sentence": "雨雲を見て試合の開催を危ぶむ。",
+      "okurigana": "ぶむ"
+    },
+    {
+      "no": 13,
+      "kanji": "論",
+      "reading_type": "on",
+      "reading": "ロン",
+      "word": "議論",
+      "word_reading": "ぎろん",
+      "sentence": "資料をもとに班で議論する。",
+      "okurigana": ""
+    },
+    {
+      "no": 14,
+      "kanji": "呼",
+      "reading_type": "on",
+      "reading": "コ",
+      "word": "呼吸",
+      "word_reading": "こきゅう",
+      "sentence": "運動のあと呼吸を整える。",
+      "okurigana": ""
+    },
+    {
+      "no": 15,
+      "kanji": "担",
+      "reading_type": "kun",
+      "reading": "になう",
+      "word": "担う",
+      "word_reading": "になう",
+      "sentence": "若い世代が地域の未来を担う。",
+      "okurigana": "う"
+    },
+    {
+      "no": 16,
+      "kanji": "欲",
+      "reading_type": "kun",
+      "reading": "ほしい",
+      "word": "欲しい",
+      "word_reading": "ほしい",
+      "sentence": "新しい辞典が欲しい。",
+      "okurigana": "しい"
+    },
+    {
+      "no": 17,
+      "kanji": "机",
+      "reading_type": "kun",
+      "reading": "つくえ",
+      "word": "机",
+      "word_reading": "つくえ",
+      "sentence": "机の上をきれいに片づける。",
+      "okurigana": ""
+    },
+    {
+      "no": 18,
+      "kanji": "革",
+      "reading_type": "kun",
+      "reading": "かわ",
+      "word": "革",
+      "word_reading": "かわ",
+      "sentence": "革で作られた丈夫なかばんを使う。",
+      "okurigana": ""
+    },
+    {
+      "no": 19,
+      "kanji": "臓",
+      "reading_type": "on",
+      "reading": "ゾウ",
+      "word": "臓器",
+      "word_reading": "ぞうき",
+      "sentence": "人体の主な臓器の働きを学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 20,
+      "kanji": "腹",
+      "reading_type": "kun",
+      "reading": "はら",
+      "word": "腹",
+      "word_reading": "はら",
+      "sentence": "走ったあとは腹が減る。",
+      "okurigana": ""
+    },
+    {
+      "no": 21,
+      "kanji": "亡",
+      "reading_type": "kun",
+      "reading": "ない",
+      "word": "亡い",
+      "word_reading": "ない",
+      "sentence": "今は亡い祖父のことを家族で語る。",
+      "okurigana": "い"
+    },
+    {
+      "no": 22,
+      "kanji": "密",
+      "reading_type": "on",
+      "reading": "ミツ",
+      "word": "密度",
+      "word_reading": "みつど",
+      "sentence": "同じ体積でも物によって密度が違う。",
+      "okurigana": ""
+    },
+    {
+      "no": 23,
+      "kanji": "障",
+      "reading_type": "on",
+      "reading": "ショウ",
+      "word": "障害",
+      "word_reading": "しょうがい",
+      "sentence": "通行の障害になる物を片づける。",
+      "okurigana": ""
+    },
+    {
+      "no": 24,
+      "kanji": "姿",
+      "reading_type": "on",
+      "reading": "シ",
+      "word": "姿勢",
+      "word_reading": "しせい",
+      "sentence": "背筋を伸ばしてよい姿勢で座る。",
+      "okurigana": ""
+    },
+    {
+      "no": 25,
+      "kanji": "異",
+      "reading_type": "on",
+      "reading": "イ",
+      "word": "異文化",
+      "word_reading": "いぶんか",
+      "sentence": "外国の異文化について学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 26,
+      "kanji": "卵",
+      "reading_type": "on",
+      "reading": "ラン",
+      "word": "卵黄",
+      "word_reading": "らんおう",
+      "sentence": "卵黄と卵白を分ける。",
+      "okurigana": ""
+    },
+    {
+      "no": 27,
+      "kanji": "律",
+      "reading_type": "on",
+      "reading": "リチ",
+      "word": "律儀",
+      "word_reading": "りちぎ",
+      "sentence": "彼は借りた物を必ず返す律儀な人だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 28,
+      "kanji": "認",
+      "reading_type": "on",
+      "reading": "ニン",
+      "word": "確認",
+      "word_reading": "かくにん",
+      "sentence": "出発前に持ち物を確認する。",
+      "okurigana": ""
+    },
+    {
+      "no": 29,
+      "kanji": "看",
+      "reading_type": "on",
+      "reading": "カン",
+      "word": "看板",
+      "word_reading": "かんばん",
+      "sentence": "店の前に大きな看板が立っている。",
+      "okurigana": ""
+    },
+    {
+      "no": 30,
+      "kanji": "疑",
+      "reading_type": "kun",
+      "reading": "うたがう",
+      "word": "疑う",
+      "word_reading": "うたがう",
+      "sentence": "情報が正しいか一度疑う姿勢も大切だ。",
+      "okurigana": "う"
+    },
+    {
+      "no": 31,
+      "kanji": "収",
+      "reading_type": "kun",
+      "reading": "おさめる",
+      "word": "収める",
+      "word_reading": "おさめる",
+      "sentence": "道具を棚の中に収める。",
+      "okurigana": "める"
+    },
+    {
+      "no": 32,
+      "kanji": "批",
+      "reading_type": "on",
+      "reading": "ヒ",
+      "word": "批評",
+      "word_reading": "ひひょう",
+      "sentence": "作品を読んで短い批評を書く。",
+      "okurigana": ""
+    },
+    {
+      "no": 33,
+      "kanji": "装",
+      "reading_type": "on",
+      "reading": "ショウ",
+      "word": "装束",
+      "word_reading": "しょうぞく",
+      "sentence": "祭りで使う伝統的な装束を見る。",
+      "okurigana": ""
+    },
+    {
+      "no": 34,
+      "kanji": "私",
+      "reading_type": "kun",
+      "reading": "わたし",
+      "word": "私",
+      "word_reading": "わたし",
+      "sentence": "私は毎朝七時に起きる。",
+      "okurigana": ""
+    },
+    {
+      "no": 35,
+      "kanji": "腸",
+      "reading_type": "on",
+      "reading": "チョウ",
+      "word": "腸",
+      "word_reading": "ちょう",
+      "sentence": "腸は消化や吸収に関わる器官だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 36,
+      "kanji": "磁",
+      "reading_type": "on",
+      "reading": "ジ",
+      "word": "磁石",
+      "word_reading": "じしゃく",
+      "sentence": "磁石に鉄くぎを近づける。",
+      "okurigana": ""
+    },
+    {
+      "no": 37,
+      "kanji": "層",
+      "reading_type": "on",
+      "reading": "ソウ",
+      "word": "地層",
+      "word_reading": "ちそう",
+      "sentence": "崖に見える地層を観察する。",
+      "okurigana": ""
+    },
+    {
+      "no": 38,
+      "kanji": "処",
+      "reading_type": "on",
+      "reading": "ショ",
+      "word": "処理",
+      "word_reading": "しょり",
+      "sentence": "集めたデータを順番に処理する。",
+      "okurigana": ""
+    },
+    {
+      "no": 39,
+      "kanji": "済",
+      "reading_type": "kun",
+      "reading": "すむ",
+      "word": "済む",
+      "word_reading": "すむ",
+      "sentence": "話し合いだけで問題が済む。",
+      "okurigana": "む"
+    },
+    {
+      "no": 40,
+      "kanji": "頂",
+      "reading_type": "kun",
+      "reading": "いただき",
+      "word": "頂",
+      "word_reading": "いただき",
+      "sentence": "山の頂に雪が残っている。",
+      "okurigana": ""
+    },
+    {
+      "no": 41,
+      "kanji": "宣",
+      "reading_type": "on",
+      "reading": "セン",
+      "word": "宣言",
+      "word_reading": "せんげん",
+      "sentence": "選手が大会で全力を尽くすと宣言する。",
+      "okurigana": ""
+    },
+    {
+      "no": 42,
+      "kanji": "貴",
+      "reading_type": "kun",
+      "reading": "たっとい",
+      "word": "貴い",
+      "word_reading": "たっとい",
+      "sentence": "この宝物は家族にとって貴い品だ。",
+      "okurigana": "い"
+    },
+    {
+      "no": 43,
+      "kanji": "存",
+      "reading_type": "on",
+      "reading": "ソン",
+      "word": "存在",
+      "word_reading": "そんざい",
+      "sentence": "深い海には未知の生物が存在する。",
+      "okurigana": ""
+    },
+    {
+      "no": 44,
+      "kanji": "座",
+      "reading_type": "on",
+      "reading": "ザ",
+      "word": "座席",
+      "word_reading": "ざせき",
+      "sentence": "自分の座席を確認する。",
+      "okurigana": ""
+    },
+    {
+      "no": 45,
+      "kanji": "敬",
+      "reading_type": "on",
+      "reading": "ケイ",
+      "word": "敬意",
+      "word_reading": "けいい",
+      "sentence": "努力した相手に敬意を表す。",
+      "okurigana": ""
+    },
+    {
+      "no": 46,
+      "kanji": "供",
+      "reading_type": "kun",
+      "reading": "そなえる",
+      "word": "供える",
+      "word_reading": "そなえる",
+      "sentence": "仏壇に花を供える。",
+      "okurigana": "える"
+    },
+    {
+      "no": 47,
+      "kanji": "探",
+      "reading_type": "kun",
+      "reading": "さがす",
+      "word": "探す",
+      "word_reading": "さがす",
+      "sentence": "なくした鍵を部屋の中で探す。",
+      "okurigana": "す"
+    },
+    {
+      "no": 48,
+      "kanji": "宗",
+      "reading_type": "on",
+      "reading": "ソウ",
+      "word": "宗家",
+      "word_reading": "そうけ",
+      "sentence": "伝統芸能の宗家を訪ねる。",
+      "okurigana": ""
+    },
+    {
+      "no": 49,
+      "kanji": "厳",
+      "reading_type": "on",
+      "reading": "ゴン",
+      "word": "荘厳",
+      "word_reading": "そうごん",
+      "sentence": "寺の内部は荘厳な雰囲気だった。",
+      "okurigana": ""
+    },
+    {
+      "no": 50,
+      "kanji": "否",
+      "reading_type": "kun",
+      "reading": "いな",
+      "word": "否",
+      "word_reading": "いな",
+      "sentence": "問いかけに否と答える。",
+      "okurigana": ""
+    },
+    {
+      "no": 51,
+      "kanji": "署",
+      "reading_type": "on",
+      "reading": "ショ",
+      "word": "署名",
+      "word_reading": "しょめい",
+      "sentence": "確認した書類に署名する。",
+      "okurigana": ""
+    },
+    {
+      "no": 52,
+      "kanji": "臨",
+      "reading_type": "kun",
+      "reading": "のぞむ",
+      "word": "臨む",
+      "word_reading": "のぞむ",
+      "sentence": "十分に準備して試合に臨む。",
+      "okurigana": "む"
+    },
+    {
+      "no": 53,
+      "kanji": "宅",
+      "reading_type": "on",
+      "reading": "タク",
+      "word": "自宅",
+      "word_reading": "じたく",
+      "sentence": "放課後はまっすぐ自宅へ帰る。",
+      "okurigana": ""
+    },
+    {
+      "no": 54,
+      "kanji": "垂",
+      "reading_type": "on",
+      "reading": "スイ",
+      "word": "垂直",
+      "word_reading": "すいちょく",
+      "sentence": "柱が地面に対して垂直に立っている。",
+      "okurigana": ""
+    },
+    {
+      "no": 55,
+      "kanji": "沿",
+      "reading_type": "kun",
+      "reading": "そう",
+      "word": "沿う",
+      "word_reading": "そう",
+      "sentence": "川に沿う道を歩く。",
+      "okurigana": "う"
+    },
+    {
+      "no": 56,
+      "kanji": "骨",
+      "reading_type": "on",
+      "reading": "コツ",
+      "word": "骨格",
+      "word_reading": "こっかく",
+      "sentence": "模型で人の骨格を観察する。",
+      "okurigana": ""
+    },
+    {
+      "no": 57,
+      "kanji": "背",
+      "reading_type": "kun",
+      "reading": "そむく",
+      "word": "背く",
+      "word_reading": "そむく",
+      "sentence": "みんなで決めた約束に背く。",
+      "okurigana": "く"
+    },
+    {
+      "no": 58,
+      "kanji": "縦",
+      "reading_type": "on",
+      "reading": "ジュウ",
+      "word": "縦横",
+      "word_reading": "じゅうおう",
+      "sentence": "選手がコートを縦横に走り回る。",
+      "okurigana": ""
+    },
+    {
+      "no": 59,
+      "kanji": "肺",
+      "reading_type": "on",
+      "reading": "ハイ",
+      "word": "肺",
+      "word_reading": "はい",
+      "sentence": "肺は呼吸に大切な器官だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 60,
+      "kanji": "郵",
+      "reading_type": "on",
+      "reading": "ユウ",
+      "word": "郵便",
+      "word_reading": "ゆうびん",
+      "sentence": "郵便が昼前に届いた。",
+      "okurigana": ""
+    },
+    {
+      "no": 61,
+      "kanji": "秘",
+      "reading_type": "kun",
+      "reading": "ひめる",
+      "word": "秘める",
+      "word_reading": "ひめる",
+      "sentence": "胸の中に大きな夢を秘める。",
+      "okurigana": "める"
+    },
+    {
+      "no": 62,
+      "kanji": "権",
+      "reading_type": "on",
+      "reading": "ゴン",
+      "word": "権化",
+      "word_reading": "ごんげ",
+      "sentence": "物語では、その人物を悪の権化と表している。",
+      "okurigana": ""
+    },
+    {
+      "no": 63,
+      "kanji": "党",
+      "reading_type": "on",
+      "reading": "トウ",
+      "word": "徒党",
+      "word_reading": "ととう",
+      "sentence": "物語では盗賊が徒党を組んで行動する。",
+      "okurigana": ""
+    },
+    {
+      "no": 64,
+      "kanji": "乱",
+      "reading_type": "kun",
+      "reading": "みだれる",
+      "word": "乱れる",
+      "word_reading": "みだれる",
+      "sentence": "強い風で髪が乱れる。",
+      "okurigana": "れる"
+    },
+    {
+      "no": 65,
+      "kanji": "舌",
+      "reading_type": "on",
+      "reading": "ゼツ",
+      "word": "毒舌",
+      "word_reading": "どくぜつ",
+      "sentence": "彼は毒舌だが、根はやさしい。",
+      "okurigana": ""
+    },
+    {
+      "no": 66,
+      "kanji": "策",
+      "reading_type": "on",
+      "reading": "サク",
+      "word": "対策",
+      "word_reading": "たいさく",
+      "sentence": "大雨に備えて対策を考える。",
+      "okurigana": ""
+    },
+    {
+      "no": 67,
+      "kanji": "盟",
+      "reading_type": "on",
+      "reading": "メイ",
+      "word": "同盟",
+      "word_reading": "どうめい",
+      "sentence": "二つの国が同盟を結んだ歴史を学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 68,
+      "kanji": "善",
+      "reading_type": "on",
+      "reading": "ゼン",
+      "word": "善意",
+      "word_reading": "ぜんい",
+      "sentence": "見知らぬ人の善意に助けられた。",
+      "okurigana": ""
+    },
+    {
+      "no": 69,
+      "kanji": "割",
+      "reading_type": "kun",
+      "reading": "さく",
+      "word": "割く",
+      "word_reading": "さく",
+      "sentence": "練習のために毎日少し時間を割く。",
+      "okurigana": "く"
+    },
+    {
+      "no": 70,
+      "kanji": "遺",
+      "reading_type": "on",
+      "reading": "ユイ",
+      "word": "遺言",
+      "word_reading": "ゆいごん",
+      "sentence": "物語の中で王が遺言を残す。",
+      "okurigana": ""
+    },
+    {
+      "no": 71,
+      "kanji": "己",
+      "reading_type": "kun",
+      "reading": "おのれ",
+      "word": "己",
+      "word_reading": "おのれ",
+      "sentence": "己の弱さと向き合うことも大切だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 72,
+      "kanji": "尺",
+      "reading_type": "on",
+      "reading": "シャク",
+      "word": "縮尺",
+      "word_reading": "しゅくしゃく",
+      "sentence": "地図の縮尺を使って実際の距離を求める。",
+      "okurigana": ""
+    },
+    {
+      "no": 73,
+      "kanji": "棒",
+      "reading_type": "on",
+      "reading": "ボウ",
+      "word": "棒",
+      "word_reading": "ぼう",
+      "sentence": "長い棒を地面に立てる。",
+      "okurigana": ""
+    },
+    {
+      "no": 74,
+      "kanji": "覧",
+      "reading_type": "on",
+      "reading": "ラン",
+      "word": "閲覧",
+      "word_reading": "えつらん",
+      "sentence": "図書館で古い新聞を閲覧する。",
+      "okurigana": ""
+    },
+    {
+      "no": 75,
+      "kanji": "樹",
+      "reading_type": "on",
+      "reading": "ジュ",
+      "word": "樹木",
+      "word_reading": "じゅもく",
+      "sentence": "公園の樹木の種類を調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 76,
+      "kanji": "承",
+      "reading_type": "kun",
+      "reading": "うけたまわる",
+      "word": "承る",
+      "word_reading": "うけたまわる",
+      "sentence": "ご注文を承ると店員が丁寧に答えた。",
+      "okurigana": "る"
+    },
+    {
+      "no": 77,
+      "kanji": "届",
+      "reading_type": "kun",
+      "reading": "とどける",
+      "word": "届ける",
+      "word_reading": "とどける",
+      "sentence": "忘れ物を友達の家へ届ける。",
+      "okurigana": "ける"
+    },
+    {
+      "no": 78,
+      "kanji": "段",
+      "reading_type": "on",
+      "reading": "ダン",
+      "word": "段階",
+      "word_reading": "だんかい",
+      "sentence": "作業を三つの段階に分けて進める。",
+      "okurigana": ""
+    },
+    {
+      "no": 79,
+      "kanji": "洗",
+      "reading_type": "on",
+      "reading": "セン",
+      "word": "洗剤",
+      "word_reading": "せんざい",
+      "sentence": "少量の洗剤で汚れを落とす。",
+      "okurigana": ""
+    },
+    {
+      "no": 80,
+      "kanji": "若",
+      "reading_type": "on",
+      "reading": "ニャク",
+      "word": "老若男女",
+      "word_reading": "ろうにゃくなんにょ",
+      "sentence": "祭りには老若男女が集まった。",
+      "okurigana": ""
+    },
+    {
+      "no": 81,
+      "kanji": "晩",
+      "reading_type": "on",
+      "reading": "バン",
+      "word": "今晩",
+      "word_reading": "こんばん",
+      "sentence": "今晩は家族で星を観察する。",
+      "okurigana": ""
+    },
+    {
+      "no": 82,
+      "kanji": "陛",
+      "reading_type": "on",
+      "reading": "ヘイ",
+      "word": "陛下",
+      "word_reading": "へいか",
+      "sentence": "歴史資料に天皇陛下という表現が見られる。",
+      "okurigana": ""
+    },
+    {
+      "no": 83,
+      "kanji": "紅",
+      "reading_type": "on",
+      "reading": "コウ",
+      "word": "紅白",
+      "word_reading": "こうはく",
+      "sentence": "紅白の旗を交互に並べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 84,
+      "kanji": "展",
+      "reading_type": "on",
+      "reading": "テン",
+      "word": "展覧会",
+      "word_reading": "てんらんかい",
+      "sentence": "美術館の展覧会を見に行く。",
+      "okurigana": ""
+    },
+    {
+      "no": 85,
+      "kanji": "翌",
+      "reading_type": "on",
+      "reading": "ヨク",
+      "word": "翌日",
+      "word_reading": "よくじつ",
+      "sentence": "遠足の翌日に写真を整理する。",
+      "okurigana": ""
+    },
+    {
+      "no": 86,
+      "kanji": "至",
+      "reading_type": "on",
+      "reading": "シ",
+      "word": "至急",
+      "word_reading": "しきゅう",
+      "sentence": "至急知らせる必要がある内容を確認する。",
+      "okurigana": ""
+    },
+    {
+      "no": 87,
+      "kanji": "胸",
+      "reading_type": "kun",
+      "reading": "むな",
+      "word": "胸元",
+      "word_reading": "むなもと",
+      "sentence": "寒いので胸元まで上着のボタンを留める。",
+      "okurigana": ""
+    },
+    {
+      "no": 88,
+      "kanji": "仁",
+      "reading_type": "on",
+      "reading": "ジン",
+      "word": "仁愛",
+      "word_reading": "じんあい",
+      "sentence": "仁愛の心で人に接する。",
+      "okurigana": ""
+    },
+    {
+      "no": 89,
+      "kanji": "訪",
+      "reading_type": "kun",
+      "reading": "たずねる",
+      "word": "訪ねる",
+      "word_reading": "たずねる",
+      "sentence": "昔の先生を訪ねる。",
+      "okurigana": "ねる"
+    },
+    {
+      "no": 90,
+      "kanji": "暖",
+      "reading_type": "kun",
+      "reading": "あたたまる",
+      "word": "暖まる",
+      "word_reading": "あたたまる",
+      "sentence": "ストーブの前で体が暖まる。",
+      "okurigana": "まる"
+    },
+    {
+      "no": 91,
+      "kanji": "俳",
+      "reading_type": "on",
+      "reading": "ハイ",
+      "word": "俳句",
+      "word_reading": "はいく",
+      "sentence": "季語を入れて俳句を作る。",
+      "okurigana": ""
+    },
+    {
+      "no": 92,
+      "kanji": "就",
+      "reading_type": "on",
+      "reading": "シュウ",
+      "word": "就任",
+      "word_reading": "しゅうにん",
+      "sentence": "新しい校長先生が就任した。",
+      "okurigana": ""
+    },
+    {
+      "no": 93,
+      "kanji": "我",
+      "reading_type": "on",
+      "reading": "ガ",
+      "word": "自我",
+      "word_reading": "じが",
+      "sentence": "成長とともに自我がはっきりしてくる。",
+      "okurigana": ""
+    },
+    {
+      "no": 94,
+      "kanji": "蔵",
+      "reading_type": "on",
+      "reading": "ゾウ",
+      "word": "蔵書",
+      "word_reading": "ぞうしょ",
+      "sentence": "図書館の蔵書を検索する。",
+      "okurigana": ""
+    },
+    {
+      "no": 95,
+      "kanji": "並",
+      "reading_type": "on",
+      "reading": "ヘイ",
+      "word": "並列",
+      "word_reading": "へいれつ",
+      "sentence": "二つの電池を並列につなぐ。",
+      "okurigana": ""
+    },
+    {
+      "no": 96,
+      "kanji": "宇",
+      "reading_type": "on",
+      "reading": "ウ",
+      "word": "宇宙",
+      "word_reading": "うちゅう",
+      "sentence": "宇宙には数え切れないほどの星がある。",
+      "okurigana": ""
+    },
+    {
+      "no": 97,
+      "kanji": "脳",
+      "reading_type": "on",
+      "reading": "ノウ",
+      "word": "脳",
+      "word_reading": "のう",
+      "sentence": "脳は体の働きを調整する。",
+      "okurigana": ""
+    },
+    {
+      "no": 98,
+      "kanji": "刻",
+      "reading_type": "kun",
+      "reading": "きざむ",
+      "word": "刻む",
+      "word_reading": "きざむ",
+      "sentence": "石に名前を刻む。",
+      "okurigana": "む"
+    },
+    {
+      "no": 99,
+      "kanji": "鋼",
+      "reading_type": "kun",
+      "reading": "はがね",
+      "word": "鋼",
+      "word_reading": "はがね",
+      "sentence": "鋼は硬くて丈夫な金属だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 100,
+      "kanji": "寸",
+      "reading_type": "on",
+      "reading": "スン",
+      "word": "寸法",
+      "word_reading": "すんぽう",
+      "sentence": "板を切る前に寸法を測る。",
+      "okurigana": ""
+    },
+    {
+      "no": 101,
+      "kanji": "劇",
+      "reading_type": "on",
+      "reading": "ゲキ",
+      "word": "劇",
+      "word_reading": "げき",
+      "sentence": "学芸会で短い劇を演じる。",
+      "okurigana": ""
+    },
+    {
+      "no": 102,
+      "kanji": "忘",
+      "reading_type": "kun",
+      "reading": "わすれる",
+      "word": "忘れる",
+      "word_reading": "わすれる",
+      "sentence": "宿題を持ってくるのを忘れる。",
+      "okurigana": "れる"
+    },
+    {
+      "no": 103,
+      "kanji": "穴",
+      "reading_type": "kun",
+      "reading": "あな",
+      "word": "穴",
+      "word_reading": "あな",
+      "sentence": "地面に小さな穴を掘る。",
+      "okurigana": ""
+    },
+    {
+      "no": 104,
+      "kanji": "操",
+      "reading_type": "kun",
+      "reading": "みさお",
+      "word": "操",
+      "word_reading": "みさお",
+      "sentence": "物語の人物は最後まで自分の操を守った。",
+      "okurigana": ""
+    },
+    {
+      "no": 105,
+      "kanji": "奮",
+      "reading_type": "on",
+      "reading": "フン",
+      "word": "奮起",
+      "word_reading": "ふんき",
+      "sentence": "仲間の応援を受けて奮起する。",
+      "okurigana": ""
+    },
+    {
+      "no": 106,
+      "kanji": "聖",
+      "reading_type": "on",
+      "reading": "セイ",
+      "word": "聖歌",
+      "word_reading": "せいか",
+      "sentence": "教会から聖歌を歌う声が聞こえる。",
+      "okurigana": ""
+    },
+    {
+      "no": 107,
+      "kanji": "針",
+      "reading_type": "kun",
+      "reading": "はり",
+      "word": "針",
+      "word_reading": "はり",
+      "sentence": "針に糸を通して布を縫う。",
+      "okurigana": ""
+    },
+    {
+      "no": 108,
+      "kanji": "傷",
+      "reading_type": "kun",
+      "reading": "きず",
+      "word": "傷",
+      "word_reading": "きず",
+      "sentence": "転んでひざに小さな傷ができた。",
+      "okurigana": ""
+    },
+    {
+      "no": 109,
+      "kanji": "警",
+      "reading_type": "on",
+      "reading": "ケイ",
+      "word": "警告",
+      "word_reading": "けいこく",
+      "sentence": "危険を知らせる警告をよく読む。",
+      "okurigana": ""
+    },
+    {
+      "no": 110,
+      "kanji": "憲",
+      "reading_type": "on",
+      "reading": "ケン",
+      "word": "憲法",
+      "word_reading": "けんぽう",
+      "sentence": "社会科で日本国憲法について学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 111,
+      "kanji": "模",
+      "reading_type": "on",
+      "reading": "ボ",
+      "word": "規模",
+      "word_reading": "きぼ",
+      "sentence": "祭りの規模が年々大きくなる。",
+      "okurigana": ""
+    },
+    {
+      "no": 112,
+      "kanji": "優",
+      "reading_type": "on",
+      "reading": "ユウ",
+      "word": "俳優",
+      "word_reading": "はいゆう",
+      "sentence": "映画に出ている俳優の演技を見る。",
+      "okurigana": ""
+    },
+    {
+      "no": 113,
+      "kanji": "預",
+      "reading_type": "kun",
+      "reading": "あずかる",
+      "word": "預かる",
+      "word_reading": "あずかる",
+      "sentence": "友達の荷物を少しの間預かる。",
+      "okurigana": "かる"
+    },
+    {
+      "no": 114,
+      "kanji": "縮",
+      "reading_type": "kun",
+      "reading": "ちぢめる",
+      "word": "縮める",
+      "word_reading": "ちぢめる",
+      "sentence": "練習して走る時間を一秒縮める。",
+      "okurigana": "める"
+    },
+    {
+      "no": 115,
+      "kanji": "冊",
+      "reading_type": "on",
+      "reading": "サク",
+      "word": "短冊",
+      "word_reading": "たんざく",
+      "sentence": "短冊に願い事を書く。",
+      "okurigana": ""
+    },
+    {
+      "no": 116,
+      "kanji": "絹",
+      "reading_type": "kun",
+      "reading": "きぬ",
+      "word": "絹",
+      "word_reading": "きぬ",
+      "sentence": "絹の布はなめらかな手触りだ。",
+      "okurigana": ""
+    },
+    {
+      "no": 117,
+      "kanji": "激",
+      "reading_type": "on",
+      "reading": "ゲキ",
+      "word": "激戦",
+      "word_reading": "げきせん",
+      "sentence": "両チームが激戦を繰り広げた。",
+      "okurigana": ""
+    },
+    {
+      "no": 118,
+      "kanji": "泉",
+      "reading_type": "kun",
+      "reading": "いずみ",
+      "word": "泉",
+      "word_reading": "いずみ",
+      "sentence": "森の奥から澄んだ泉がわいている。",
+      "okurigana": ""
+    },
+    {
+      "no": 119,
+      "kanji": "裁",
+      "reading_type": "on",
+      "reading": "サイ",
+      "word": "裁判",
+      "word_reading": "さいばん",
+      "sentence": "裁判の仕組みを社会科で学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 120,
+      "kanji": "幼",
+      "reading_type": "on",
+      "reading": "ヨウ",
+      "word": "幼児",
+      "word_reading": "ようじ",
+      "sentence": "幼児にも分かる絵本を選ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 121,
+      "kanji": "困",
+      "reading_type": "on",
+      "reading": "コン",
+      "word": "困難",
+      "word_reading": "こんなん",
+      "sentence": "困難な問題にもあきらめず取り組む。",
+      "okurigana": ""
+    },
+    {
+      "no": 122,
+      "kanji": "系",
+      "reading_type": "on",
+      "reading": "ケイ",
+      "word": "太陽系",
+      "word_reading": "たいようけい",
+      "sentence": "地球は太陽系の惑星の一つだ。",
+      "okurigana": ""
+    },
+    {
+      "no": 123,
+      "kanji": "従",
+      "reading_type": "kun",
+      "reading": "したがえる",
+      "word": "従える",
+      "word_reading": "したがえる",
+      "sentence": "王が多くの家臣を従える。",
+      "okurigana": "える"
+    },
+    {
+      "no": 124,
+      "kanji": "創",
+      "reading_type": "on",
+      "reading": "ソウ",
+      "word": "創意",
+      "word_reading": "そうい",
+      "sentence": "創意を生かして作品を工夫する。",
+      "okurigana": ""
+    },
+    {
+      "no": 125,
+      "kanji": "討",
+      "reading_type": "kun",
+      "reading": "うつ",
+      "word": "討つ",
+      "word_reading": "うつ",
+      "sentence": "昔の物語で武将が敵を討つ。",
+      "okurigana": "つ"
+    },
+    {
+      "no": 126,
+      "kanji": "干",
+      "reading_type": "kun",
+      "reading": "ひる",
+      "word": "干る",
+      "word_reading": "ひる",
+      "sentence": "長い日照りで池の水が干る。",
+      "okurigana": "る"
+    },
+    {
+      "no": 127,
+      "kanji": "班",
+      "reading_type": "on",
+      "reading": "ハン",
+      "word": "班",
+      "word_reading": "はん",
+      "sentence": "四人ずつの班に分かれる。",
+      "okurigana": ""
+    },
+    {
+      "no": 128,
+      "kanji": "孝",
+      "reading_type": "on",
+      "reading": "コウ",
+      "word": "孝行",
+      "word_reading": "こうこう",
+      "sentence": "祖父母に孝行をしたいと思う。",
+      "okurigana": ""
+    },
+    {
+      "no": 129,
+      "kanji": "庁",
+      "reading_type": "on",
+      "reading": "チョウ",
+      "word": "市庁",
+      "word_reading": "しちょう",
+      "sentence": "市庁の役割について資料で調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 130,
+      "kanji": "賃",
+      "reading_type": "on",
+      "reading": "チン",
+      "word": "家賃",
+      "word_reading": "やちん",
+      "sentence": "家賃は毎月決まった日に支払う。",
+      "okurigana": ""
+    },
+    {
+      "no": 131,
+      "kanji": "除",
+      "reading_type": "kun",
+      "reading": "のぞく",
+      "word": "除く",
+      "word_reading": "のぞく",
+      "sentence": "合計から休んだ人の数を除く。",
+      "okurigana": "く"
+    },
+    {
+      "no": 132,
+      "kanji": "皇",
+      "reading_type": "on",
+      "reading": "オウ",
+      "word": "法皇",
+      "word_reading": "ほうおう",
+      "sentence": "歴史の資料に法皇の名前が出てくる。",
+      "okurigana": ""
+    },
+    {
+      "no": 133,
+      "kanji": "純",
+      "reading_type": "on",
+      "reading": "ジュン",
+      "word": "純水",
+      "word_reading": "じゅんすい",
+      "sentence": "実験では不純物の少ない純水を使う。",
+      "okurigana": ""
+    },
+    {
+      "no": 134,
+      "kanji": "域",
+      "reading_type": "on",
+      "reading": "イキ",
+      "word": "地域",
+      "word_reading": "ちいき",
+      "sentence": "地域の防災について調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 135,
+      "kanji": "乳",
+      "reading_type": "kun",
+      "reading": "ち",
+      "word": "乳飲み子",
+      "word_reading": "ちのみご",
+      "sentence": "母親が乳飲み子を抱いている。",
+      "okurigana": ""
+    },
+    {
+      "no": 136,
+      "kanji": "詞",
+      "reading_type": "on",
+      "reading": "シ",
+      "word": "歌詞",
+      "word_reading": "かし",
+      "sentence": "歌詞の意味を考えながら歌う。",
+      "okurigana": ""
+    },
+    {
+      "no": 137,
+      "kanji": "値",
+      "reading_type": "on",
+      "reading": "チ",
+      "word": "価値",
+      "word_reading": "かち",
+      "sentence": "文化財の価値を学ぶ。",
+      "okurigana": ""
+    },
+    {
+      "no": 138,
+      "kanji": "枚",
+      "reading_type": "on",
+      "reading": "マイ",
+      "word": "一枚",
+      "word_reading": "いちまい",
+      "sentence": "画用紙を一枚取り出す。",
+      "okurigana": ""
+    },
+    {
+      "no": 139,
+      "kanji": "誠",
+      "reading_type": "on",
+      "reading": "セイ",
+      "word": "誠意",
+      "word_reading": "せいい",
+      "sentence": "失敗した相手に誠意をもって謝る。",
+      "okurigana": ""
+    },
+    {
+      "no": 140,
+      "kanji": "恩",
+      "reading_type": "on",
+      "reading": "オン",
+      "word": "恩",
+      "word_reading": "おん",
+      "sentence": "助けてもらった恩を忘れない。",
+      "okurigana": ""
+    },
+    {
+      "no": 141,
+      "kanji": "后",
+      "reading_type": "on",
+      "reading": "コウ",
+      "word": "皇后",
+      "word_reading": "こうごう",
+      "sentence": "歴史の本で皇后について調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 142,
+      "kanji": "券",
+      "reading_type": "on",
+      "reading": "ケン",
+      "word": "乗車券",
+      "word_reading": "じょうしゃけん",
+      "sentence": "駅で乗車券を買う。",
+      "okurigana": ""
+    },
+    {
+      "no": 143,
+      "kanji": "訳",
+      "reading_type": "kun",
+      "reading": "わけ",
+      "word": "訳",
+      "word_reading": "わけ",
+      "sentence": "遅れた訳を先生に説明する。",
+      "okurigana": ""
+    },
+    {
+      "no": 144,
+      "kanji": "痛",
+      "reading_type": "on",
+      "reading": "ツウ",
+      "word": "頭痛",
+      "word_reading": "ずつう",
+      "sentence": "頭痛がするので静かに休む。",
+      "okurigana": ""
+    },
+    {
+      "no": 145,
+      "kanji": "染",
+      "reading_type": "kun",
+      "reading": "しみ",
+      "word": "染み",
+      "word_reading": "しみ",
+      "sentence": "白いシャツに小さな染みがついた。",
+      "okurigana": "み"
+    },
+    {
+      "no": 146,
+      "kanji": "難",
+      "reading_type": "kun",
+      "reading": "かたい",
+      "word": "難い",
+      "word_reading": "かたい",
+      "sentence": "長年の努力は言葉では表し難い。",
+      "okurigana": "い"
+    },
+    {
+      "no": 147,
+      "kanji": "暮",
+      "reading_type": "on",
+      "reading": "ボ",
+      "word": "野暮",
+      "word_reading": "やぼ",
+      "sentence": "人の秘密を細かく聞くのは野暮だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 148,
+      "kanji": "誌",
+      "reading_type": "on",
+      "reading": "シ",
+      "word": "雑誌",
+      "word_reading": "ざっし",
+      "sentence": "図書館で科学の雑誌を読む。",
+      "okurigana": ""
+    },
+    {
+      "no": 149,
+      "kanji": "源",
+      "reading_type": "kun",
+      "reading": "みなもと",
+      "word": "源",
+      "word_reading": "みなもと",
+      "sentence": "川の源を地図で探す。",
+      "okurigana": ""
+    },
+    {
+      "no": 150,
+      "kanji": "宝",
+      "reading_type": "on",
+      "reading": "ホウ",
+      "word": "宝庫",
+      "word_reading": "ほうこ",
+      "sentence": "図書館は知識の宝庫だ。",
+      "okurigana": ""
+    },
+    {
+      "no": 151,
+      "kanji": "降",
+      "reading_type": "on",
+      "reading": "コウ",
+      "word": "降水量",
+      "word_reading": "こうすいりょう",
+      "sentence": "月ごとの降水量をグラフにする。",
+      "okurigana": ""
+    },
+    {
+      "no": 152,
+      "kanji": "吸",
+      "reading_type": "on",
+      "reading": "キュウ",
+      "word": "吸収",
+      "word_reading": "きゅうしゅう",
+      "sentence": "植物の根が水を吸収する。",
+      "okurigana": ""
+    },
+    {
+      "no": 153,
+      "kanji": "糖",
+      "reading_type": "on",
+      "reading": "トウ",
+      "word": "砂糖",
+      "word_reading": "さとう",
+      "sentence": "紅茶に砂糖を少し入れる。",
+      "okurigana": ""
+    },
+    {
+      "no": 154,
+      "kanji": "潮",
+      "reading_type": "on",
+      "reading": "チョウ",
+      "word": "干潮",
+      "word_reading": "かんちょう",
+      "sentence": "干潮の時刻を調べて干潟へ行く。",
+      "okurigana": ""
+    },
+    {
+      "no": 155,
+      "kanji": "窓",
+      "reading_type": "on",
+      "reading": "ソウ",
+      "word": "車窓",
+      "word_reading": "しゃそう",
+      "sentence": "列車の車窓から海が見える。",
+      "okurigana": ""
+    },
+    {
+      "no": 156,
+      "kanji": "捨",
+      "reading_type": "kun",
+      "reading": "すてる",
+      "word": "捨てる",
+      "word_reading": "すてる",
+      "sentence": "ごみを決められた場所に捨てる。",
+      "okurigana": "てる"
+    },
+    {
+      "no": 157,
+      "kanji": "著",
+      "reading_type": "kun",
+      "reading": "あらわす",
+      "word": "著す",
+      "word_reading": "あらわす",
+      "sentence": "研究の成果を一冊の本に著す。",
+      "okurigana": "す"
+    },
+    {
+      "no": 158,
+      "kanji": "胃",
+      "reading_type": "on",
+      "reading": "イ",
+      "word": "胃",
+      "word_reading": "い",
+      "sentence": "食べ物は胃で消化される。",
+      "okurigana": ""
+    },
+    {
+      "no": 159,
+      "kanji": "蚕",
+      "reading_type": "on",
+      "reading": "サン",
+      "word": "蚕糸",
+      "word_reading": "さんし",
+      "sentence": "昔の蚕糸業について資料で調べる。",
+      "okurigana": ""
+    },
+    {
+      "no": 160,
+      "kanji": "拡",
+      "reading_type": "on",
+      "reading": "カク",
+      "word": "拡大",
+      "word_reading": "かくだい",
+      "sentence": "写真を拡大して細部を見る。",
+      "okurigana": ""
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 1",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "郷",
+      "reading_type": "on",
+      "reading": "キョウ"
+    },
+    {
+      "kanji": "誕",
+      "reading_type": "on",
+      "reading": "タン"
+    },
+    {
+      "kanji": "盛",
+      "reading_type": "on",
+      "reading": "セイ"
+    },
+    {
+      "kanji": "筋",
+      "reading_type": "on",
+      "reading": "キン"
+    },
+    {
+      "kanji": "穀",
+      "reading_type": "on",
+      "reading": "コク"
+    },
+    {
+      "kanji": "視",
+      "reading_type": "on",
+      "reading": "シ"
+    },
+    {
+      "kanji": "勤",
+      "reading_type": "kun",
+      "reading": "つとめる"
+    },
+    {
+      "kanji": "諸",
+      "reading_type": "on",
+      "reading": "ショ"
+    },
+    {
+      "kanji": "派",
+      "reading_type": "on",
+      "reading": "ハ"
+    },
+    {
+      "kanji": "株",
+      "reading_type": "kun",
+      "reading": "かぶ"
+    },
+    {
+      "kanji": "蒸",
+      "reading_type": "kun",
+      "reading": "むれる"
+    },
+    {
+      "kanji": "危",
+      "reading_type": "kun",
+      "reading": "あやぶむ"
+    },
+    {
+      "kanji": "論",
+      "reading_type": "on",
+      "reading": "ロン"
+    },
+    {
+      "kanji": "呼",
+      "reading_type": "on",
+      "reading": "コ"
+    },
+    {
+      "kanji": "担",
+      "reading_type": "kun",
+      "reading": "になう"
+    },
+    {
+      "kanji": "欲",
+      "reading_type": "kun",
+      "reading": "ほしい"
+    },
+    {
+      "kanji": "机",
+      "reading_type": "kun",
+      "reading": "つくえ"
+    },
+    {
+      "kanji": "革",
+      "reading_type": "kun",
+      "reading": "かわ"
+    },
+    {
+      "kanji": "臓",
+      "reading_type": "on",
+      "reading": "ゾウ"
+    },
+    {
+      "kanji": "腹",
+      "reading_type": "kun",
+      "reading": "はら"
+    }
+  ]
+}

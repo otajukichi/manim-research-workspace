@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 8",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "后",
+      "reading_type": "on",
+      "reading": "コウ"
+    },
+    {
+      "kanji": "券",
+      "reading_type": "on",
+      "reading": "ケン"
+    },
+    {
+      "kanji": "訳",
+      "reading_type": "kun",
+      "reading": "わけ"
+    },
+    {
+      "kanji": "痛",
+      "reading_type": "on",
+      "reading": "ツウ"
+    },
+    {
+      "kanji": "染",
+      "reading_type": "kun",
+      "reading": "しみ"
+    },
+    {
+      "kanji": "難",
+      "reading_type": "kun",
+      "reading": "かたい"
+    },
+    {
+      "kanji": "暮",
+      "reading_type": "on",
+      "reading": "ボ"
+    },
+    {
+      "kanji": "誌",
+      "reading_type": "on",
+      "reading": "シ"
+    },
+    {
+      "kanji": "源",
+      "reading_type": "kun",
+      "reading": "みなもと"
+    },
+    {
+      "kanji": "宝",
+      "reading_type": "on",
+      "reading": "ホウ"
+    },
+    {
+      "kanji": "降",
+      "reading_type": "on",
+      "reading": "コウ"
+    },
+    {
+      "kanji": "吸",
+      "reading_type": "on",
+      "reading": "キュウ"
+    },
+    {
+      "kanji": "糖",
+      "reading_type": "on",
+      "reading": "トウ"
+    },
+    {
+      "kanji": "潮",
+      "reading_type": "on",
+      "reading": "チョウ"
+    },
+    {
+      "kanji": "窓",
+      "reading_type": "on",
+      "reading": "ソウ"
+    },
+    {
+      "kanji": "捨",
+      "reading_type": "kun",
+      "reading": "すてる"
+    },
+    {
+      "kanji": "著",
+      "reading_type": "kun",
+      "reading": "あらわす"
+    },
+    {
+      "kanji": "胃",
+      "reading_type": "on",
+      "reading": "イ"
+    },
+    {
+      "kanji": "蚕",
+      "reading_type": "on",
+      "reading": "サン"
+    },
+    {
+      "kanji": "拡",
+      "reading_type": "on",
+      "reading": "カク"
+    }
+  ]
+}

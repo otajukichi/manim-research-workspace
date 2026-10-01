@@ -1,0 +1,56 @@
+{
+    "title": "家庭教師指導料 領収書",
+    "receipt_number": "",
+    "recipient": "大山",
+    "period": "2026年9月分",
+    "received_date": "",
+    "description": "2026年9月分 家庭教師指導料として",
+    "sessions": [
+        {
+            "date": "9月7日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 2000,
+            "transport_fee": 200
+        },
+        {
+            "date": "9月9日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 2000,
+            "transport_fee": 200
+        },
+        {
+            "date": "9月14日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 2000,
+            "transport_fee": 200
+        },
+        {
+            "date": "9月16日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 1800,
+            "transport_fee": 200
+        },
+        {
+            "date": "9月28日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 2000,
+            "transport_fee": 200
+        },
+        {
+            "date": "9月30日",
+            "time": "20:00〜21:30",
+            "hours": 1.5,
+            "hourly_rate": 2000,
+            "transport_fee": 200
+        }
+    ],
+    "issuer": {
+        "name": "大田重吉",
+        "contact": ""
+    }
+}

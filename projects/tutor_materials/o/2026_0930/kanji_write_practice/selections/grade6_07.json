@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 7",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "困",
+      "reading_type": "on",
+      "reading": "コン"
+    },
+    {
+      "kanji": "系",
+      "reading_type": "on",
+      "reading": "ケイ"
+    },
+    {
+      "kanji": "従",
+      "reading_type": "kun",
+      "reading": "したがえる"
+    },
+    {
+      "kanji": "創",
+      "reading_type": "on",
+      "reading": "ソウ"
+    },
+    {
+      "kanji": "討",
+      "reading_type": "kun",
+      "reading": "うつ"
+    },
+    {
+      "kanji": "干",
+      "reading_type": "kun",
+      "reading": "ひる"
+    },
+    {
+      "kanji": "班",
+      "reading_type": "on",
+      "reading": "ハン"
+    },
+    {
+      "kanji": "孝",
+      "reading_type": "on",
+      "reading": "コウ"
+    },
+    {
+      "kanji": "庁",
+      "reading_type": "on",
+      "reading": "チョウ"
+    },
+    {
+      "kanji": "賃",
+      "reading_type": "on",
+      "reading": "チン"
+    },
+    {
+      "kanji": "除",
+      "reading_type": "kun",
+      "reading": "のぞく"
+    },
+    {
+      "kanji": "皇",
+      "reading_type": "on",
+      "reading": "オウ"
+    },
+    {
+      "kanji": "純",
+      "reading_type": "on",
+      "reading": "ジュン"
+    },
+    {
+      "kanji": "域",
+      "reading_type": "on",
+      "reading": "イキ"
+    },
+    {
+      "kanji": "乳",
+      "reading_type": "kun",
+      "reading": "ち"
+    },
+    {
+      "kanji": "詞",
+      "reading_type": "on",
+      "reading": "シ"
+    },
+    {
+      "kanji": "値",
+      "reading_type": "on",
+      "reading": "チ"
+    },
+    {
+      "kanji": "枚",
+      "reading_type": "on",
+      "reading": "マイ"
+    },
+    {
+      "kanji": "誠",
+      "reading_type": "on",
+      "reading": "セイ"
+    },
+    {
+      "kanji": "恩",
+      "reading_type": "on",
+      "reading": "オン"
+    }
+  ]
+}

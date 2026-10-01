@@ -1,0 +1,1234 @@
+from __future__ import annotations
+
+import json
+import os
+from dataclasses import replace
+from pathlib import Path
+
+import manimpango
+from manim import (
+    DOWN,
+    PI,
+    Circle,
+    Line,
+    ManimColor,
+    Square,
+    Text,
+    VGroup,
+    config,
+)
+
+from manim_research import EDUCATION_THEME, EducationScene
+
+
+# ============================================================
+# A4 portrait / print
+# ============================================================
+
+A4_WIDTH_MM = 210
+A4_HEIGHT_MM = 297
+
+A4_PIXEL_WIDTH = 2480
+A4_PIXEL_HEIGHT = 3508
+
+FRAME_HEIGHT = 14.0
+FRAME_WIDTH = FRAME_HEIGHT * A4_WIDTH_MM / A4_HEIGHT_MM
+
+config.pixel_width = A4_PIXEL_WIDTH
+config.pixel_height = A4_PIXEL_HEIGHT
+config.frame_width = FRAME_WIDTH
+config.frame_height = FRAME_HEIGHT
+
+
+PRINT_THEME = replace(
+    EDUCATION_THEME,
+    background=ManimColor("#FFFFFF"),
+    foreground=ManimColor("#211F1D"),
+    muted=ManimColor("#5E5955"),
+    accent=ManimColor("#9B3E25"),
+    surface=ManimColor("#FFFFFF"),
+)
+
+ANSWER_COLOR = ManimColor("#D2186A")
+RULE_COLOR = ManimColor("#817A74")
+LIGHT_RULE_COLOR = ManimColor("#B9B2AC")
+
+
+# ============================================================
+# Font
+# ============================================================
+
+PREFERRED_FONTS = [
+    "UD Digi Kyokasho N",
+    "UD Digi Kyokasho NP",
+    "UD Digi Kyokasho NK",
+]
+
+FALLBACK_FONTS = [
+    "Noto Sans CJK JP",
+    "Noto Sans JP",
+    "Noto Serif CJK JP",
+    "Noto Serif JP",
+    "IPAexGothic",
+    "IPAexMincho",
+]
+
+
+def choose_font() -> str:
+    available = set(manimpango.list_fonts())
+
+    for font_name in PREFERRED_FONTS + FALLBACK_FONTS:
+        if font_name in available:
+            return font_name
+
+    raise ValueError(
+        "日本語フォントが見つかりません。候補: "
+        + ", ".join(PREFERRED_FONTS + FALLBACK_FONTS)
+    )
+
+
+EDUCATION_FONT = choose_font()
+
+
+# ============================================================
+# Layout constants
+# ============================================================
+
+PROBLEM_COUNT = 20
+PROBLEMS_PER_ROW = 10
+
+MARGIN_X = 0.34
+MARGIN_Y = 0.25
+
+HEADER_HEIGHT = 1.12
+ROW_GAP = 0.30
+
+NUMBER_BAND_HEIGHT = 0.34
+SENTENCE_TOP_GAP = 0.05
+SENTENCE_BOTTOM_GAP = 0.08
+
+BASE_CHAR_ADVANCE = 0.235
+BASE_CHAR_FONT_SIZE = 14.5
+
+BASE_BOX_SIZE = 0.46
+BASE_BOX_ADVANCE = 0.505
+
+BASE_OKURI_SLOT_ADVANCE = 0.495
+
+MIN_LAYOUT_SCALE = 0.76
+
+RUBY_FONT_SIZE = 7.2
+RUBY_X_OFFSET = 0.31
+
+BOX_STROKE_WIDTH = 1.25
+ANSWER_FONT_SIZE = 22.0
+
+OKURI_FRAME_HALF_WIDTH = 0.25
+OKURI_FRAME_CAP_HEIGHT = 0.13
+OKURI_FRAME_STROKE = 1.30
+
+
+# ============================================================
+# Content
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+DEFAULT_CONTENT_FILE = BASE_DIR / "json" / "grade6_01.json"
+
+
+def resolve_content_file() -> Path:
+    raw = os.environ.get("MANIM_CONTENT_FILE")
+
+    if not raw:
+        return DEFAULT_CONTENT_FILE
+
+    path = Path(raw).expanduser()
+
+    if path.is_absolute():
+        return path
+
+    cwd_path = Path.cwd() / path
+
+    if cwd_path.is_file():
+        return cwd_path.resolve()
+
+    return (BASE_DIR / path).resolve()
+
+
+CONTENT_FILE = resolve_content_file()
+
+PAGE_MODE = os.environ.get("MANIM_PAGE_MODE", "problem").strip().lower()
+
+if PAGE_MODE not in {"problem", "answer"}:
+    raise ValueError("MANIM_PAGE_MODE must be 'problem' or 'answer'")
+
+
+# ============================================================
+# Validation helpers
+# ============================================================
+
+SMALL_KANA = set(
+    "ゃゅょぁぃぅぇぉゎャュョァィゥェォヮっッ"
+)
+
+
+def is_kanji(char: str) -> bool:
+    code = ord(char)
+    return (
+        0x3400 <= code <= 0x4DBF
+        or 0x4E00 <= code <= 0x9FFF
+        or 0xF900 <= code <= 0xFAFF
+    )
+
+
+def load_content() -> dict[str, object]:
+    if not CONTENT_FILE.is_file():
+        raise FileNotFoundError(f"Content JSON not found: {CONTENT_FILE}")
+
+    data = json.loads(CONTENT_FILE.read_text(encoding="utf-8"))
+
+    if not isinstance(data, dict):
+        raise ValueError("Content JSON root must be an object")
+
+    problems = data.get("problems")
+
+    if not isinstance(problems, list):
+        raise ValueError("Content JSON field 'problems' must be a list")
+
+    if len(problems) != PROBLEM_COUNT:
+        raise ValueError(
+            f"Expected {PROBLEM_COUNT} problems, found {len(problems)}"
+        )
+
+    required = {
+        "no",
+        "kanji",
+        "reading_type",
+        "reading",
+        "word",
+        "word_reading",
+        "sentence",
+    }
+
+    for index, problem in enumerate(problems):
+        if not isinstance(problem, dict):
+            raise ValueError(f"problems[{index}] must be an object")
+
+        missing = required - set(problem)
+
+        if missing:
+            raise ValueError(
+                f"problems[{index}] is missing fields: {sorted(missing)}"
+            )
+
+        word = str(problem["word"])
+        sentence = str(problem["sentence"])
+        target_kanji = str(problem["kanji"])
+
+        if word not in sentence:
+            raise ValueError(
+                f"problems[{index}]: word {word!r} is not in sentence"
+            )
+
+        if target_kanji not in word:
+            raise ValueError(
+                f"problems[{index}]: target kanji {target_kanji!r} "
+                "is not in word"
+            )
+
+        if not any(is_kanji(char) for char in word):
+            raise ValueError(
+                f"problems[{index}]: target word has no kanji: {word!r}"
+            )
+
+    return data
+
+
+# ============================================================
+# Common text / glyph helpers
+# ============================================================
+
+def make_vertical_chars(
+    text: str,
+    *,
+    font_size: float,
+    color: ManimColor,
+) -> VGroup:
+    chars = VGroup()
+
+    for char in text:
+        glyph = Text(
+            char,
+            font=EDUCATION_FONT,
+            font_size=font_size,
+            color=color,
+        )
+
+        if char in {"ー", "〜", "～"}:
+            glyph.rotate(PI / 2)
+        elif char in {"。", "、"}:
+            glyph.scale(0.72)
+
+        chars.add(glyph)
+
+    chars.arrange(DOWN, buff=0.005)
+    return chars
+
+
+def make_single_char(
+    char: str,
+    *,
+    x: float,
+    center_y: float,
+    font_size: float,
+    color: ManimColor,
+) -> Text:
+    glyph = Text(
+        char,
+        font=EDUCATION_FONT,
+        font_size=font_size,
+        color=color,
+    )
+
+    if char in {"ー", "〜", "～"}:
+        glyph.rotate(PI / 2)
+    elif char in {"。", "、"}:
+        glyph.scale(0.72)
+
+    glyph.move_to([x, center_y, 0])
+
+    if char in {"。", "、"}:
+        glyph.shift([0.055, 0, 0])
+
+    return glyph
+
+
+def make_problem_number(number: int) -> VGroup:
+    circle = Circle(
+        radius=0.115,
+        color=RULE_COLOR,
+        stroke_width=1.0,
+    )
+
+    label = Text(
+        str(number),
+        font=EDUCATION_FONT,
+        font_size=6.8 if number < 10 else 5.7,
+        color=PRINT_THEME.foreground,
+    )
+
+    label.move_to(circle.get_center())
+
+    return VGroup(circle, label)
+
+
+# ============================================================
+# Reading split / ruby placement
+# ============================================================
+
+def split_kana_units(text: str) -> list[str]:
+    units: list[str] = []
+
+    for char in text:
+        if units and (char in SMALL_KANA or char == "ー"):
+            units[-1] += char
+        else:
+            units.append(char)
+
+    return units
+
+
+def distribute_units_to_boxes(
+    units: list[str],
+    box_count: int,
+) -> list[str]:
+    if box_count <= 0:
+        return []
+
+    if not units:
+        return [""] * box_count
+
+    if box_count == 1:
+        return ["".join(units)]
+
+    if len(units) <= box_count:
+        result = units[:]
+        while len(result) < box_count:
+            result.append("")
+        return result
+
+    base, rem = divmod(len(units), box_count)
+    counts = [base] * box_count
+
+    # 余りは後ろに寄せる。
+    for i in range(rem):
+        counts[box_count - rem + i] += 1
+
+    out: list[str] = []
+    start = 0
+
+    for count in counts:
+        out.append("".join(units[start : start + count]))
+        start += count
+
+    return out
+
+
+def infer_box_rubies(problem: dict[str, object]) -> list[str]:
+    word = str(problem["word"])
+    kanji_chars = [char for char in word if is_kanji(char)]
+    kanji_count = len(kanji_chars)
+
+    if kanji_count == 0:
+        return []
+
+    kanji_reading = str(problem.get("kanji_reading", "")).strip()
+    word_reading = str(problem.get("word_reading", "")).strip()
+
+    if kanji_reading:
+        units = split_kana_units(kanji_reading)
+        return distribute_units_to_boxes(units, kanji_count)
+
+    if word_reading:
+        units = split_kana_units(word_reading)
+        return distribute_units_to_boxes(units, kanji_count)
+
+    return [""] * kanji_count
+
+
+def add_ruby_for_slot(
+    group: VGroup,
+    ruby_text: str,
+    *,
+    x: float,
+    center_y: float,
+    slot_height: float,
+    scale: float,
+) -> None:
+    if not ruby_text:
+        return
+
+    ruby = make_vertical_chars(
+        ruby_text,
+        font_size=RUBY_FONT_SIZE * scale,
+        color=PRINT_THEME.muted,
+    )
+
+    max_height = max(slot_height * 0.95, 0.10)
+
+    if ruby.height > max_height:
+        ruby.scale_to_fit_height(max_height)
+
+    ruby.move_to([x + RUBY_X_OFFSET * scale, center_y, 0])
+
+    group.add(ruby)
+
+
+# ============================================================
+# Sentence / target word structure
+# ============================================================
+
+def split_sentence(problem: dict[str, object]) -> tuple[str, str, str]:
+    sentence = str(problem["sentence"])
+    word = str(problem["word"])
+
+    start = sentence.find(word)
+
+    if start < 0:
+        raise ValueError(f"Target word {word!r} not found in sentence")
+
+    end = start + len(word)
+
+    return (
+        sentence[:start],
+        word,
+        sentence[end:],
+    )
+
+
+def word_has_okurigana(
+    problem: dict[str, object],
+) -> bool:
+    """JSONの okurigana フィールドを使って判定する。"""
+
+    return bool(
+        str(
+            problem.get(
+                "okurigana",
+                "",
+            )
+        ).strip()
+    )
+
+
+def base_total_advance(
+    problem: dict[str, object],
+) -> float:
+    """1問の縦方向の必要長を計算する。
+
+    送り仮名つきの語は、
+    語全体を書かせる縦長回答欄として扱う。
+    """
+
+    prefix, word, suffix = split_sentence(
+        problem
+    )
+
+    total = (
+        len(prefix) * BASE_CHAR_ADVANCE
+        + len(suffix) * BASE_CHAR_ADVANCE
+    )
+
+    if word_has_okurigana(problem):
+        total += (
+            len(word)
+            * BASE_OKURI_SLOT_ADVANCE
+        )
+
+        # 上下の台形ガイドぶん
+        total += (
+            2
+            * OKURI_FRAME_CAP_HEIGHT
+        )
+
+    else:
+        total += (
+            len(word)
+            * BASE_BOX_ADVANCE
+        )
+
+    return total
+
+
+def compute_scale(problem: dict[str, object], max_height: float) -> float:
+    total = base_total_advance(problem)
+
+    if total <= 0:
+        raise ValueError("Invalid total advance")
+
+    scale = min(1.0, max_height / total)
+
+    if scale < MIN_LAYOUT_SCALE:
+        raise ValueError(
+            "Sentence is too long for the current layout. "
+            f"required scale={scale:.3f}"
+        )
+
+    return scale
+
+
+# ============================================================
+# Target renderers
+# ============================================================
+
+def make_boxed_target(
+    word: str,
+    rubies: list[str],
+    *,
+    x: float,
+    top_y: float,
+    scale: float,
+    show_answer: bool,
+) -> tuple[VGroup, float]:
+    box_size = BASE_BOX_SIZE * scale
+    box_advance = BASE_BOX_ADVANCE * scale
+    group = VGroup()
+
+    cursor_y = top_y
+    ruby_index = 0
+
+    for char in word:
+        center_y = cursor_y - box_advance / 2
+
+        square = Square(
+            side_length=box_size,
+            color=RULE_COLOR,
+            stroke_width=BOX_STROKE_WIDTH,
+        )
+        square.move_to([x, center_y, 0])
+        group.add(square)
+
+        if show_answer:
+            answer = Text(
+                char,
+                font=EDUCATION_FONT,
+                font_size=ANSWER_FONT_SIZE * (box_size / BASE_BOX_SIZE),
+                color=ANSWER_COLOR,
+            )
+
+            max_inside = box_size * 0.76
+
+            if answer.width > max_inside:
+                answer.scale_to_fit_width(max_inside)
+
+            if answer.height > max_inside:
+                answer.scale_to_fit_height(max_inside)
+
+            answer.move_to(square.get_center())
+            group.add(answer)
+
+        ruby_text = rubies[ruby_index] if ruby_index < len(rubies) else ""
+        add_ruby_for_slot(
+            group,
+            ruby_text,
+            x=x,
+            center_y=center_y,
+            slot_height=box_advance,
+            scale=scale,
+        )
+        ruby_index += 1
+        cursor_y -= box_advance
+
+    return group, len(word) * box_advance
+
+
+def make_okurigana_target(
+    problem: dict[str, object],
+    *,
+    x: float,
+    top_y: float,
+    scale: float,
+    show_answer: bool,
+) -> tuple[VGroup, float]:
+    """送り仮名つきの語を、語全体の回答欄として描画する。
+
+    参考教材の
+
+        並べる
+        忘れる
+
+    と同じ考え方。
+
+    問題:
+        語全体を空欄にする。
+        送り仮名も印刷しない。
+
+    解答:
+        漢字・送り仮名を含む語全体をピンクで表示。
+
+    読み:
+        word_reading 全体を回答欄の右側に縦配置。
+    """
+
+    word = str(
+        problem["word"]
+    )
+
+    word_reading = str(
+        problem["word_reading"]
+    )
+
+    slot_advance = (
+        BASE_OKURI_SLOT_ADVANCE
+        * scale
+    )
+
+    # 語全体が占有する縦サイズは従来どおり維持する。
+    # ただし、実際に描く上下の「かっこ」だけ少し内側へ縮める。
+    reserved_cap_height = (
+        OKURI_FRAME_CAP_HEIGHT
+        * scale
+    )
+
+    visual_cap_height = (
+        OKURI_FRAME_CAP_HEIGHT
+        * 0.58
+        * scale
+    )
+
+    word_height = (
+        len(word)
+        * slot_advance
+    )
+
+    # --------------------------------------------------------
+    # 回答欄
+    #
+    # top_y
+    #   ─────
+    #  /     \
+    #
+    #   回答
+    #
+    #  \     /
+    #   ─────
+    # --------------------------------------------------------
+
+    frame_top_y = top_y
+
+    # 実際に描く括弧は短くするが、
+    # 問題語全体の予約スペースは従来と同じ。
+    content_top_y = (
+        frame_top_y
+        - reserved_cap_height
+    )
+
+    content_bottom_y = (
+        content_top_y
+        - word_height
+    )
+
+    frame_bottom_y = (
+        content_bottom_y
+        - reserved_cap_height
+    )
+
+    visual_top_y = (
+        content_top_y
+        + visual_cap_height
+    )
+
+    visual_bottom_y = (
+        content_bottom_y
+        - visual_cap_height
+    )
+
+    total_height = (
+        word_height
+        + 2 * reserved_cap_height
+    )
+
+    group = VGroup()
+
+    outer_half_width = (
+        OKURI_FRAME_HALF_WIDTH
+        * scale
+    )
+
+    inner_half_width = max(
+        0.08 * scale,
+        outer_half_width
+        - 0.09 * scale,
+    )
+
+    stroke_width = (
+        OKURI_FRAME_STROKE
+    )
+
+    # --------------------------------------------------------
+    # 上側:
+    #
+    #       ______
+    #      /      \
+    #
+    # --------------------------------------------------------
+
+    group.add(
+        Line(
+            [
+                x - inner_half_width,
+                visual_top_y,
+                0,
+            ],
+            [
+                x + inner_half_width,
+                visual_top_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    group.add(
+        Line(
+            [
+                x - inner_half_width,
+                visual_top_y,
+                0,
+            ],
+            [
+                x - outer_half_width,
+                content_top_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    group.add(
+        Line(
+            [
+                x + inner_half_width,
+                visual_top_y,
+                0,
+            ],
+            [
+                x + outer_half_width,
+                content_top_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    # --------------------------------------------------------
+    # 下側:
+    #
+    #      \      /
+    #       ______
+    #
+    # --------------------------------------------------------
+
+    group.add(
+        Line(
+            [
+                x - outer_half_width,
+                content_bottom_y,
+                0,
+            ],
+            [
+                x - inner_half_width,
+                visual_bottom_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    group.add(
+        Line(
+            [
+                x + outer_half_width,
+                content_bottom_y,
+                0,
+            ],
+            [
+                x + inner_half_width,
+                visual_bottom_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    group.add(
+        Line(
+            [
+                x - inner_half_width,
+                frame_bottom_y,
+                0,
+            ],
+            [
+                x + inner_half_width,
+                visual_bottom_y,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=stroke_width,
+        )
+    )
+
+    # --------------------------------------------------------
+    # 解答ページだけ、語全体を書く
+    #
+    # 「危ない」なら
+    #
+    #   危
+    #   な
+    #   い
+    #
+    # をすべてピンクで表示。
+    # --------------------------------------------------------
+
+    if show_answer:
+        cursor_y = content_top_y
+
+        for char in word:
+            center_y = (
+                cursor_y
+                - slot_advance / 2
+            )
+
+            answer = Text(
+                char,
+                font=EDUCATION_FONT,
+                font_size=(
+                    ANSWER_FONT_SIZE
+                    * scale
+                ),
+                color=ANSWER_COLOR,
+            )
+
+            max_size = (
+                slot_advance
+                * 0.76
+            )
+
+            if answer.width > max_size:
+                answer.scale_to_fit_width(
+                    max_size
+                )
+
+            if answer.height > max_size:
+                answer.scale_to_fit_height(
+                    max_size
+                )
+
+            answer.move_to(
+                [
+                    x,
+                    center_y,
+                    0,
+                ]
+            )
+
+            group.add(answer)
+
+            cursor_y -= slot_advance
+
+    # --------------------------------------------------------
+    # フリガナ
+    #
+    # 参考画像と同じく、
+    # word_reading 全体を欄の右側へ均等配置する。
+    #
+    # 例:
+    #
+    #   並べる
+    #   ならべる
+    #
+    # main 3文字に対して reading 4文字でも問題ない。
+    # --------------------------------------------------------
+
+    reading_units = split_kana_units(
+        word_reading
+    )
+
+    if reading_units:
+        reading_advance = (
+            word_height
+            / len(reading_units)
+        )
+
+        ruby_x = (
+            x
+            + RUBY_X_OFFSET
+            * scale
+        )
+
+        for index, unit in enumerate(
+            reading_units
+        ):
+            ruby_center_y = (
+                content_top_y
+                - reading_advance
+                * (index + 0.5)
+            )
+
+            ruby = make_vertical_chars(
+                unit,
+                font_size=(
+                    RUBY_FONT_SIZE
+                    * scale
+                ),
+                color=PRINT_THEME.muted,
+            )
+
+            max_ruby_height = (
+                reading_advance
+                * 0.78
+            )
+
+            if (
+                max_ruby_height > 0
+                and ruby.height
+                > max_ruby_height
+            ):
+                ruby.scale_to_fit_height(
+                    max_ruby_height
+                )
+
+            ruby.move_to(
+                [
+                    ruby_x,
+                    ruby_center_y,
+                    0,
+                ]
+            )
+
+            group.add(ruby)
+
+    return (
+        group,
+        total_height,
+    )
+
+
+# ============================================================
+# One full vertical problem
+# ============================================================
+
+def make_vertical_problem(
+    problem: dict[str, object],
+    *,
+    x: float,
+    top_y: float,
+    max_height: float,
+    show_answer: bool,
+) -> VGroup:
+    """1問ぶんの縦書き文を作る。"""
+
+    prefix, word, suffix = split_sentence(
+        problem
+    )
+
+    scale = compute_scale(
+        problem,
+        max_height,
+    )
+
+    char_advance = (
+        BASE_CHAR_ADVANCE
+        * scale
+    )
+
+    char_font_size = (
+        BASE_CHAR_FONT_SIZE
+        * scale
+    )
+
+    group = VGroup()
+    cursor_y = top_y
+
+    # --------------------------------------------------------
+    # 問題語より前
+    # --------------------------------------------------------
+
+    for char in prefix:
+        center_y = (
+            cursor_y
+            - char_advance / 2
+        )
+
+        group.add(
+            make_single_char(
+                char,
+                x=x,
+                center_y=center_y,
+                font_size=char_font_size,
+                color=PRINT_THEME.foreground,
+            )
+        )
+
+        cursor_y -= char_advance
+
+    # --------------------------------------------------------
+    # 問題語
+    # --------------------------------------------------------
+
+    if word_has_okurigana(problem):
+
+        (
+            target_group,
+            used_height,
+        ) = make_okurigana_target(
+            problem,
+            x=x,
+            top_y=cursor_y,
+            scale=scale,
+            show_answer=show_answer,
+        )
+
+    else:
+
+        rubies = infer_box_rubies(
+            problem
+        )
+
+        (
+            target_group,
+            used_height,
+        ) = make_boxed_target(
+            word,
+            rubies,
+            x=x,
+            top_y=cursor_y,
+            scale=scale,
+            show_answer=show_answer,
+        )
+
+    group.add(
+        target_group
+    )
+
+    cursor_y -= used_height
+
+    # --------------------------------------------------------
+    # 問題語より後
+    # --------------------------------------------------------
+
+    for char in suffix:
+        center_y = (
+            cursor_y
+            - char_advance / 2
+        )
+
+        group.add(
+            make_single_char(
+                char,
+                x=x,
+                center_y=center_y,
+                font_size=char_font_size,
+                color=PRINT_THEME.foreground,
+            )
+        )
+
+        cursor_y -= char_advance
+
+    return group
+
+
+# ============================================================
+# Scene
+# ============================================================
+
+class KanjiWriteWorksheet(EducationScene):
+    theme = PRINT_THEME
+
+    def construct(self) -> None:
+        data = load_content()
+        problems = data["problems"]
+
+        assert isinstance(problems, list)
+
+        frame_top = config.frame_height / 2
+        frame_bottom = -config.frame_height / 2
+        frame_left = -config.frame_width / 2
+        frame_right = config.frame_width / 2
+
+        top_outer = frame_top - MARGIN_Y
+        header_bottom = top_outer - HEADER_HEIGHT
+        bottom_outer = frame_bottom + MARGIN_Y
+
+        row_height = (
+            header_bottom - bottom_outer - ROW_GAP
+        ) / 2
+
+        row_tops = [
+            header_bottom,
+            header_bottom - row_height - ROW_GAP,
+        ]
+
+        content_width = config.frame_width - 2 * MARGIN_X
+        column_step = content_width / PROBLEMS_PER_ROW
+        rightmost_x = frame_right - MARGIN_X - column_step / 2
+
+        title_text = str(data.get("title", "小学6年 漢字練習"))
+        subtitle_text = str(
+            data.get(
+                "subtitle",
+                "読みを手がかりに、□に漢字を書きましょう。",
+            )
+        )
+        mode_label = "問題" if PAGE_MODE == "problem" else "解答"
+
+        title = Text(
+            title_text,
+            font=EDUCATION_FONT,
+            font_size=20,
+            weight="BOLD",
+            color=self.theme.foreground,
+        )
+        title.move_to([0, top_outer - 0.24, 0])
+
+        mode = Text(
+            mode_label,
+            font=EDUCATION_FONT,
+            font_size=11,
+            weight="BOLD",
+            color=ANSWER_COLOR if PAGE_MODE == "answer" else self.theme.accent,
+        )
+        mode.move_to([frame_right - 0.56, top_outer - 0.22, 0])
+
+        subtitle = Text(
+            subtitle_text,
+            font=EDUCATION_FONT,
+            font_size=9.5,
+            color=self.theme.foreground,
+        )
+        subtitle.move_to(
+            [
+                frame_left + MARGIN_X + subtitle.width / 2,
+                top_outer - 0.72,
+                0,
+            ]
+        )
+
+        name_y = top_outer - 0.72
+
+        name_label = Text(
+            "名前",
+            font=EDUCATION_FONT,
+            font_size=9.5,
+            color=self.theme.foreground,
+        )
+        name_label.move_to([frame_right - 2.05, name_y, 0])
+
+        name_line = Line(
+            [frame_right - 1.70, name_y - 0.05, 0],
+            [frame_right - 0.35, name_y - 0.05, 0],
+            color=RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        header_rule = Line(
+            [frame_left + MARGIN_X, header_bottom + 0.03, 0],
+            [frame_right - MARGIN_X, header_bottom + 0.03, 0],
+            color=LIGHT_RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        divider_y = header_bottom - row_height - ROW_GAP / 2
+
+        divider = Line(
+            [frame_left + MARGIN_X, divider_y, 0],
+            [frame_right - MARGIN_X, divider_y, 0],
+            color=LIGHT_RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        page = VGroup(
+            title,
+            mode,
+            subtitle,
+            name_label,
+            name_line,
+            header_rule,
+            divider,
+        )
+
+        sentence_max_height = (
+            row_height
+            - NUMBER_BAND_HEIGHT
+            - SENTENCE_TOP_GAP
+            - SENTENCE_BOTTOM_GAP
+        )
+
+        for index, problem in enumerate(problems):
+            row_index = index // PROBLEMS_PER_ROW
+            column_index = index % PROBLEMS_PER_ROW
+
+            x = rightmost_x - column_index * column_step
+            row_top = row_tops[row_index]
+
+            number = make_problem_number(index + 1)
+            number.move_to([x, row_top - NUMBER_BAND_HEIGHT / 2, 0])
+
+            sentence_top = row_top - NUMBER_BAND_HEIGHT - SENTENCE_TOP_GAP
+
+            vertical_problem = make_vertical_problem(
+                problem,
+                x=x,
+                top_y=sentence_top,
+                max_height=sentence_max_height,
+                show_answer=(PAGE_MODE == "answer"),
+            )
+
+            page.add(number, vertical_problem)
+
+        self.add(page)

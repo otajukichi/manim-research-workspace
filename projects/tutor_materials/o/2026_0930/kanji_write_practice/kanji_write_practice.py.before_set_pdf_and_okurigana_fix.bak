@@ -1,0 +1,1073 @@
+from __future__ import annotations
+
+import json
+import os
+from dataclasses import replace
+from pathlib import Path
+
+import manimpango
+from manim import (
+    DOWN,
+    PI,
+    RIGHT,
+    Circle,
+    Line,
+    ManimColor,
+    Square,
+    Text,
+    VGroup,
+    config,
+)
+
+from manim_research import (
+    EDUCATION_THEME,
+    EducationScene,
+)
+
+
+# ============================================================
+# A4 portrait / print
+# ============================================================
+
+A4_WIDTH_MM = 210
+A4_HEIGHT_MM = 297
+
+A4_PIXEL_WIDTH = 2480
+A4_PIXEL_HEIGHT = 3508
+
+FRAME_HEIGHT = 14.0
+FRAME_WIDTH = (
+    FRAME_HEIGHT
+    * A4_WIDTH_MM
+    / A4_HEIGHT_MM
+)
+
+config.pixel_width = A4_PIXEL_WIDTH
+config.pixel_height = A4_PIXEL_HEIGHT
+
+config.frame_width = FRAME_WIDTH
+config.frame_height = FRAME_HEIGHT
+
+
+PRINT_THEME = replace(
+    EDUCATION_THEME,
+    background=ManimColor("#FFFFFF"),
+    foreground=ManimColor("#211F1D"),
+    muted=ManimColor("#5E5955"),
+    accent=ManimColor("#9B3E25"),
+    surface=ManimColor("#FFFFFF"),
+)
+
+ANSWER_COLOR = ManimColor("#D2186A")
+
+RULE_COLOR = ManimColor("#817A74")
+LIGHT_RULE_COLOR = ManimColor("#B9B2AC")
+
+
+# ============================================================
+# Education font
+# ============================================================
+
+PREFERRED_FONTS = [
+    "UD Digi Kyokasho N",
+    "UD Digi Kyokasho NP",
+    "UD Digi Kyokasho NK",
+]
+
+
+def require_education_font() -> str:
+    available = set(
+        manimpango.list_fonts()
+    )
+
+    for font_name in PREFERRED_FONTS:
+        if font_name in available:
+            return font_name
+
+    raise ValueError(
+        "教育用フォントが見つかりません。"
+        " 使用候補: "
+        + ", ".join(PREFERRED_FONTS)
+    )
+
+
+EDUCATION_FONT = require_education_font()
+
+
+# ============================================================
+# Page layout
+# ============================================================
+
+PROBLEM_COUNT = 20
+PROBLEMS_PER_ROW = 10
+
+MARGIN_X = 0.34
+MARGIN_Y = 0.25
+
+HEADER_HEIGHT = 1.12
+ROW_GAP = 0.30
+
+NUMBER_BAND_HEIGHT = 0.34
+
+SENTENCE_TOP_GAP = 0.05
+SENTENCE_BOTTOM_GAP = 0.08
+
+BASE_CHAR_ADVANCE = 0.235
+BASE_CHAR_FONT_SIZE = 14.5
+
+BASE_BOX_SIZE = 0.46
+BASE_BOX_ADVANCE = 0.505
+
+MIN_LAYOUT_SCALE = 0.76
+
+HINT_FONT_SIZE = 7.2
+HINT_X_OFFSET = 0.31
+
+BOX_STROKE_WIDTH = 1.25
+ANSWER_FONT_SIZE = 22
+
+
+# ============================================================
+# Content
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parent
+
+DEFAULT_CONTENT_FILE = (
+    BASE_DIR
+    / "json"
+    / "grade6_01.json"
+)
+
+
+def resolve_content_file() -> Path:
+    raw = os.environ.get(
+        "MANIM_CONTENT_FILE"
+    )
+
+    if not raw:
+        return DEFAULT_CONTENT_FILE
+
+    path = Path(raw).expanduser()
+
+    if path.is_absolute():
+        return path
+
+    cwd_path = Path.cwd() / path
+
+    if cwd_path.is_file():
+        return cwd_path.resolve()
+
+    return BASE_DIR / path
+
+
+CONTENT_FILE = resolve_content_file()
+
+PAGE_MODE = os.environ.get(
+    "MANIM_PAGE_MODE",
+    "problem",
+).strip().lower()
+
+if PAGE_MODE not in {
+    "problem",
+    "answer",
+}:
+    raise ValueError(
+        "MANIM_PAGE_MODE must be "
+        "'problem' or 'answer'"
+    )
+
+
+# ============================================================
+# Validation
+# ============================================================
+
+def is_kanji(char: str) -> bool:
+    code = ord(char)
+
+    return (
+        0x3400 <= code <= 0x4DBF
+        or 0x4E00 <= code <= 0x9FFF
+        or 0xF900 <= code <= 0xFAFF
+    )
+
+
+def load_content() -> dict[str, object]:
+    if not CONTENT_FILE.is_file():
+        raise FileNotFoundError(
+            "Content JSON not found: "
+            f"{CONTENT_FILE}"
+        )
+
+    data = json.loads(
+        CONTENT_FILE.read_text(
+            encoding="utf-8"
+        )
+    )
+
+    if not isinstance(data, dict):
+        raise ValueError(
+            "Content JSON root "
+            "must be an object"
+        )
+
+    problems = data.get("problems")
+
+    if not isinstance(problems, list):
+        raise ValueError(
+            "Content JSON field 'problems' "
+            "must be a list"
+        )
+
+    if len(problems) != PROBLEM_COUNT:
+        raise ValueError(
+            f"Expected {PROBLEM_COUNT} problems, "
+            f"found {len(problems)}"
+        )
+
+    required = {
+        "no",
+        "kanji",
+        "reading_type",
+        "reading",
+        "word",
+        "word_reading",
+        "sentence",
+    }
+
+    for index, problem in enumerate(
+        problems
+    ):
+        if not isinstance(problem, dict):
+            raise ValueError(
+                f"problems[{index}] "
+                "must be an object"
+            )
+
+        missing = required - set(problem)
+
+        if missing:
+            raise ValueError(
+                f"problems[{index}] "
+                "is missing fields: "
+                f"{sorted(missing)}"
+            )
+
+        word = problem["word"]
+        sentence = problem["sentence"]
+        target_kanji = problem["kanji"]
+
+        if not all(
+            isinstance(value, str)
+            and value
+            for value in (
+                word,
+                sentence,
+                target_kanji,
+            )
+        ):
+            raise ValueError(
+                "Invalid string field in "
+                f"problems[{index}]"
+            )
+
+        if word not in sentence:
+            raise ValueError(
+                f"problems[{index}]: "
+                f"word {word!r} "
+                "is not in sentence"
+            )
+
+        if target_kanji not in word:
+            raise ValueError(
+                f"problems[{index}]: "
+                f"target kanji "
+                f"{target_kanji!r} "
+                "is not in word"
+            )
+
+        if not any(
+            is_kanji(char)
+            for char in word
+        ):
+            raise ValueError(
+                f"problems[{index}]: "
+                "target word has no kanji: "
+                f"{word!r}"
+            )
+
+    return data
+
+
+# ============================================================
+# Small vertical reading text
+# ============================================================
+
+def make_vertical_chars(
+    text: str,
+    *,
+    font_size: float,
+    color: ManimColor,
+) -> VGroup:
+
+    chars = VGroup()
+
+    for char in text:
+        glyph = Text(
+            char,
+            font=EDUCATION_FONT,
+            font_size=font_size,
+            color=color,
+        )
+
+        if char in {
+            "ー",
+            "〜",
+            "～",
+        }:
+            glyph.rotate(PI / 2)
+
+        elif char in {
+            "。",
+            "、",
+        }:
+            glyph.scale(0.72)
+
+        chars.add(glyph)
+
+    chars.arrange(
+        DOWN,
+        buff=0.005,
+    )
+
+    return chars
+
+
+# ============================================================
+# Problem number
+# ============================================================
+
+def make_problem_number(
+    number: int,
+) -> VGroup:
+
+    circle = Circle(
+        radius=0.115,
+        color=RULE_COLOR,
+        stroke_width=1.0,
+    )
+
+    label = Text(
+        str(number),
+        font=EDUCATION_FONT,
+        font_size=(
+            6.8
+            if number < 10
+            else 5.7
+        ),
+        color=PRINT_THEME.foreground,
+    )
+
+    label.move_to(
+        circle.get_center()
+    )
+
+    return VGroup(
+        circle,
+        label,
+    )
+
+
+# ============================================================
+# Turn the target example word into boxes
+#
+# 例:
+#   宇宙   -> □□
+#   危ない -> □ない
+#   映す   -> □す
+#
+# Target word 以外の漢字は通常どおり表示する。
+# ============================================================
+
+def split_sentence_tokens(
+    problem: dict[str, object],
+) -> list[tuple[str, str]]:
+
+    sentence = str(
+        problem["sentence"]
+    )
+
+    word = str(
+        problem["word"]
+    )
+
+    start = sentence.find(word)
+
+    if start < 0:
+        raise ValueError(
+            "Target word not found "
+            f"in sentence: {word!r}"
+        )
+
+    end = start + len(word)
+
+    tokens: list[
+        tuple[str, str]
+    ] = []
+
+    for index, char in enumerate(sentence):
+        in_target_word = (
+            start <= index < end
+        )
+
+        if (
+            in_target_word
+            and is_kanji(char)
+        ):
+            tokens.append(
+                ("box", char)
+            )
+        else:
+            tokens.append(
+                ("char", char)
+            )
+
+    return tokens
+
+
+# ============================================================
+# Long-sentence fitting
+# ============================================================
+
+def layout_metrics(
+    tokens: list[tuple[str, str]],
+    max_height: float,
+) -> tuple[
+    float,
+    float,
+    float,
+    float,
+]:
+
+    char_count = sum(
+        kind == "char"
+        for kind, _ in tokens
+    )
+
+    box_count = sum(
+        kind == "box"
+        for kind, _ in tokens
+    )
+
+    base_total = (
+        char_count
+        * BASE_CHAR_ADVANCE
+        + box_count
+        * BASE_BOX_ADVANCE
+    )
+
+    if base_total <= 0:
+        raise ValueError(
+            "Sentence produced "
+            "no layout tokens"
+        )
+
+    scale = min(
+        1.0,
+        max_height / base_total,
+    )
+
+    if scale < MIN_LAYOUT_SCALE:
+        raise ValueError(
+            "Sentence is too long for "
+            "the current "
+            "2-row x 10-column layout. "
+            f"required scale={scale:.3f}"
+        )
+
+    char_advance = (
+        BASE_CHAR_ADVANCE
+        * scale
+    )
+
+    char_font_size = (
+        BASE_CHAR_FONT_SIZE
+        * scale
+    )
+
+    box_size = (
+        BASE_BOX_SIZE
+        * scale
+    )
+
+    box_advance = (
+        BASE_BOX_ADVANCE
+        * scale
+    )
+
+    return (
+        char_advance,
+        char_font_size,
+        box_size,
+        box_advance,
+    )
+
+
+# ============================================================
+# One vertical problem
+# ============================================================
+
+def make_vertical_problem(
+    problem: dict[str, object],
+    *,
+    x: float,
+    top_y: float,
+    max_height: float,
+    show_answer: bool,
+) -> VGroup:
+
+    tokens = split_sentence_tokens(
+        problem
+    )
+
+    (
+        char_advance,
+        char_font_size,
+        box_size,
+        box_advance,
+    ) = layout_metrics(
+        tokens,
+        max_height,
+    )
+
+    word = str(
+        problem["word"]
+    )
+
+    sentence = str(
+        problem["sentence"]
+    )
+
+    word_start = sentence.find(word)
+    word_end = (
+        word_start
+        + len(word)
+    )
+
+    group = VGroup()
+    cursor_y = top_y
+
+    target_top: float | None = None
+    target_bottom: float | None = None
+
+    for index, (
+        kind,
+        value,
+    ) in enumerate(tokens):
+
+        if kind == "box":
+            advance = box_advance
+
+            center_y = (
+                cursor_y
+                - advance / 2
+            )
+
+            square = Square(
+                side_length=box_size,
+                color=RULE_COLOR,
+                stroke_width=(
+                    BOX_STROKE_WIDTH
+                ),
+            )
+
+            square.move_to(
+                [
+                    x,
+                    center_y,
+                    0,
+                ]
+            )
+
+            group.add(square)
+
+            if show_answer:
+                answer = Text(
+                    value,
+                    font=EDUCATION_FONT,
+                    font_size=(
+                        ANSWER_FONT_SIZE
+                        * (
+                            box_size
+                            / BASE_BOX_SIZE
+                        )
+                    ),
+                    color=ANSWER_COLOR,
+                )
+
+                max_inside = (
+                    box_size
+                    * 0.76
+                )
+
+                if (
+                    answer.width
+                    > max_inside
+                ):
+                    answer.scale_to_fit_width(
+                        max_inside
+                    )
+
+                if (
+                    answer.height
+                    > max_inside
+                ):
+                    answer.scale_to_fit_height(
+                        max_inside
+                    )
+
+                answer.move_to(
+                    square.get_center()
+                )
+
+                group.add(answer)
+
+        else:
+            advance = char_advance
+
+            center_y = (
+                cursor_y
+                - advance / 2
+            )
+
+            glyph = Text(
+                value,
+                font=EDUCATION_FONT,
+                font_size=char_font_size,
+                color=(
+                    PRINT_THEME.foreground
+                ),
+            )
+
+            if value in {
+                "ー",
+                "〜",
+                "～",
+            }:
+                glyph.rotate(
+                    PI / 2
+                )
+
+            elif value in {
+                "。",
+                "、",
+            }:
+                glyph.scale(0.72)
+
+            glyph.move_to(
+                [
+                    x,
+                    center_y,
+                    0,
+                ]
+            )
+
+            if value in {
+                "。",
+                "、",
+            }:
+                glyph.shift(
+                    RIGHT * 0.055
+                )
+
+            group.add(glyph)
+
+        if (
+            word_start
+            <= index
+            < word_end
+        ):
+            if target_top is None:
+                target_top = cursor_y
+
+            target_bottom = (
+                cursor_y
+                - advance
+            )
+
+        cursor_y -= advance
+
+    if (
+        target_top is None
+        or target_bottom is None
+    ):
+        raise ValueError(
+            "Failed to locate "
+            f"target word span: {word!r}"
+        )
+
+    # Full reading of the example word.
+    # This naturally handles on-yomi compounds
+    # and kun-yomi + okurigana.
+    hint = make_vertical_chars(
+        str(problem["word_reading"]),
+        font_size=HINT_FONT_SIZE,
+        color=PRINT_THEME.muted,
+    )
+
+    target_height = (
+        target_top
+        - target_bottom
+    )
+
+    max_hint_height = max(
+        0.55,
+        target_height * 0.92,
+    )
+
+    if (
+        hint.height
+        > max_hint_height
+    ):
+        hint.scale_to_fit_height(
+            max_hint_height
+        )
+
+    hint.move_to(
+        [
+            x + HINT_X_OFFSET,
+            (
+                target_top
+                + target_bottom
+            )
+            / 2,
+            0,
+        ]
+    )
+
+    group.add(hint)
+
+    return group
+
+
+# ============================================================
+# Scene
+# ============================================================
+
+class KanjiWriteWorksheet(
+    EducationScene
+):
+    theme = PRINT_THEME
+
+    def construct(self) -> None:
+        data = load_content()
+
+        problems = data["problems"]
+
+        assert isinstance(
+            problems,
+            list,
+        )
+
+        frame_top = (
+            config.frame_height / 2
+        )
+
+        frame_bottom = (
+            -config.frame_height / 2
+        )
+
+        frame_left = (
+            -config.frame_width / 2
+        )
+
+        frame_right = (
+            config.frame_width / 2
+        )
+
+        top_outer = (
+            frame_top
+            - MARGIN_Y
+        )
+
+        header_bottom = (
+            top_outer
+            - HEADER_HEIGHT
+        )
+
+        bottom_outer = (
+            frame_bottom
+            + MARGIN_Y
+        )
+
+        row_height = (
+            header_bottom
+            - bottom_outer
+            - ROW_GAP
+        ) / 2
+
+        row_tops = [
+            header_bottom,
+            (
+                header_bottom
+                - row_height
+                - ROW_GAP
+            ),
+        ]
+
+        content_width = (
+            config.frame_width
+            - 2 * MARGIN_X
+        )
+
+        column_step = (
+            content_width
+            / PROBLEMS_PER_ROW
+        )
+
+        rightmost_x = (
+            frame_right
+            - MARGIN_X
+            - column_step / 2
+        )
+
+        title_text = str(
+            data.get(
+                "title",
+                "小学6年 漢字練習",
+            )
+        )
+
+        subtitle_text = str(
+            data.get(
+                "subtitle",
+                "読みを手がかりに、"
+                "□に漢字を書きましょう。",
+            )
+        )
+
+        mode_label = (
+            "問題"
+            if PAGE_MODE == "problem"
+            else "解答"
+        )
+
+        # ----------------------------------------------------
+        # Header
+        # ----------------------------------------------------
+
+        title = Text(
+            title_text,
+            font=EDUCATION_FONT,
+            font_size=20,
+            weight="BOLD",
+            color=self.theme.foreground,
+        )
+
+        title.move_to(
+            [
+                0,
+                top_outer - 0.24,
+                0,
+            ]
+        )
+
+        mode = Text(
+            mode_label,
+            font=EDUCATION_FONT,
+            font_size=11,
+            weight="BOLD",
+            color=(
+                ANSWER_COLOR
+                if PAGE_MODE == "answer"
+                else self.theme.accent
+            ),
+        )
+
+        mode.move_to(
+            [
+                frame_right - 0.56,
+                top_outer - 0.22,
+                0,
+            ]
+        )
+
+        subtitle = Text(
+            subtitle_text,
+            font=EDUCATION_FONT,
+            font_size=9.5,
+            color=self.theme.foreground,
+        )
+
+        subtitle.move_to(
+            [
+                (
+                    frame_left
+                    + MARGIN_X
+                    + subtitle.width / 2
+                ),
+                top_outer - 0.72,
+                0,
+            ]
+        )
+
+        name_y = (
+            top_outer - 0.72
+        )
+
+        name_label = Text(
+            "名前",
+            font=EDUCATION_FONT,
+            font_size=9.5,
+            color=self.theme.foreground,
+        )
+
+        name_label.move_to(
+            [
+                frame_right - 2.05,
+                name_y,
+                0,
+            ]
+        )
+
+        name_line = Line(
+            [
+                frame_right - 1.70,
+                name_y - 0.05,
+                0,
+            ],
+            [
+                frame_right - 0.35,
+                name_y - 0.05,
+                0,
+            ],
+            color=RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        header_rule = Line(
+            [
+                frame_left + MARGIN_X,
+                header_bottom + 0.03,
+                0,
+            ],
+            [
+                frame_right - MARGIN_X,
+                header_bottom + 0.03,
+                0,
+            ],
+            color=LIGHT_RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        divider_y = (
+            header_bottom
+            - row_height
+            - ROW_GAP / 2
+        )
+
+        divider = Line(
+            [
+                frame_left + MARGIN_X,
+                divider_y,
+                0,
+            ],
+            [
+                frame_right - MARGIN_X,
+                divider_y,
+                0,
+            ],
+            color=LIGHT_RULE_COLOR,
+            stroke_width=1.0,
+        )
+
+        page = VGroup(
+            title,
+            mode,
+            subtitle,
+            name_label,
+            name_line,
+            header_rule,
+            divider,
+        )
+
+        sentence_max_height = (
+            row_height
+            - NUMBER_BAND_HEIGHT
+            - SENTENCE_TOP_GAP
+            - SENTENCE_BOTTOM_GAP
+        )
+
+        # ----------------------------------------------------
+        # 20 questions
+        #
+        # 1-10  : top row, right -> left
+        # 11-20 : bottom row, right -> left
+        # ----------------------------------------------------
+
+        for index, problem in enumerate(
+            problems
+        ):
+            row_index = (
+                index
+                // PROBLEMS_PER_ROW
+            )
+
+            column_index = (
+                index
+                % PROBLEMS_PER_ROW
+            )
+
+            x = (
+                rightmost_x
+                - column_index
+                * column_step
+            )
+
+            row_top = (
+                row_tops[row_index]
+            )
+
+            number = make_problem_number(
+                index + 1
+            )
+
+            number.move_to(
+                [
+                    x,
+                    (
+                        row_top
+                        - NUMBER_BAND_HEIGHT
+                        / 2
+                    ),
+                    0,
+                ]
+            )
+
+            sentence_top = (
+                row_top
+                - NUMBER_BAND_HEIGHT
+                - SENTENCE_TOP_GAP
+            )
+
+            vertical_problem = (
+                make_vertical_problem(
+                    problem,
+                    x=x,
+                    top_y=sentence_top,
+                    max_height=(
+                        sentence_max_height
+                    ),
+                    show_answer=(
+                        PAGE_MODE
+                        == "answer"
+                    ),
+                )
+            )
+
+            page.add(
+                number,
+                vertical_problem,
+            )
+
+        self.add(page)

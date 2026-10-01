@@ -1,0 +1,21 @@
+wrote: /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/json/grade6_01.json
+grade: 6
+problems: 20
+selected: 宇 映 延 沿 恩 我 灰 拡 閣 革 割 株 巻 干 看 簡 危 揮 机 貴
+✨ Pixi task (manim): bash scripts/manim.sh --content-file /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/json/grade6_01.json --media_dir /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/rendered -s -qh -o grade6_01_problem /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/kanji_write_practice.py KanjiWriteWorksheet: (Run the ManimCE CLI with this workspace's TeX environment)
+Manim Community v0.20.1
+
+✨ Pixi task (manim): bash scripts/manim.sh --content-file /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/json/grade6_01.json --media_dir /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/rendered -s -qh -o grade6_01_answer /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/kanji_write_practice.py KanjiWriteWorksheet: (Run the ManimCE CLI with this workspace's TeX environment)
+Manim Community v0.20.1
+
+wrote: /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_questions.pdf
+pages: 1
+wrote: /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_answers.pdf
+pages: 1
+wrote: /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_paired.pdf
+pages: 2
+
+===== PDF output =====
+-rw-r--r-- 1 jukichi jukichi 767K Sep 30 18:24 /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_answers.pdf
+-rw-r--r-- 1 jukichi jukichi 1.4M Sep 30 18:24 /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_paired.pdf
+-rw-r--r-- 1 jukichi jukichi 656K Sep 30 18:24 /home/jukichi/workspace/manim-research-workspace/projects/tutor_materials/o/2026_0930/kanji_write_practice/output/pdf/grade6_kanji_0930_questions.pdf

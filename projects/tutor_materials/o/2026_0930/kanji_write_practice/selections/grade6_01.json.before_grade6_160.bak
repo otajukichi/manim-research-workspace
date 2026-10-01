@@ -1,0 +1,28 @@
+{
+  "title": "小学6年 漢字の書き取り 1",
+  "subtitle": "読みを手がかりに、□に漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {"kanji": "宇", "reading_type": "on",  "reading": "ウ"},
+    {"kanji": "映", "reading_type": "kun", "reading": "うつす"},
+    {"kanji": "延", "reading_type": "kun", "reading": "のばす"},
+    {"kanji": "沿", "reading_type": "kun", "reading": "そう"},
+    {"kanji": "恩", "reading_type": "on",  "reading": "オン"},
+    {"kanji": "我", "reading_type": "kun", "reading": "われ"},
+    {"kanji": "灰", "reading_type": "on",  "reading": "カイ"},
+    {"kanji": "拡", "reading_type": "on",  "reading": "カク"},
+    {"kanji": "閣", "reading_type": "on",  "reading": "カク"},
+    {"kanji": "革", "reading_type": "kun", "reading": "かわ"},
+
+    {"kanji": "割", "reading_type": "kun", "reading": "わる"},
+    {"kanji": "株", "reading_type": "kun", "reading": "かぶ"},
+    {"kanji": "巻", "reading_type": "kun", "reading": "まく"},
+    {"kanji": "干", "reading_type": "kun", "reading": "ほす"},
+    {"kanji": "看", "reading_type": "on",  "reading": "カン"},
+    {"kanji": "簡", "reading_type": "on",  "reading": "カン"},
+    {"kanji": "危", "reading_type": "kun", "reading": "あぶない"},
+    {"kanji": "揮", "reading_type": "on",  "reading": "キ"},
+    {"kanji": "机", "reading_type": "kun", "reading": "つくえ"},
+    {"kanji": "貴", "reading_type": "kun", "reading": "たっとい"}
+  ]
+}

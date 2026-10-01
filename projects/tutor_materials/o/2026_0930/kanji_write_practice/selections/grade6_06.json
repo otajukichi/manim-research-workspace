@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 6",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "劇",
+      "reading_type": "on",
+      "reading": "ゲキ"
+    },
+    {
+      "kanji": "忘",
+      "reading_type": "kun",
+      "reading": "わすれる"
+    },
+    {
+      "kanji": "穴",
+      "reading_type": "kun",
+      "reading": "あな"
+    },
+    {
+      "kanji": "操",
+      "reading_type": "kun",
+      "reading": "みさお"
+    },
+    {
+      "kanji": "奮",
+      "reading_type": "on",
+      "reading": "フン"
+    },
+    {
+      "kanji": "聖",
+      "reading_type": "on",
+      "reading": "セイ"
+    },
+    {
+      "kanji": "針",
+      "reading_type": "kun",
+      "reading": "はり"
+    },
+    {
+      "kanji": "傷",
+      "reading_type": "kun",
+      "reading": "きず"
+    },
+    {
+      "kanji": "警",
+      "reading_type": "on",
+      "reading": "ケイ"
+    },
+    {
+      "kanji": "憲",
+      "reading_type": "on",
+      "reading": "ケン"
+    },
+    {
+      "kanji": "模",
+      "reading_type": "on",
+      "reading": "ボ"
+    },
+    {
+      "kanji": "優",
+      "reading_type": "on",
+      "reading": "ユウ"
+    },
+    {
+      "kanji": "預",
+      "reading_type": "kun",
+      "reading": "あずかる"
+    },
+    {
+      "kanji": "縮",
+      "reading_type": "kun",
+      "reading": "ちぢめる"
+    },
+    {
+      "kanji": "冊",
+      "reading_type": "on",
+      "reading": "サク"
+    },
+    {
+      "kanji": "絹",
+      "reading_type": "kun",
+      "reading": "きぬ"
+    },
+    {
+      "kanji": "激",
+      "reading_type": "on",
+      "reading": "ゲキ"
+    },
+    {
+      "kanji": "泉",
+      "reading_type": "kun",
+      "reading": "いずみ"
+    },
+    {
+      "kanji": "裁",
+      "reading_type": "on",
+      "reading": "サイ"
+    },
+    {
+      "kanji": "幼",
+      "reading_type": "on",
+      "reading": "ヨウ"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 5",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "晩",
+      "reading_type": "on",
+      "reading": "バン"
+    },
+    {
+      "kanji": "陛",
+      "reading_type": "on",
+      "reading": "ヘイ"
+    },
+    {
+      "kanji": "紅",
+      "reading_type": "on",
+      "reading": "コウ"
+    },
+    {
+      "kanji": "展",
+      "reading_type": "on",
+      "reading": "テン"
+    },
+    {
+      "kanji": "翌",
+      "reading_type": "on",
+      "reading": "ヨク"
+    },
+    {
+      "kanji": "至",
+      "reading_type": "on",
+      "reading": "シ"
+    },
+    {
+      "kanji": "胸",
+      "reading_type": "kun",
+      "reading": "むな"
+    },
+    {
+      "kanji": "仁",
+      "reading_type": "on",
+      "reading": "ジン"
+    },
+    {
+      "kanji": "訪",
+      "reading_type": "kun",
+      "reading": "たずねる"
+    },
+    {
+      "kanji": "暖",
+      "reading_type": "kun",
+      "reading": "あたたまる"
+    },
+    {
+      "kanji": "俳",
+      "reading_type": "on",
+      "reading": "ハイ"
+    },
+    {
+      "kanji": "就",
+      "reading_type": "on",
+      "reading": "シュウ"
+    },
+    {
+      "kanji": "我",
+      "reading_type": "on",
+      "reading": "ガ"
+    },
+    {
+      "kanji": "蔵",
+      "reading_type": "on",
+      "reading": "ゾウ"
+    },
+    {
+      "kanji": "並",
+      "reading_type": "on",
+      "reading": "ヘイ"
+    },
+    {
+      "kanji": "宇",
+      "reading_type": "on",
+      "reading": "ウ"
+    },
+    {
+      "kanji": "脳",
+      "reading_type": "on",
+      "reading": "ノウ"
+    },
+    {
+      "kanji": "刻",
+      "reading_type": "kun",
+      "reading": "きざむ"
+    },
+    {
+      "kanji": "鋼",
+      "reading_type": "kun",
+      "reading": "はがね"
+    },
+    {
+      "kanji": "寸",
+      "reading_type": "on",
+      "reading": "スン"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "小学6年 漢字の書き取り 3",
+  "subtitle": "読みを手がかりに、漢字を書きましょう。",
+  "grade": 6,
+  "items": [
+    {
+      "kanji": "宣",
+      "reading_type": "on",
+      "reading": "セン"
+    },
+    {
+      "kanji": "貴",
+      "reading_type": "kun",
+      "reading": "たっとい"
+    },
+    {
+      "kanji": "存",
+      "reading_type": "on",
+      "reading": "ソン"
+    },
+    {
+      "kanji": "座",
+      "reading_type": "on",
+      "reading": "ザ"
+    },
+    {
+      "kanji": "敬",
+      "reading_type": "on",
+      "reading": "ケイ"
+    },
+    {
+      "kanji": "供",
+      "reading_type": "kun",
+      "reading": "そなえる"
+    },
+    {
+      "kanji": "探",
+      "reading_type": "kun",
+      "reading": "さがす"
+    },
+    {
+      "kanji": "宗",
+      "reading_type": "on",
+      "reading": "ソウ"
+    },
+    {
+      "kanji": "厳",
+      "reading_type": "on",
+      "reading": "ゴン"
+    },
+    {
+      "kanji": "否",
+      "reading_type": "kun",
+      "reading": "いな"
+    },
+    {
+      "kanji": "署",
+      "reading_type": "on",
+      "reading": "ショ"
+    },
+    {
+      "kanji": "臨",
+      "reading_type": "kun",
+      "reading": "のぞむ"
+    },
+    {
+      "kanji": "宅",
+      "reading_type": "on",
+      "reading": "タク"
+    },
+    {
+      "kanji": "垂",
+      "reading_type": "on",
+      "reading": "スイ"
+    },
+    {
+      "kanji": "沿",
+      "reading_type": "kun",
+      "reading": "そう"
+    },
+    {
+      "kanji": "骨",
+      "reading_type": "on",
+      "reading": "コツ"
+    },
+    {
+      "kanji": "背",
+      "reading_type": "kun",
+      "reading": "そむく"
+    },
+    {
+      "kanji": "縦",
+      "reading_type": "on",
+      "reading": "ジュウ"
+    },
+    {
+      "kanji": "肺",
+      "reading_type": "on",
+      "reading": "ハイ"
+    },
+    {
+      "kanji": "郵",
+      "reading_type": "on",
+      "reading": "ユウ"
+    }
+  ]
+}
